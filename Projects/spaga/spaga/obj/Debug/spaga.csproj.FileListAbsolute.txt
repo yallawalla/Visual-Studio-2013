@@ -1,0 +1,9 @@
+c:\users\mocnik\documents\visual studio 2013\Projects\spaga\spaga\bin\Debug\spaga.exe.config
+c:\users\mocnik\documents\visual studio 2013\Projects\spaga\spaga\bin\Debug\spaga.exe
+c:\users\mocnik\documents\visual studio 2013\Projects\spaga\spaga\bin\Debug\spaga.pdb
+c:\users\mocnik\documents\visual studio 2013\Projects\spaga\spaga\obj\Debug\spaga.csprojResolveAssemblyReference.cache
+c:\users\mocnik\documents\visual studio 2013\Projects\spaga\spaga\obj\Debug\spaga.Form1.resources
+c:\users\mocnik\documents\visual studio 2013\Projects\spaga\spaga\obj\Debug\spaga.Properties.Resources.resources
+c:\users\mocnik\documents\visual studio 2013\Projects\spaga\spaga\obj\Debug\spaga.csproj.GenerateResource.Cache
+c:\users\mocnik\documents\visual studio 2013\Projects\spaga\spaga\obj\Debug\spaga.exe
+c:\users\mocnik\documents\visual studio 2013\Projects\spaga\spaga\obj\Debug\spaga.pdb

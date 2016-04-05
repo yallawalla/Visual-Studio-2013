@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity name="Tcp2Com.exe" version="1.0.0.0" publicKeyToken="65e463109bd6b46c" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="App.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Tcp2Com" version="1.0.5155.25665" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Tcp2Com.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Tcp2Com.exe" size="28672">
+      <assemblyIdentity name="Tcp2Com" version="1.0.5155.25665" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>C9DMA7Y4Gmqh+8Xr7Fo5UCE/1Wo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="App.ico" size="1078">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>GM7OUb4teOfGVJg9lxgqFUWHPYk=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=Mocnikm\Mocnik" issuerKeyHash="d9d0303fc64989a795efa72ac49dd1308e73daba" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>J4/XHFnEm1+ASDzcFvaly1jEtBg=</DigestValue></Reference></SignedInfo><SignatureValue>N8Az3Bpp8O9Tz3mdhwAwZQYC855TdZ98lLNexn0WwKf5ds+JBjFz1S13JDBN+QHLpGfKShGVGPNzRdyQQT0sc0Jozbg8Ic0rd1EhVkW+bEWiQE6BHb6zQBtR016upbYArPEwS6IZMZLLUJMK8vuqzyF1kAOUIHwE7d6uw7OrDaY=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>jta9T0v6AYmAG0QrvemgB/hdPSq+rfw1vrl1WXYv6dzZnjo1UnPEUSbZuztqsjA6OkgvnjJnRtgZ5XgR5KXm0E9lvUInjPhJiZn9Cbg8yHSZ5YADTORoltQ4oTZe/nEqeUeNrxqWBaMoPgQfueJxghgVqMXMQlzNvgvOY4s1AC8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="18b4c458cba5f616dc3c48805f9bc4591cd78f27" Description="" Url=""><as:assemblyIdentity name="Tcp2Com.exe" version="1.0.0.0" publicKeyToken="65e463109bd6b46c" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=Mocnikm\Mocnik</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>6Hkhtl/5kyY1CjU0F+FNx3SRz3c=</DigestValue></Reference></SignedInfo><SignatureValue>gBeeu4T4Hv9RexzqriGJfrYHTUx1Y+TRW6eeryb/5AIySKSx4gnW7VPJD6JcHAXlgJWI+P+NX5VLZ6xBVLhP/fqdWtzLMpqFMu8Zd9vGLZOG9Egfq7tlzSCwbwQsFaBDWa7wSCVjyX2lZPczXCtuRQ3EHpwzskt9tUEwlgKbTyg=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>jta9T0v6AYmAG0QrvemgB/hdPSq+rfw1vrl1WXYv6dzZnjo1UnPEUSbZuztqsjA6OkgvnjJnRtgZ5XgR5KXm0E9lvUInjPhJiZn9Cbg8yHSZ5YADTORoltQ4oTZe/nEqeUeNrxqWBaMoPgQfueJxghgVqMXMQlzNvgvOY4s1AC8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB0TCCATqgAwIBAgIQdga1k49fYptMrBjsSCzMWDANBgkqhkiG9w0BAQUFADAnMSUwIwYDVQQDHhwATQBvAGMAbgBpAGsAbQBcAE0AbwBjAG4AaQBrMB4XDTE0MDIxMTEzMTUzMFoXDTE1MDIxMTE5MTUzMFowJzElMCMGA1UEAx4cAE0AbwBjAG4AaQBrAG0AXABNAG8AYwBuAGkAazCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAjta9T0v6AYmAG0QrvemgB/hdPSq+rfw1vrl1WXYv6dzZnjo1UnPEUSbZuztqsjA6OkgvnjJnRtgZ5XgR5KXm0E9lvUInjPhJiZn9Cbg8yHSZ5YADTORoltQ4oTZe/nEqeUeNrxqWBaMoPgQfueJxghgVqMXMQlzNvgvOY4s1AC8CAwEAATANBgkqhkiG9w0BAQUFAAOBgQAYEx1iKQBtegjTSorCIMoacrZ+8gVbhiK/IbiXot9stCiC9PQexk4FtzshitlClga+8K3S7kcJ3ZNIetnWquiAnGkTFuux4jm1v9XwRhT9QxCy4C/+qqNAn7E0TpfuvmoI2J5JDMHhstA6B4w15HiBkSosZOzL9rTiYdwZmBPnUw==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

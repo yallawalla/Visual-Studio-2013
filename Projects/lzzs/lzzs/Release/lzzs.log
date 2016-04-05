@@ -1,0 +1,43 @@
+﻿Build started 3/6/2014 09:08:30.
+     1>Project "c:\Users\MOCNIK\documents\visual studio 2010\Projects\lzzs\lzzs\lzzs.vcxproj" on node 2 (build target(s)).
+     1>PrepareForBuild:
+         Creating directory "c:\users\mocnik\documents\visual studio 2010\Projects\lzzs\Release\".
+       InitializeBuildStatus:
+         Creating "Release\lzzs.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /O2 /Oy- /D WIN32 /D NDEBUG /D _UNICODE /D UNICODE /EHa /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Release\lzzs.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt stdafx.cpp /clr:nostdlib 
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /O2 /Oy- /D WIN32 /D NDEBUG /D _UNICODE /D UNICODE /EHa /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\lzzs.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt AssemblyInfo.cpp lzzs.cpp /clr:nostdlib 
+         AssemblyInfo.cpp
+         lzzs.cpp
+     1>lzzs.cpp(132): warning C4244: '=' : conversion from 'short' to 'unsigned char', possible loss of data
+     1>lzzs.cpp(165): warning C4244: '=' : conversion from 'short' to 'unsigned char', possible loss of data
+     1>lzzs.cpp(166): warning C4244: '=' : conversion from 'short' to 'unsigned char', possible loss of data
+     1>lzzs.cpp(208): warning C4244: '=' : conversion from 'short' to 'unsigned char', possible loss of data
+     1>lzzs.cpp(215): warning C4244: '=' : conversion from 'short' to 'unsigned char', possible loss of data
+     1>lzzs.cpp(232): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /clr /nologo /W3 /WX- /O2 /Oy- /D WIN32 /D NDEBUG /D _UNICODE /D UNICODE /EHa /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /TP /analyze- /errorReport:prompt "C:\Users\MOCNIK\AppData\Local\Temp\.NETFramework,Version=v4.0.AssemblyAttributes.cpp"
+         .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Release\app.res" app.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\mocnik\documents\visual studio 2010\Projects\lzzs\Release\lzzs.exe" /INCREMENTAL:NO /NOLOGO /MANIFEST /ManifestFile:"Release\lzzs.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"c:\users\mocnik\documents\visual studio 2010\Projects\lzzs\Release\lzzs.pdb" /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Release\app.res
+         Release\AssemblyInfo.obj
+         Release\lzzs.obj
+         Release\stdafx.obj
+         "Release\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+         lzzs.vcxproj -> c:\users\mocnik\documents\visual studio 2010\Projects\lzzs\Release\lzzs.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"c:\users\mocnik\documents\visual studio 2010\Projects\lzzs\Release\lzzs.exe;#1" /manifest Release\lzzs.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Release\lzzs.unsuccessfulbuild".
+         Touching "Release\lzzs.lastbuildstate".
+     1>Done Building Project "c:\Users\MOCNIK\documents\visual studio 2010\Projects\lzzs\lzzs\lzzs.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.62

@@ -1,0 +1,46 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WindowsFormsApplication1.Properties" GeneratedClassName="wtf">
+  <Profiles />
+  <Settings>
+    <Setting Name="port" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM1</Value>
+    </Setting>
+    <Setting Name="font" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Lucida Console, 12pt, style=Bold</Value>
+    </Setting>
+    <Setting Name="logfile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">wtf00000.log</Value>
+    </Setting>
+    <Setting Name="send2dir" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="baud" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">115200</Value>
+    </Setting>
+    <Setting Name="ip" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;172.21.243.189&lt;/string&gt;
+  &lt;string&gt;192.168.1.10&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="a1max" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">52000</Value>
+    </Setting>
+    <Setting Name="a1min" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">13000</Value>
+    </Setting>
+    <Setting Name="a2max" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">52000</Value>
+    </Setting>
+    <Setting Name="a2min" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">13000</Value>
+    </Setting>
+    <Setting Name="a3max" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">52000</Value>
+    </Setting>
+    <Setting Name="a3min" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">13000</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

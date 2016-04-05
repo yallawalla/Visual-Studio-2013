@@ -1,0 +1,66 @@
+﻿Build started 12/20/2012 4:40:42 PM.
+     1>Project "C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\Lwip\Lwip\Lwip.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\Lwip.unsuccessfulbuild".
+       ClCompile:
+         All outputs are up-to-date.
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\WpdPack\Include /IC:\Users\klks8243iu\Documents\Keil\FatFs /IC:\Users\klks8243iu\Documents\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\include /IC:\Users\klks8243iu\Documents\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\include\ipv4 /IC:\Users\klks8243iu\Documents\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\port\STM32F2x7 /IC:\Users\klks8243iu\Documents\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\port\STM32F2x7\Standalone /IC:\Users\klks8243iu\Documents\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Libraries\STM32F2x7_ETH_Driver\inc /I"C:\Users\klks8243iu\Documents\Keil\STM32_USB-Host-Device_Lib_V2.1.0\Project\USB_Device_Examples\MSC\src\ftpd" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt "..\..\..\..\Keil\STM32_USB-Host-Device_Lib_V2.1.0\Project\USB_Device_Examples\MSC\src\ftpd\newif.c"
+         newif.c
+         All outputs are up-to-date.
+       Link:
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\Lwip\Debug\Lwip.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:C:\WpdPack\Lib wpcap.lib Packet.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Lwip.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\Lwip\Debug\Lwip.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\Lwip\Debug\Lwip.lib" /MACHINE:X86 Debug\diskio.obj
+         Debug\ff.obj
+         Debug\ccsbcs.obj
+         Debug\api_lib.obj
+         Debug\api_msg.obj
+         Debug\err.obj
+         Debug\netbuf.obj
+         Debug\netdb.obj
+         Debug\netifapi.obj
+         Debug\sockets.obj
+         Debug\tcpip.obj
+         Debug\dhcp.obj
+         Debug\dns.obj
+         Debug\init.obj
+         Debug\autoip.obj
+         Debug\icmp.obj
+         Debug\igmp.obj
+         Debug\inet.obj
+         Debug\inet_chksum.obj
+         Debug\ip.obj
+         Debug\ip_addr.obj
+         Debug\ip_frag.obj
+         Debug\mem.obj
+         Debug\memp.obj
+         Debug\netif.obj
+         Debug\pbuf.obj
+         Debug\raw.obj
+         Debug\stats.obj
+         Debug\sys.obj
+         Debug\tcp.obj
+         Debug\tcp_in.obj
+         Debug\tcp_out.obj
+         Debug\udp.obj
+         Debug\etharp.obj
+         Debug\loopif.obj
+         Debug\slipif.obj
+         Debug\netconf.obj
+         Debug\NetFtp_ftpd.obj
+         Debug\NetFtp_vfs.obj
+         Debug\newif.obj
+         Debug\pcap.obj
+         Debug\Lwip.obj
+         Debug\serial.obj
+         Debug\stdafx.obj
+     1>diskio.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+         Lwip.vcxproj -> C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\Lwip\Debug\Lwip.exe
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\Lwip\Debug\Lwip.exe;#1" /manifest Debug\Lwip.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\Lwip.unsuccessfulbuild".
+         Touching "Debug\Lwip.lastbuildstate".
+     1>Done Building Project "C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\Lwip\Lwip\Lwip.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.22

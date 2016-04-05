@@ -1,0 +1,13 @@
+C:\Users\Matjaz\Documents\visual studio 2013\Projects\piss\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Matjaz\Documents\visual studio 2013\Projects\piss\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Matjaz\Documents\visual studio 2013\Projects\piss\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Matjaz\Documents\visual studio 2013\Projects\piss\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Matjaz\Documents\visual studio 2013\Projects\piss\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Matjaz\Documents\visual studio 2013\Projects\piss\WindowsFormsApplication1\obj\Debug\piss.csprojResolveAssemblyReference.cache
+C:\Users\Matjaz\Documents\visual studio 2013\Projects\piss\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Matjaz\Documents\visual studio 2013\Projects\piss\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Matjaz\Documents\visual studio 2013\Projects\piss\WindowsFormsApplication1\obj\Debug\piss.csproj.GenerateResource.Cache
+C:\Users\Matjaz\Documents\visual studio 2013\Projects\piss\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.manifest
+C:\Users\Matjaz\Documents\visual studio 2013\Projects\piss\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.application
+C:\Users\Matjaz\Documents\visual studio 2013\Projects\piss\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe.manifest
+C:\Users\Matjaz\Documents\visual studio 2013\Projects\piss\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.application

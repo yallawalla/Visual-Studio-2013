@@ -1,0 +1,21 @@
+C:\Documents and Settings\Mocnik\Desktop\ConsoleApplication1\ConsoleApplication1\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Mocnik\Desktop\ConsoleApplication1\ConsoleApplication1\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Mocnik\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Documents and Settings\Mocnik\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Documents and Settings\Mocnik\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Debug\FTD2XX_NET.dll
+C:\Documents and Settings\Mocnik\Desktop\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Documents and Settings\Mocnik\Desktop\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Documents and Settings\Mocnik\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Debug\FTD2XX_NET.xml
+C:\Documents and Settings\Mocnik\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Release\ConsoleApplication1.exe
+C:\Documents and Settings\Mocnik\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Release\ConsoleApplication1.pdb
+C:\Documents and Settings\Mocnik\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Release\FTD2XX_NET.dll
+C:\Documents and Settings\Mocnik\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Release\FTD2XX_NET.xml
+C:\Documents and Settings\Mocnik\Desktop\ConsoleApplication1\ConsoleApplication1\obj\Release\ConsoleApplication1.exe
+C:\Documents and Settings\Mocnik\Desktop\ConsoleApplication1\ConsoleApplication1\obj\Release\ConsoleApplication1.pdb
+d:\Documents and Settings\Mocnik\My Documents\Projects\charger\VB\ConsoleApplication1\ConsoleApplication1\obj\Release\ResolveAssemblyReference.cache
+d:\Documents and Settings\Mocnik\My Documents\Projects\charger\VB\ConsoleApplication1\ConsoleApplication1\bin\Release\ConsoleApplication1.exe
+d:\Documents and Settings\Mocnik\My Documents\Projects\charger\VB\ConsoleApplication1\ConsoleApplication1\bin\Release\ConsoleApplication1.pdb
+d:\Documents and Settings\Mocnik\My Documents\Projects\charger\VB\ConsoleApplication1\ConsoleApplication1\bin\Release\FTD2XX_NET.dll
+d:\Documents and Settings\Mocnik\My Documents\Projects\charger\VB\ConsoleApplication1\ConsoleApplication1\bin\Release\FTD2XX_NET.xml
+d:\Documents and Settings\Mocnik\My Documents\Projects\charger\VB\ConsoleApplication1\ConsoleApplication1\obj\Release\ConsoleApplication1.exe
+d:\Documents and Settings\Mocnik\My Documents\Projects\charger\VB\ConsoleApplication1\ConsoleApplication1\obj\Release\ConsoleApplication1.pdb

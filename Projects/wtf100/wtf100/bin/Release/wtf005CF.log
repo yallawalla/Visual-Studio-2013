@@ -1,0 +1,260 @@
+
+>
+>
+>
+>
+>
+>v 1.13 Nov 10 2015, <C318802E>
+>
+>
+>
+>
+>p>p(ulse)  T,U           ... 350us,334V
+>:0
+0:/>t cfg.ini
+-l d0,d1,d2,d3,,d4,d5,d6,d7
+-l
+
+u 700,500,780
+s 180,180,40
+
+-u h
++m 9,10,11
+
+q 250,250,36,70,105
+q 250,250,36,100,175
+q 250,230,36,50,50
+
+-P
+
+0:/>>
+>
+>q 250,200,35,350,350
+>p>p(ulse)  T,U           ... 350us,334V
+>p 350,334,7
+>w q 250,200,35,35,180,180... WTF(1)
+>q 250,200       200,250,35,180,180
+>p 180,      p>p(ulse)  T,U           ... 180us,334V
+>p 180,334, 
+>p 180,334
+>P>p(ulse)  T,U           ... 180us,334V
+>p>p(ulse)  T,U           ... 180us,334V
+>P>p(ulse)  T,U           ... 180us,334V
+>+ p>p(ulse)  T,U           ... 180us,334V
+>P>p(ulse)  T,U           ... 180us,334V
+>p>p(ulse)  T,U           ... 180us,334V
+>+D 3
+>:5508 trigger...
+>:5508 simmer rate 100 kHz
+>:5511 simmer rate  25 kHz
+>:5512 E2=13.1J
+>:6008 trigger...
+>:6008 simmer rate 100 kHz
+>:6011 simmer rate  25 kHz
+>:6012 E2=13.1J
+>:6508 trigger...
+>:6508 simmer rate 100 kHz
+>:6511 simmer rate  25 kHz
+>:6512 E2=12.9J
+>:7008 trigger...
+>:7008 simmer rate 100 kHz
+>:7011 simmer rate  25 kHz
+>:7012 E2=13.0J
+>:7508 trigger...
+>:7508 simmer rate 100 kHz
+>:7511 simmer rate  25 kHz
+>:7512 E2=13.0J
+>:8008 trigger...
+>:8008 simmer rate 100 kHz
+>:8011 simmer rate  25 kHz
+>:8012 E2=13.0J
+>:8508 trigger...
+>:8508 simmer rate 100 kHz
+>:8511 simmer rate  25 kHz
+>:8513 E2=13.0J
+>:9008 trigger...
+>:9008 simmer rate 100 kHz
+>:9011 simmer rate  25 kHz
+>:9013 E2=12.5J
+>:9508 trigger...
+>:9508 simmer rate 100 kHz
+>:9511 simmer rate  25 kHz
+>:9513 E2=13.1J
+>:0008 trigger...
+>:0008 simmer rate 100 kHz
+>:0011 simmer rate  25 kHz
+>:0013 E2=13.1J
+>:0508 trigger...
+>:0508 simmer rate 100 kHz
+>:0512 simmer rate  25 kHz
+>:0513 E2=13.1J
+>:1008 trigger...
+>:1008 simmer rate 100 kHz
+>:1012 simmer rate  25 kHz
+>:1013 E2=13.0J
+>:1508 trigger...
+>:1508 simmer rate 100 kHz
+>:1512 simmer rate  25 kHz
+>:1513 E2=12.9J
+>:2008 trigger...
+>:2008 simmer rate 100 kHz
+>:2012 simmer rate  25 kHz
+>:2013 E2=13.0J
+>P:2508 trigger...
+>:2508 simmer rate 100 kHz
+>:2512 simmer rate  25 kHz
+>:2513 E2=13.0J
+>>p(ulse)  T,U           ... 180us,334V
+>:3008 trigger...
+>:3009 simmer rate 100 kHz
+>:3012 simmer rate  25 kHz
+>:3013 E2=19.2J
+>:3508 trigger...
+>:3509 simmer rate 100 kHz
+>:3512 simmer rate  25 kHz
+>:3513 E2=19.2J
+>:4009 trigger...
+>:4009 simmer rate 100 kHz
+>:4012 simmer rate  25 kHz
+>:4013 E2=19.2J
+>:4509 trigger...
+>:4509 simmer rate 100 kHz
+>:4512 simmer rate  25 kHz
+>:4513 E2=18.7J
+>:5009 trigger...
+>:5009 simmer rate 100 kHz
+>:5012 simmer rate  25 kHz
+>:5013 E2=19.3J
+>:5509 trigger...
+>:5509 simmer rate 100 kHz
+>:5512 simmer rate  25 kHz
+>:5514 E2=19.4J
+>:6009 trigger...
+>:6009 simmer rate 100 kHz
+>:6012 simmer rate  25 kHz
+>:6014 E2=19.3J
+>:6509 trigger...
+>:6509 simmer rate 100 kHz
+>:6512 simmer rate  25 kHz
+>:6514 E2=19.5J
+>:7009 trigger...
+>:7009 simmer rate 100 kHz
+>:7012 simmer rate  25 kHz
+>:7014 E2=19.3J
+>:7509 trigger...
+>:7509 simmer rate 100 kHz
+>:7513 simmer rate  25 kHz
+>:7514 E2=19.2J
+>:8009 trigger...
+>:8009 simmer rate 100 kHz
+>:8013 simmer rate  25 kHz
+>:8014 E2=19.3J
+>:8509 trigger...
+>:8509 simmer rate 100 kHz
+>:8513 simmer rate  25 kHz
+>:8514 E2=19.3J
+>p:9009 trigger...
+>:9009 simmer rate 100 kHz
+>:9013 simmer rate  25 kHz
+>:9014 E2=19.3J
+>>p(ulse)  T,U           ... 180us,334V
+>:9509 trigger...
+>:9509 simmer rate 100 kHz
+>:9513 simmer rate  25 kHz
+>:9514 E2=13.0J
+>:0009 trigger...
+>:0009 simmer rate 100 kHz
+>:0012 simmer rate  25 kHz
+>:0014 E2=12.9J
+>:0509 trigger...
+>:0509 simmer rate 100 kHz
+>:0513 simmer rate  25 kHz
+>:0514 E2=13.1J
+>:1009 trigger...
+>:1009 simmer rate 100 kHz
+>:1013 simmer rate  25 kHz
+>:1014 E2=13.0J
+>:1509 trigger...
+>:1509 simmer rate 100 kHz
+>:1513 simmer rate  25 kHz
+>:1514 E2=12.9J
+>:2009 trigger...
+>:2010 simmer rate 100 kHz
+>:2013 simmer rate  25 kHz
+>:2014 E2=13.1J
+>:2509 trigger...
+>:2510 simmer rate 100 kHz
+>:2513 simmer rate  25 kHz
+>:2514 E2=13.0J
+>P:3010 trigger...
+>:3010 simmer rate 100 kHz
+>:3013 simmer rate  25 kHz
+>:3014 E2=13.0J
+>:3510 trigger...
+>:3510 simmer rate 100 kHz
+>:3513 simmer rate  25 kHz
+>:3514 E2=13.0J
+>>p(ulse)  T,U           ... 180us,334V
+>:4010 trigger...
+>:4010 simmer rate 100 kHz
+>:4013 simmer rate  25 kHz
+>:4014 E2=19.3J
+>:4510 trigger...
+>:4510 simmer rate 100 kHz
+>:4513 simmer rate  25 kHz
+>:4515 E2=19.4J
+>:5010 trigger...
+>:5010 simmer rate 100 kHz
+>:5013 simmer rate  25 kHz
+>:5015 E2=19.3J
+>:5510 trigger...
+>:5510 simmer rate 100 kHz
+>:5513 simmer rate  25 kHz
+>:5515 E2=19.4J
+>:6010 trigger...
+>:6010 simmer rate 100 kHz
+>:6013 simmer rate  25 kHz
+>:6015 E2=19.3J
+>:6510 trigger...
+>:6510 simmer rate 100 kHz
+>:6514 simmer rate  25 kHz
+>:6515 E2=18.6J
+>:7010 trigger...
+>:7010 simmer rate 100 kHz
+>:7014 simmer rate  25 kHz
+>:7015 E2=19.2J
+>:7510 trigger...
+>:7510 simmer rate 100 kHz
+>:7514 simmer rate  25 kHz
+>:7515 E2=19.4J
+>:8010 trigger...
+>:8010 simmer rate 100 kHz
+>:8014 simmer rate  25 kHz
+>:8015 E2=19.3J
+>:8510 trigger...
+>:8510 simmer rate 100 kHz
+>:8514 simmer rate  25 kHz
+>:8515 E2=19.3J
+>:9010 trigger...
+>:9010 simmer rate 100 kHz
+>:9014 simmer rate  25 kHz
+>:9015 E2=19.3J
+>:9510 trigger...
+>:9510 simmer rate 100 kHz
+>:9514 simmer rate  25 kHz
+>:9515 E2=18.3J
+>:0010 trigger...
+>:0010 simmer rate 100 kHz
+>:0014 simmer rate  25 kHz
+>:0015 E2=18.4J
+>:0510 trigger...
+>:0510 simmer rate 100 kHz
+>:0514 simmer rate  25 kHz
+>:0515 E2=18.4J
+>:1010 trigger...
+>:1011 simmer rate 100 kHz
+>:1014 simmer rate  25 kHz
+>:1015 E2=19.3J
+>:9476 simmer rate  25 kHz
+>:4263 simmer rate  25 kHz
+>

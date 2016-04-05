@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="RawEthernet">
+</Property><Property Name="Solution File" Value="C:\Users\klks8243iu\Documents\SendRawPacket\RawEthernet\RawEthernet.sln">
+</Property><Property Name="Date" Value="Tuesday, November 27, 2012">
+</Property><Property Name="Time" Value="15:20 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="RawEthernet.sln" Description="File successfully backed up as C:\Users\klks8243iu\Documents\SendRawPacket\RawEthernet\Backup\RawEthernet.sln">
+</Event><Event ErrorLevel="0" Project="" Source="RawEthernet.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="RawEthernet.sln" Description="Converted">
+</Event></UpgradeLog>

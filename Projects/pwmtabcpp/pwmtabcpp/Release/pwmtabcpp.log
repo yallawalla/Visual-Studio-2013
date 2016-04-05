@@ -1,0 +1,30 @@
+﻿Build started 5/28/2014 12:42:25.
+     1>Project "c:\Users\MOCNIK\documents\visual studio 2010\Projects\pwmtabcpp\pwmtabcpp\pwmtabcpp.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Release\pwmtabcpp.unsuccessfulbuild".
+       ClCompile:
+         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\MOCNIK\Documents\STM32_USB-Host-Device_Lib_V2.1.0\Project\FatFs" /I"C:\Users\MOCNIK\Documents\STM32_USB-Host-Device_Lib_V2.1.0\Project\Pfm6Ctrl\inc" /I"C:\Users\MOCNIK\Documents\STM32_USB-Host-Device_Lib_V2.1.0\Project\Pfm6Ctrl\inc\app" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D PWMTABCPP_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Release\pwmtabcpp.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\MOCNIK\Documents\STM32_USB-Host-Device_Lib_V2.1.0\Project\FatFs" /I"C:\Users\MOCNIK\Documents\STM32_USB-Host-Device_Lib_V2.1.0\Project\Pfm6Ctrl\inc" /I"C:\Users\MOCNIK\Documents\STM32_USB-Host-Device_Lib_V2.1.0\Project\Pfm6Ctrl\inc\app" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D PWMTABCPP_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt dllmain.cpp
+         dllmain.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\MOCNIK\Documents\STM32_USB-Host-Device_Lib_V2.1.0\Project\FatFs" /I"C:\Users\MOCNIK\Documents\STM32_USB-Host-Device_Lib_V2.1.0\Project\Pfm6Ctrl\inc" /I"C:\Users\MOCNIK\Documents\STM32_USB-Host-Device_Lib_V2.1.0\Project\Pfm6Ctrl\inc\app" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D PWMTABCPP_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\pwmtabcpp.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt pwmtabcpp.cpp
+         pwmtabcpp.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\mocnik\documents\visual studio 2010\Projects\pwmtabcpp\Release\pwmtabcpp.dll" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\pwmtabcpp.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"c:\users\mocnik\documents\visual studio 2010\Projects\pwmtabcpp\Release\pwmtabcpp.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\mocnik\documents\visual studio 2010\Projects\pwmtabcpp\Release\pwmtabcpp.lib" /MACHINE:X86 /DLL Release\dllmain.obj
+         Release\pwmtabcpp.obj
+         Release\stdafx.obj
+         Generating code
+         Finished generating code
+         pwmtabcpp.vcxproj -> c:\users\mocnik\documents\visual studio 2010\Projects\pwmtabcpp\Release\pwmtabcpp.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"c:\users\mocnik\documents\visual studio 2010\Projects\pwmtabcpp\Release\pwmtabcpp.dll;#2" /manifest Release\pwmtabcpp.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Release\pwmtabcpp.unsuccessfulbuild".
+         Touching "Release\pwmtabcpp.lastbuildstate".
+     1>Done Building Project "c:\Users\MOCNIK\documents\visual studio 2010\Projects\pwmtabcpp\pwmtabcpp\pwmtabcpp.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.12

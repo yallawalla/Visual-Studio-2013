@@ -1,0 +1,218 @@
+?
+>u>u(bank)  Uc,Uc/2,20,-5 ... 200V,100V,20.0V,-4.7V
+>s>s(immer) n // t1,t2,tp ... 166ns,166ns,40us
+>d>d(elay)  T,PW          ... 100us,0.02
+>p>p(ulse)  T,PW          ... 100us,14
+>b>b(urst)  N,len,per     ... 1,1000us,1000ms
+>f>f(an)    Tl,Th,min,max ... 30?,40?,20%,95%
+>
+>
+>
+>
+>
+>
+>
+>
+>t
+0,0,0
+100,0,0
+100,0,0
+900,0,0
+900,2,2
+910,2,2
+915,2,2
+>
+>
+>
+>
+>t
+0,0,0
+100,0,0
+100,0,0
+900,0,0
+900,2,2
+910,2,2
+915,2,2
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>v 2 Jul  1 2014, <791ED425>
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,0V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,0V,6A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,4A,0V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,5A,0V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,5A,0V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,5A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,0V,6A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,4A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,5A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,5A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,5A,0V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,5A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,5A,1V,6A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,0V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,5A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,4A,0V,6A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,0V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,5A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,5A,0V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,0V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,5A,0V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,5A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,0V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,5A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,5A,0V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,1V,6A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,0V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,4A,0V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,0V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,4A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,4A,0V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,5A,0V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,4A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,5A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,5A,0V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,4A,0V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,0V,6A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,5A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,4A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,4A,0V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,5A,0V,6A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,0V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,5A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,0V,6A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,2V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 200V,5A,0V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>a  >a(dc)    U1,I1,U2,I2   ... 199V,5A,1V,5A
+>a(dc)    idle          ... 0V,0A,0V,0A
+>a(dc)    Isimm,I,Uh,Ul ... 0A,0A,780V,500V
+>

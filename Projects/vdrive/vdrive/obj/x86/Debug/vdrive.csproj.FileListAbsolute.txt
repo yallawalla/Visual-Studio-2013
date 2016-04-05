@@ -1,0 +1,10 @@
+C:\Users\User\AppData\Local\Temporary Projects\vdrive\bin\Debug\vdrive.exe
+C:\Users\User\AppData\Local\Temporary Projects\vdrive\bin\Debug\vdrive.pdb
+C:\Users\User\AppData\Local\Temporary Projects\vdrive\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\User\AppData\Local\Temporary Projects\vdrive\obj\x86\Debug\vdrive.exe
+C:\Users\User\AppData\Local\Temporary Projects\vdrive\obj\x86\Debug\vdrive.pdb
+C:\Users\User\documents\visual studio 2010\Projects\vdrive\vdrive\obj\x86\Debug\vdrive.exe
+C:\Users\User\documents\visual studio 2010\Projects\vdrive\vdrive\obj\x86\Debug\vdrive.pdb
+C:\Users\User\documents\visual studio 2010\Projects\vdrive\vdrive\bin\Debug\vdrive.exe
+C:\Users\User\documents\visual studio 2010\Projects\vdrive\vdrive\bin\Debug\vdrive.pdb
+C:\Users\User\documents\visual studio 2010\Projects\vdrive\vdrive\obj\x86\Debug\ResolveAssemblyReference.cache

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{54F7E085-3657-4E8F-AEC2-5AF095CBAF08}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Lwip</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\WpdPack\Include;C:\Users\klks8243iu\Documents\Keil\FatFs;C:\Users\klks8243iu\Documents\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\include;C:\Users\klks8243iu\Documents\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\include\ipv4;C:\Users\klks8243iu\Documents\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\port\STM32F2x7;C:\Users\klks8243iu\Documents\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\port\STM32F2x7\Standalone;C:\Users\klks8243iu\Documents\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Libraries\STM32F2x7_ETH_Driver\inc;C:\Users\klks8243iu\Documents\Keil\STM32_USB-Host-Device_Lib_V2.1.0\Project\USB_Device_Examples\MSC\src\ftpd</AdditionalIncludeDirectories>
+      <UndefineAllPreprocessorDefinitions>false</UndefineAllPreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\WpdPack\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>wpcap.lib;Packet.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="serial.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Keil\FatFs\diskio.c" />
+    <ClCompile Include="..\..\..\..\Keil\FatFs\ff.c" />
+    <ClCompile Include="..\..\..\..\Keil\FatFs\option\ccsbcs.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\api\api_lib.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\api\api_msg.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\api\err.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\api\netbuf.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\api\netdb.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\api\netifapi.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\api\sockets.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\api\tcpip.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\dhcp.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\dns.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\init.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\ipv4\autoip.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\ipv4\icmp.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\ipv4\igmp.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\ipv4\inet.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\ipv4\inet_chksum.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\ipv4\ip.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\ipv4\ip_addr.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\ipv4\ip_frag.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\mem.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\memp.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\netif.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\pbuf.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\raw.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\stats.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\sys.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\tcp.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\tcp_in.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\tcp_out.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\udp.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\netif\etharp.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\netif\loopif.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\netif\slipif.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32_USB-Host-Device_Lib_V2.1.0\Project\USB_Device_Examples\MSC\src\ftpd\netconf.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32_USB-Host-Device_Lib_V2.1.0\Project\USB_Device_Examples\MSC\src\ftpd\NetFtp_ftpd.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32_USB-Host-Device_Lib_V2.1.0\Project\USB_Device_Examples\MSC\src\ftpd\NetFtp_vfs.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32_USB-Host-Device_Lib_V2.1.0\Project\USB_Device_Examples\MSC\src\ftpd\newif.c" />
+    <ClCompile Include="..\..\..\..\Keil\STM32_USB-Host-Device_Lib_V2.1.0\Project\USB_Device_Examples\MSC\src\ftpd\pcap.c" />
+    <ClCompile Include="Lwip.cpp" />
+    <ClCompile Include="serial.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

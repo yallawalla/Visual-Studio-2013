@@ -1,0 +1,12 @@
+C:\Users\User\Documents\Visual Studio 2010\Projects\template\wtf100\bin\Release\template.exe.config
+C:\Users\User\Documents\Visual Studio 2010\Projects\template\wtf100\bin\Release\template.exe.manifest
+C:\Users\User\Documents\Visual Studio 2010\Projects\template\wtf100\bin\Release\template.application
+C:\Users\User\Documents\Visual Studio 2010\Projects\template\wtf100\bin\Release\template.exe
+C:\Users\User\Documents\Visual Studio 2010\Projects\template\wtf100\bin\Release\template.pdb
+C:\Users\User\Documents\Visual Studio 2010\Projects\template\wtf100\obj\x86\Release\WindowsFormsApplication1.Form1.resources
+C:\Users\User\Documents\Visual Studio 2010\Projects\template\wtf100\obj\x86\Release\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\User\Documents\Visual Studio 2010\Projects\template\wtf100\obj\x86\Release\template.csproj.GenerateResource.Cache
+C:\Users\User\Documents\Visual Studio 2010\Projects\template\wtf100\obj\x86\Release\template.exe.manifest
+C:\Users\User\Documents\Visual Studio 2010\Projects\template\wtf100\obj\x86\Release\template.application
+C:\Users\User\Documents\Visual Studio 2010\Projects\template\wtf100\obj\x86\Release\template.exe
+C:\Users\User\Documents\Visual Studio 2010\Projects\template\wtf100\obj\x86\Release\template.pdb

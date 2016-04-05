@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010 Express for Windows Phone
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "Content1", "Content1\Content1.contentproj", "{53CD8E0A-DC43-4CFA-AC09-9DF4A37B4A39}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53CD8E0A-DC43-4CFA-AC09-9DF4A37B4A39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

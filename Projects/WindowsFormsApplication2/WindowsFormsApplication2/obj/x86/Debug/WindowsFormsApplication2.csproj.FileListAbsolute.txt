@@ -1,0 +1,7 @@
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.exe
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.pdb

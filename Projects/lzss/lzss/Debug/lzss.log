@@ -1,0 +1,37 @@
+﻿Build started 8/30/2013 10:46:06 AM.
+     1>Project "C:\Users\MOCNIK\documents\visual studio 2010\Projects\lzss\lzss\lzss.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\lzss.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       ClCompile:
+         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\lzss.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt lzss.cpp /clr:nostdlib 
+         lzss.cpp
+     1>lzss.cpp(128): warning C4244: '=' : conversion from 'short' to 'unsigned char', possible loss of data
+     1>lzss.cpp(161): warning C4244: '=' : conversion from 'short' to 'unsigned char', possible loss of data
+     1>lzss.cpp(162): warning C4244: '=' : conversion from 'short' to 'unsigned char', possible loss of data
+     1>lzss.cpp(204): warning C4244: '=' : conversion from 'short' to 'unsigned char', possible loss of data
+     1>lzss.cpp(211): warning C4244: '=' : conversion from 'short' to 'unsigned char', possible loss of data
+     1>lzss.cpp(233): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+         All outputs are up-to-date.
+       ResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\MOCNIK\documents\visual studio 2010\Projects\lzss\Debug\lzss.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\lzss.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\MOCNIK\documents\visual studio 2010\Projects\lzss\Debug\lzss.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\app.res
+         Debug\AssemblyInfo.obj
+         Debug\lzss.obj
+         Debug\stdafx.obj
+         "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+         lzss.vcxproj -> C:\Users\MOCNIK\documents\visual studio 2010\Projects\lzss\Debug\lzss.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\MOCNIK\documents\visual studio 2010\Projects\lzss\Debug\lzss.exe;#1" /manifest Debug\lzss.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\lzss.unsuccessfulbuild".
+         Touching "Debug\lzss.lastbuildstate".
+     1>Done Building Project "C:\Users\MOCNIK\documents\visual studio 2010\Projects\lzss\lzss\lzss.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.96

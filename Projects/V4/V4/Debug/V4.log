@@ -1,0 +1,111 @@
+﻿Build started 4/12/2013 3:22:51 PM.
+     1>Project "C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\V4\V4\V4.vcxproj" on node 2 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Debug\V4.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "Debug\V4.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D V4_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\V4.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D V4_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt dllmain.cpp
+         dllmain.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\V4\V4\\embed\inc" /ZI /nologo /W1 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D V4_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt embed\src\Dett.C embed\src\Etaloni.C embed\src\Etbali.C embed\src\Geomag.C embed\src\Jw.C embed\src\New.C embed\src\rem.C embed\src\remcomm.C embed\src\Remdsp.C embed\src\Remedit.C embed\src\Remherc.C embed\src\remlcd.C embed\src\Remlink.C embed\src\Remmain.C embed\src\remmenu.C embed\src\Remmisc.C embed\src\remplan.C embed\src\Rempos.C embed\src\Remtime.C embed\src\Rtcm.C embed\src\Rtilt.C embed\src\utm1.C
+         utm1.C
+         Rtilt.C
+         Rtcm.C
+         Remtime.C
+         Rempos.C
+         remplan.C
+         Remmisc.C
+         remmenu.C
+         Remmain.C
+         Remlink.C
+         remlcd.C
+         Remherc.C
+         Remedit.C
+         Remdsp.C
+         remcomm.C
+         rem.C
+         New.C
+         Jw.C
+         Geomag.C
+         Etbali.C
+         Generating Code...
+         Compiling...
+         Etaloni.C
+         Dett.C
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D V4_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\V4.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt V4.cpp
+         V4.cpp
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\V4.dll.embed.manifest.res" Debug\V4_manifest.rc 
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\V4\Debug\V4.dll) does not match the Linker's OutputFile property value (C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\V4cs\V4cs\bin\Debug\V4.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\V4cs\V4cs\bin\Debug\V4.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\V4.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\V4\Debug\V4.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\V4\Debug\V4.lib" /MACHINE:X86 /DLL Debug\V4.dll.embed.manifest.res
+         Debug\dllmain.obj
+         Debug\Dett.obj
+         Debug\Etaloni.obj
+         Debug\Etbali.obj
+         Debug\Geomag.obj
+         Debug\Jw.obj
+         Debug\New.obj
+         Debug\rem.obj
+         Debug\remcomm.obj
+         Debug\Remdsp.obj
+         Debug\Remedit.obj
+         Debug\Remherc.obj
+         Debug\remlcd.obj
+         Debug\Remlink.obj
+         Debug\Remmain.obj
+         Debug\remmenu.obj
+         Debug\Remmisc.obj
+         Debug\remplan.obj
+         Debug\Rempos.obj
+         Debug\Remtime.obj
+         Debug\Rtcm.obj
+         Debug\Rtilt.obj
+         Debug\utm1.obj
+         Debug\stdafx.obj
+         Debug\V4.obj
+            Creating library C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\V4\Debug\V4.lib and object C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\V4\Debug\V4.exp
+       Manifest:
+         Deleting file "Debug\V4.dll.embed.manifest".
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\V4.dll.embed.manifest" /manifest Debug\V4.dll.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\V4.dll.embed.manifest.res" Debug\V4_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\V4cs\V4cs\bin\Debug\V4.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\V4.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\V4\Debug\V4.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\V4\Debug\V4.lib" /MACHINE:X86 /DLL Debug\V4.dll.embed.manifest.res
+         Debug\dllmain.obj
+         Debug\Dett.obj
+         Debug\Etaloni.obj
+         Debug\Etbali.obj
+         Debug\Geomag.obj
+         Debug\Jw.obj
+         Debug\New.obj
+         Debug\rem.obj
+         Debug\remcomm.obj
+         Debug\Remdsp.obj
+         Debug\Remedit.obj
+         Debug\Remherc.obj
+         Debug\remlcd.obj
+         Debug\Remlink.obj
+         Debug\Remmain.obj
+         Debug\remmenu.obj
+         Debug\Remmisc.obj
+         Debug\remplan.obj
+         Debug\Rempos.obj
+         Debug\Remtime.obj
+         Debug\Rtcm.obj
+         Debug\Rtilt.obj
+         Debug\utm1.obj
+         Debug\stdafx.obj
+         Debug\V4.obj
+            Creating library C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\V4\Debug\V4.lib and object C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\V4\Debug\V4.exp
+         V4.vcxproj -> C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\V4\Debug\V4.dll
+       FinalizeBuildStatus:
+         Deleting file "Debug\V4.unsuccessfulbuild".
+         Touching "Debug\V4.lastbuildstate".
+     1>Done Building Project "C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\V4\V4\V4.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.15

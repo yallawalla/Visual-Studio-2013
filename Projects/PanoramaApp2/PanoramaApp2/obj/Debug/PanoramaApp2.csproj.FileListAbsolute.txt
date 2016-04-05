@@ -1,0 +1,14 @@
+c:\users\mocnik\documents\visual studio 2010\Projects\PanoramaApp2\PanoramaApp2\Bin\Debug\ApplicationIcon.png
+c:\users\mocnik\documents\visual studio 2010\Projects\PanoramaApp2\PanoramaApp2\Bin\Debug\Background.png
+c:\users\mocnik\documents\visual studio 2010\Projects\PanoramaApp2\PanoramaApp2\Bin\Debug\PanoramaApp2.dll
+c:\users\mocnik\documents\visual studio 2010\Projects\PanoramaApp2\PanoramaApp2\Bin\Debug\PanoramaApp2.pdb
+c:\users\mocnik\documents\visual studio 2010\Projects\PanoramaApp2\PanoramaApp2\Bin\Debug\AppManifest.xaml
+c:\users\mocnik\documents\visual studio 2010\Projects\PanoramaApp2\PanoramaApp2\Bin\Debug\PanoramaApp2.xap
+c:\users\mocnik\documents\visual studio 2010\Projects\PanoramaApp2\PanoramaApp2\Bin\Debug\Microsoft.Phone.Controls.dll
+c:\users\mocnik\documents\visual studio 2010\Projects\PanoramaApp2\PanoramaApp2\Bin\Debug\Microsoft.Phone.Controls.xml
+c:\users\mocnik\documents\visual studio 2010\Projects\PanoramaApp2\PanoramaApp2\obj\Debug\App.g.i.cs
+c:\users\mocnik\documents\visual studio 2010\Projects\PanoramaApp2\PanoramaApp2\obj\Debug\MainPage.g.i.cs
+c:\users\mocnik\documents\visual studio 2010\Projects\PanoramaApp2\PanoramaApp2\obj\Debug\PanoramaApp2.g.resources
+c:\users\mocnik\documents\visual studio 2010\Projects\PanoramaApp2\PanoramaApp2\obj\Debug\PanoramaApp2.dll
+c:\users\mocnik\documents\visual studio 2010\Projects\PanoramaApp2\PanoramaApp2\obj\Debug\PanoramaApp2.pdb
+c:\users\mocnik\documents\visual studio 2010\Projects\PanoramaApp2\PanoramaApp2\obj\Debug\XapCacheFile.xml

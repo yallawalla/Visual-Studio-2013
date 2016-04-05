@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010 Express for Windows Phone
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduledTaskAgent1", "ScheduledTaskAgent1\ScheduledTaskAgent1.csproj", "{E9F14337-EE32-4E5D-A0E1-CCF82726A3DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9F14337-EE32-4E5D-A0E1-CCF82726A3DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9F14337-EE32-4E5D-A0E1-CCF82726A3DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9F14337-EE32-4E5D-A0E1-CCF82726A3DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9F14337-EE32-4E5D-A0E1-CCF82726A3DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

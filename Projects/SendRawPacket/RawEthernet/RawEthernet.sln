@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RawEthernet", "RawEthernet.csproj", "{432C59D8-B82E-45FA-940C-E7876AC10EE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{432C59D8-B82E-45FA-940C-E7876AC10EE4}.Debug|Default.ActiveCfg = Debug|Any CPU
+		{432C59D8-B82E-45FA-940C-E7876AC10EE4}.Debug|Default.Build.0 = Debug|Any CPU
+		{432C59D8-B82E-45FA-940C-E7876AC10EE4}.Release|Default.ActiveCfg = Release|Any CPU
+		{432C59D8-B82E-45FA-940C-E7876AC10EE4}.Release|Default.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

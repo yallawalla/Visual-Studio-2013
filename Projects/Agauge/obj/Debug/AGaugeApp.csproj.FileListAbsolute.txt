@@ -1,0 +1,9 @@
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\Agauge\bin\Debug\AGaugeApp.exe
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\Agauge\bin\Debug\AGaugeApp.pdb
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\Agauge\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\Agauge\obj\Debug\AGaugeApp.Form1.resources
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\Agauge\obj\Debug\AGaugeApp.Properties.Resources.resources
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\Agauge\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\Agauge\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\Agauge\obj\Debug\AGaugeApp.exe
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\Agauge\obj\Debug\AGaugeApp.pdb

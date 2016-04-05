@@ -1,0 +1,150 @@
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\bin\Release\ZedGraph.dll
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\bin\Release\ZedGraph.xml
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\bin\Release\de\ZedGraph.resources.dll
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\bin\Release\es\ZedGraph.resources.dll
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\bin\Release\fr\ZedGraph.resources.dll
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\bin\Release\hu\ZedGraph.resources.dll
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\bin\Release\it\ZedGraph.resources.dll
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\bin\Release\ja\ZedGraph.resources.dll
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\bin\Release\pt\ZedGraph.resources.dll
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\bin\Release\ru\ZedGraph.resources.dll
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\bin\Release\sk\ZedGraph.resources.dll
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\bin\Release\sv\ZedGraph.resources.dll
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\bin\Release\tr\ZedGraph.resources.dll
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\bin\Release\zh-cn\ZedGraph.resources.dll
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\bin\Release\zh-tw\ZedGraph.resources.dll
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\obj\x86\Release\WindowsFormsApplication1.Form1.resources
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\obj\x86\Release\WindowsFormsApplication1.Properties.Resources.resources
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\bin\Release\wtf100.exe.manifest
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\bin\Release\wtf100.application
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\bin\Release\wtf100.exe
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\bin\Release\wtf100.pdb
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\obj\x86\Release\wtf100.exe.manifest
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\obj\x86\Release\wtf100.application
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\obj\x86\Release\wtf100.exe
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\obj\x86\Release\wtf100.pdb
+C:\Documents and Settings\Mocnik\Desktop\Cterm\Pfm6\bin\Release\wtf100.exe.config
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\Pfm6\bin\Release\wtf100.exe.config
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\Pfm6\obj\x86\Release\wtf100.exe
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\Pfm6\obj\x86\Release\wtf100.pdb
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\Pfm6\bin\Release\wtf100.exe.manifest
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\Pfm6\bin\Release\wtf100.application
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\Pfm6\bin\Release\wtf100.exe
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\Pfm6\bin\Release\wtf100.pdb
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\Pfm6\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\Pfm6\obj\x86\Release\WindowsFormsApplication1.Form1.resources
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\Pfm6\obj\x86\Release\WindowsFormsApplication1.Properties.Resources.resources
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\Pfm6\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\Pfm6\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\Pfm6\obj\x86\Release\wtf100.exe.manifest
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\Pfm6\obj\x86\Release\wtf100.application
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\bin\Release\wtf100.exe.config
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\bin\Release\wtf100.exe.manifest
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\bin\Release\wtf100.application
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\bin\Release\wtf100.exe
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\bin\Release\wtf100.pdb
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\WindowsFormsApplication1.Form1.resources
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\WindowsFormsApplication1.Properties.Resources.resources
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\wtf100.exe.manifest
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\wtf100.application
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\wtf100.exe
+C:\Documents and Settings\Mocnik\My Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\wtf100.pdb
+C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\bin\Release\wtf100.exe.config
+C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\bin\Release\wtf100.exe.manifest
+C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\bin\Release\wtf100.application
+C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\bin\Release\wtf100.exe
+C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\bin\Release\wtf100.pdb
+C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\WindowsFormsApplication1.Form1.resources
+C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\wtf100.exe.manifest
+C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\wtf100.application
+C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\wtf100.exe
+C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\wtf100.pdb
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\bin\Release\wtf100.exe.config
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\wtf100.exe
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\wtf100.pdb
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\bin\Release\wtf100.exe.manifest
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\bin\Release\wtf100.application
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\bin\Release\wtf100.exe
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\bin\Release\wtf100.pdb
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\WindowsFormsApplication1.Form1.resources
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\wtf100.exe.manifest
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\wtf100.application
+C:\Users\User\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\bin\Release\wtf100.exe.config
+C:\Users\User\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\wtf100.exe
+C:\Users\User\Documents\Visual Studio 2010\Projects\wtf100_205\wtf100\obj\x86\Release\wtf100.pdb
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100old\wtf100\bin\Release\wtf100.exe.config
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100old\wtf100\obj\x86\Release\wtf100.exe
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100old\wtf100\obj\x86\Release\wtf100.pdb
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100old\wtf100\bin\Release\wtf100.exe.manifest
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100old\wtf100\bin\Release\wtf100.application
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100old\wtf100\bin\Release\wtf100.exe
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100old\wtf100\bin\Release\wtf100.pdb
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100old\wtf100\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100old\wtf100\obj\x86\Release\WindowsFormsApplication1.Form1.resources
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100old\wtf100\obj\x86\Release\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100old\wtf100\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100old\wtf100\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100old\wtf100\obj\x86\Release\wtf100.exe.manifest
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100old\wtf100\obj\x86\Release\wtf100.application
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100\wtf100\bin\Release\wtf100.exe.config
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\wtf100.exe
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\wtf100.pdb
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100\wtf100\bin\Release\wtf100.exe.manifest
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100\wtf100\bin\Release\wtf100.application
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100\wtf100\bin\Release\wtf100.exe
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100\wtf100\bin\Release\wtf100.pdb
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\WindowsFormsApplication1.Form1.resources
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\wtf100.exe.manifest
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\wtf100.application
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\wtf100.csproj.GenerateResource.Cache
+C:\Users\User\Documents\Visual Studio 2010\Projects\wtf100\wtf100\bin\Release\wtf100.exe.config
+C:\Users\User\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\wtf100.exe
+C:\Users\User\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\wtf100.pdb
+C:\Users\User\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\wtf100.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\WindowsFormsApplication1.Form1.resources
+C:\Users\User\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\WindowsFormsApplication1.Form2.resources
+C:\Users\User\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\User\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\wtf100.csproj.GenerateResource.Cache
+C:\Users\User\Documents\Visual Studio 2010\Projects\wtf100\wtf100\bin\Release\wtf100.exe.manifest
+C:\Users\User\Documents\Visual Studio 2010\Projects\wtf100\wtf100\bin\Release\wtf100.application
+C:\Users\User\Documents\Visual Studio 2010\Projects\wtf100\wtf100\bin\Release\wtf100.exe
+C:\Users\User\Documents\Visual Studio 2010\Projects\wtf100\wtf100\bin\Release\wtf100.pdb
+C:\Users\User\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\wtf100.exe.manifest
+C:\Users\User\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\wtf100.application
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\WindowsFormsApplication1.Form2.resources
+C:\Users\Matjaz\Documents\Visual Studio 2010\Projects\wtf100\wtf100\bin\Release\wtf100.exe.config
+C:\Users\Matjaz\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\wtf100.exe
+C:\Users\Matjaz\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\wtf100.pdb
+C:\Users\Matjaz\Documents\Visual Studio 2010\Projects\wtf100\wtf100\bin\Release\wtf100.exe.manifest
+C:\Users\Matjaz\Documents\Visual Studio 2010\Projects\wtf100\wtf100\bin\Release\wtf100.application
+C:\Users\Matjaz\Documents\Visual Studio 2010\Projects\wtf100\wtf100\bin\Release\wtf100.exe
+C:\Users\Matjaz\Documents\Visual Studio 2010\Projects\wtf100\wtf100\bin\Release\wtf100.pdb
+C:\Users\Matjaz\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\WindowsFormsApplication1.Form1.resources
+C:\Users\Matjaz\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\WindowsFormsApplication1.Form2.resources
+C:\Users\Matjaz\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Matjaz\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\wtf100.csproj.GenerateResource.Cache
+C:\Users\Matjaz\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\wtf100.exe.manifest
+C:\Users\Matjaz\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\wtf100.application
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\WindowsFormsApplication1.Form3.resources
+C:\Users\Matjaz\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\WindowsFormsApplication1.Form3.resources
+C:\Users\User\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\WindowsFormsApplication1.Form3.resources
+C:\Users\User\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\WindowsFormsApplication1.Form4.resources
+C:\Users\Matjaz\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\wtf100.csprojResolveAssemblyReference.cache
+C:\Users\Matjaz\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\WindowsFormsApplication1.pShape.resources
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\WindowsFormsApplication1.pShape.resources
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\wtf100\wtf100\obj\x86\Release\wtf100.csprojResolveAssemblyReference.cache

@@ -1,0 +1,5 @@
+C:\Users\MOCNIK\documents\visual studio 2010\Projects\Tcp2Com\Tcp2Com\bin\Debug\Tcp2Com.exe
+C:\Users\MOCNIK\documents\visual studio 2010\Projects\Tcp2Com\Tcp2Com\bin\Debug\Tcp2Com.pdb
+C:\Users\MOCNIK\documents\visual studio 2010\Projects\Tcp2Com\Tcp2Com\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\MOCNIK\documents\visual studio 2010\Projects\Tcp2Com\Tcp2Com\obj\x86\Debug\Tcp2Com.exe
+C:\Users\MOCNIK\documents\visual studio 2010\Projects\Tcp2Com\Tcp2Com\obj\x86\Debug\Tcp2Com.pdb

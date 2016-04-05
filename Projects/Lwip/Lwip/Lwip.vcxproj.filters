@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Lwip">
+      <UniqueIdentifier>{2819b8b3-9ec1-46b4-b552-63f60e0a55d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FatFs">
+      <UniqueIdentifier>{4bc994a2-0c7e-481a-b702-b9fa5b7097ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ftp">
+      <UniqueIdentifier>{6344b9da-40eb-4468-9db5-19437f703cbd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="serial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Lwip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\dhcp.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\dns.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\init.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\mem.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\memp.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\netif.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\pbuf.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\raw.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\stats.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\sys.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\tcp.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\tcp_in.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\tcp_out.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\udp.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\ipv4\autoip.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\ipv4\icmp.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\ipv4\igmp.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\ipv4\inet.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\ipv4\inet_chksum.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\ipv4\ip.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\ipv4\ip_addr.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\core\ipv4\ip_frag.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\netif\etharp.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\netif\loopif.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\netif\slipif.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\api\api_lib.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\api\api_msg.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\api\err.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\api\netbuf.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\api\netdb.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\api\netifapi.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\api\sockets.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32F2x7_ETH_LwIP_V1.1.0\Utilities\Third_Party\lwip_v1.3.2\src\api\tcpip.c">
+      <Filter>Lwip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32_USB-Host-Device_Lib_V2.1.0\Project\USB_Device_Examples\MSC\src\ftpd\newif.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="serial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32_USB-Host-Device_Lib_V2.1.0\Project\USB_Device_Examples\MSC\src\ftpd\pcap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32_USB-Host-Device_Lib_V2.1.0\Project\USB_Device_Examples\MSC\src\ftpd\netconf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\FatFs\ff.c">
+      <Filter>FatFs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\FatFs\diskio.c">
+      <Filter>FatFs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\FatFs\option\ccsbcs.c">
+      <Filter>FatFs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32_USB-Host-Device_Lib_V2.1.0\Project\USB_Device_Examples\MSC\src\ftpd\NetFtp_ftpd.c">
+      <Filter>Ftp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Keil\STM32_USB-Host-Device_Lib_V2.1.0\Project\USB_Device_Examples\MSC\src\ftpd\NetFtp_vfs.c">
+      <Filter>Ftp</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

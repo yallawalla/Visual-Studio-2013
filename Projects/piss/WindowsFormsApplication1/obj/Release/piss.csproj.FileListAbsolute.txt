@@ -1,0 +1,14 @@
+C:\Users\Matjaz\Documents\visual studio 2013\Projects\piss\WindowsFormsApplication1\bin\Release\WindowsFormsApplication1.exe.config
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\piss\WindowsFormsApplication1\bin\Release\WindowsFormsApplication1.exe.config
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\piss\WindowsFormsApplication1\bin\Release\WindowsFormsApplication1.exe.manifest
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\piss\WindowsFormsApplication1\bin\Release\WindowsFormsApplication1.application
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\piss\WindowsFormsApplication1\bin\Release\WindowsFormsApplication1.exe
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\piss\WindowsFormsApplication1\bin\Release\WindowsFormsApplication1.pdb
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\piss\WindowsFormsApplication1\obj\Release\piss.csprojResolveAssemblyReference.cache
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\piss\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.Form1.resources
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\piss\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\piss\WindowsFormsApplication1\obj\Release\piss.csproj.GenerateResource.Cache
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\piss\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.exe.manifest
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\piss\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.application
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\piss\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.exe
+C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\piss\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.pdb

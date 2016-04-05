@@ -1,0 +1,8 @@
+C:\Users\MOCNIK\documents\visual studio 2010\Projects\ppp\ppp\bin\Debug\ppp.exe
+C:\Users\MOCNIK\documents\visual studio 2010\Projects\ppp\ppp\bin\Debug\ppp.pdb
+C:\Users\MOCNIK\documents\visual studio 2010\Projects\ppp\ppp\obj\x86\Debug\ppp.csprojResolveAssemblyReference.cache
+C:\Users\MOCNIK\documents\visual studio 2010\Projects\ppp\ppp\obj\x86\Debug\ppp.Form1.resources
+C:\Users\MOCNIK\documents\visual studio 2010\Projects\ppp\ppp\obj\x86\Debug\ppp.Properties.Resources.resources
+C:\Users\MOCNIK\documents\visual studio 2010\Projects\ppp\ppp\obj\x86\Debug\ppp.csproj.GenerateResource.Cache
+C:\Users\MOCNIK\documents\visual studio 2010\Projects\ppp\ppp\obj\x86\Debug\ppp.exe
+C:\Users\MOCNIK\documents\visual studio 2010\Projects\ppp\ppp\obj\x86\Debug\ppp.pdb

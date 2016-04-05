@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="RawEthernet">
+</Property><Property Name="Solution File" Value="C:\Users\klks8243iu\Documents\SendRawPacket\RawEthernet\RawEthernet.sln">
+</Property><Property Name="User Options File" Value="C:\Users\klks8243iu\Documents\SendRawPacket\RawEthernet\RawEthernet.suo">
+</Property><Property Name="Date" Value="Tuesday, November 27, 2012">
+</Property><Property Name="Time" Value="15:20 PM">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="RawEthernet.sln" Description="File successfully backed up as C:\Users\klks8243iu\Documents\SendRawPacket\RawEthernet\Backup1\RawEthernet.sln">
+</Event><Event ErrorLevel="0" Project="" Source="RawEthernet.suo" Description="File successfully backed up as C:\Users\klks8243iu\Documents\SendRawPacket\RawEthernet\Backup1\RawEthernet.suo">
+</Event><Event ErrorLevel="0" Project="RawEthernet" Source="RawEthernet.csproj" Description="Project file successfully backed up as C:\Users\klks8243iu\Documents\SendRawPacket\RawEthernet\Backup1\RawEthernet.csproj">
+</Event><Event ErrorLevel="0" Project="RawEthernet" Source="RawEthernet.csproj.user" Description="Project user file successfully backed up as C:\Users\klks8243iu\Documents\SendRawPacket\RawEthernet\Backup1\RawEthernet.csproj.user">
+</Event><Event ErrorLevel="0" Project="RawEthernet" Source="AssemblyInfo.cs" Description="File successfully backed up as C:\Users\klks8243iu\Documents\SendRawPacket\RawEthernet\Backup1\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="RawEthernet" Source="RawEthernet.cs" Description="File successfully backed up as C:\Users\klks8243iu\Documents\SendRawPacket\RawEthernet\Backup1\RawEthernet.cs">
+</Event><Event ErrorLevel="0" Project="RawEthernet" Source="App.ico" Description="File successfully backed up as C:\Users\klks8243iu\Documents\SendRawPacket\RawEthernet\Backup1\App.ico">
+</Event><Event ErrorLevel="0" Project="RawEthernet" Source="RawEthernet.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="RawEthernet" Source="RawEthernet.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="RawEthernet.sln" Description="The solution file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="" Source="RawEthernet.sln" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="RawEthernet" Source="RawEthernet.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

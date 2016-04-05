@@ -1,0 +1,6 @@
+C:\Users\User\documents\visual studio 2010\Projects\Slip2Net\Slip2Net\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\User\documents\visual studio 2010\Projects\Slip2Net\Slip2Net\obj\x86\Release\Com2Net.Properties.Resources.resources
+C:\Users\User\documents\visual studio 2010\Projects\Slip2Net\Slip2Net\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\User\documents\visual studio 2010\Projects\Slip2Net\Slip2Net\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\User\Documents\Visual Studio 2010\Projects\Slip2Net\Slip2Net\obj\x86\Release\Slip2Net.exe
+C:\Users\User\Documents\Visual Studio 2010\Projects\Slip2Net\Slip2Net\obj\x86\Release\Slip2Net.pdb

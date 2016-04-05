@@ -1,0 +1,16 @@
+D:\Documents and Settings\Mocnik\My Documents\Projects\charger\VB\ConsoleApplication1\ConsoleApplication1\obj\Release\ConsoleApplication1.exe
+D:\Documents and Settings\Mocnik\My Documents\Projects\charger\VB\ConsoleApplication1\ConsoleApplication1\obj\Release\ConsoleApplication1.pdb
+D:\Documents and Settings\Mocnik\My Documents\Projects\charger\VB\ConsoleApplication1\ConsoleApplication1\bin\Release\ConsoleApplication1.exe
+D:\Documents and Settings\Mocnik\My Documents\Projects\charger\VB\ConsoleApplication1\ConsoleApplication1\bin\Release\ConsoleApplication1.pdb
+D:\Documents and Settings\Mocnik\My Documents\Projects\charger\VB\ConsoleApplication1\ConsoleApplication1\bin\Release\FTD2XX_NET.dll
+D:\Documents and Settings\Mocnik\My Documents\Projects\charger\VB\ConsoleApplication1\ConsoleApplication1\bin\Release\FTD2XX_NET.xml
+D:\Documents and Settings\Mocnik\My Documents\Projects\charger\VB\ConsoleApplication1\ConsoleApplication1\obj\Release\ResolveAssemblyReference.cache
+C:\Users\klks8243iu\Desktop\ConsoleApplication1\ConsoleApplication1\obj\Release\ConsoleApplication1.exe
+C:\Users\klks8243iu\Desktop\ConsoleApplication1\ConsoleApplication1\obj\Release\ConsoleApplication1.pdb
+C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\ConsoleApplication1\ConsoleApplication1\bin\Release\FTD2XX_NET.dll
+C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\ConsoleApplication1\ConsoleApplication1\bin\Release\FTD2XX_NET.xml
+C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\ConsoleApplication1\ConsoleApplication1\obj\Release\ResolveAssemblyReference.cache
+C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\ConsoleApplication1\ConsoleApplication1\bin\Release\StmResetProg.exe
+C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\ConsoleApplication1\ConsoleApplication1\bin\Release\StmResetProg.pdb
+C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\ConsoleApplication1\ConsoleApplication1\obj\Release\StmResetProg.exe
+C:\Users\klks8243iu\Documents\Visual Studio 2010\Projects\ConsoleApplication1\ConsoleApplication1\obj\Release\StmResetProg.pdb

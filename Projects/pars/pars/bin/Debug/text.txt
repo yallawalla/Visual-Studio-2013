@@ -1,0 +1,63 @@
+
+{
+	version()
+	WORD(%X)
+	LONG(%X)
+	SRECORD(%s)
+	DUMP(%X,%X)
+
+	? {
+		mode(%d..)
+		event(%d..)
+		ERROR(%d..)
+		DEBUG(%d..)
+	}
+	+ {
+
+	}
+
+	- {	
+
+		usb	{ 
+			file() 
+			serial() 
+			host()
+		}
+
+		i2c	{ 
+			address() 
+			speed 
+			reset 
+		}
+		can { 
+			normal 
+			loop 
+		}
+	
+		PACK
+		FORMAT {
+				usb() 
+				flash()
+		}
+
+		led
+		query
+		simmer
+		?
+
+		delay
+	}
+
+	.
+	read(%X
+	write
+	pulse(%d,%d)
+	delay(%d)
+	burst(%d,%d,%d)
+	simmer {0 1 2 3 {%d,%d}}
+	xmode
+	fan
+	ubank
+	Ubank
+	?
+}

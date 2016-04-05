@@ -1,0 +1,9 @@
+C:\Users\MOCNIK\documents\visual studio 2010\Projects\play\play\bin\Debug\play.exe
+C:\Users\MOCNIK\documents\visual studio 2010\Projects\play\play\bin\Debug\play.pdb
+C:\Users\MOCNIK\documents\visual studio 2010\Projects\play\play\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\MOCNIK\documents\visual studio 2010\Projects\play\play\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\MOCNIK\documents\visual studio 2010\Projects\play\play\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\MOCNIK\documents\visual studio 2010\Projects\play\play\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\MOCNIK\documents\visual studio 2010\Projects\play\play\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\MOCNIK\documents\visual studio 2010\Projects\play\play\obj\x86\Debug\play.exe
+C:\Users\MOCNIK\documents\visual studio 2010\Projects\play\play\obj\x86\Debug\play.pdb
