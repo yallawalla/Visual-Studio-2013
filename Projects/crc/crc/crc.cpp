@@ -40,21 +40,8 @@ int	Scanning(FILE *f, unsigned int *min, unsigned int *max, unsigned  char block
 	{
 		unsigned int	j, size, address;
 		record			type;
-//		char s[256], chk;
 		if (fscanf(f, ":%02X%04X%02X", &size, &address, &type) == 3)
 		{
-			//for (i = chk = 0; i < size + 5; ++i)
-			//{
-			//	sscanf(&s[2 * i + 1], "%02X", &j);
-			//	chk += j;
-			//}
-
-			//if (chk)
-			//{
-			//	printf("...error, line checksum\r\n");
-			//	return 0;
-			//}
-
 			switch (type)
 			{
 			case _DATA:
@@ -103,14 +90,19 @@ int main(int argc, char* argv[])
 		return 0;
 	}
 
-	FILE *f  = fopen(argv[1], "r");
+
+	strcpy(c, argv[1]);
+	if (strchr(c, '.'))
+		*strchr(c, '.') = '\0';
+	strcat(c, "Signed.hex");
+
+	FILE *f = fopen(argv[1],"r");
 	if (!f)
 	{
 		printf("..input file error\r\n");
 		return 0;
 	}
-	strcpy(c, argv[1]);
-	strcpy(strchr(c, '.'), ".xxx");
+
 	FILE *ff = fopen(c, "w");
 	if (!ff)
 	{
@@ -122,7 +114,7 @@ int main(int argc, char* argv[])
 	unsigned char *p = new unsigned char[max-min]();
 	memset(p, 0xff, max - min);
 	fclose(f);
-	f = fopen((char *)argv[1], "r");
+	f = fopen(argv[1], "r");
 	Scanning(f, &min, &max, p);
 
 	int _crc = -1;
@@ -131,7 +123,7 @@ int main(int argc, char* argv[])
 		_crc = crc(_crc,*q++);
 
 	fclose(f);
-	f = fopen((char *)argv[1], "r");
+	f = fopen(argv[1], "r");
 	while (fgets(c, 256, f))
 		if (!strncmp(c, ":04000005", 9) || !strncmp(c, ":00000001", 9))
 			break;
