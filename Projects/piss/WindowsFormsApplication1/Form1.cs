@@ -32,6 +32,7 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
             button1_Click(null, null);
+            Console.WriteLine("here we go: ");
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -93,6 +94,20 @@ namespace WindowsFormsApplication1
         private void timer1_Tick(object sender, EventArgs e)
         {
             Refresh();
+            if (Console.KeyAvailable)
+            {
+                switch(Console.ReadKey().Key)
+                {
+                    case ConsoleKey.R:
+                        hh = 100;
+                        break;
+                    case ConsoleKey.Escape:
+                        Application.Exit();
+                        break;
+                }
+
+            }
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
