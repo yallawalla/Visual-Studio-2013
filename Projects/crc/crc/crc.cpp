@@ -5,8 +5,9 @@
 #include <stdio.h>
 #include <string.h>
 
-typedef enum { _DATA=0, _EOF, _ESA, _SSA, _ELA, _SLA } record;
+typedef enum { _DATA=0, _EOF, _ESA, _SSA, _ELA, _SLA } record;		// Intel Hex record types
 #define POLYNOMIAL 0x04c11db7      									// Eth CRC-32 polynomial
+//
 int crc(int crc, int data) 
 {
 	int i = 32;
