@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Pfm6.exe" size="458752">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Pfm6.exe" size="459264">
       <assemblyIdentity name="Pfm6" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>np4HyB1SonCP08dOo6/8TUWxKy0=</dsig:DigestValue>
+        <dsig:DigestValue>fnauObp64pMSEdqC44qlX1qBMtk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

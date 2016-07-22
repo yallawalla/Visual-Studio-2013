@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.com = new System.IO.Ports.SerialPort(this.components);
             this.menu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Connect = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,9 +42,9 @@
             this.fileToolStripMenuItem,
             this.Connect});
             this.menu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menu.Location = new System.Drawing.Point(483, 9);
+            this.menu.Location = new System.Drawing.Point(455, 9);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(70, 44);
+            this.menu.Size = new System.Drawing.Size(98, 63);
             this.menu.TabIndex = 0;
             this.menu.Text = "menuStrip1";
             this.menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -86,7 +84,6 @@
 
         #endregion
 
-        private System.IO.Ports.SerialPort com;
         private System.Windows.Forms.MenuStrip menu;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Connect;

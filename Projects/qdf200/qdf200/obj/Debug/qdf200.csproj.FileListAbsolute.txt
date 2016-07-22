@@ -14,3 +14,11 @@ C:\Users\Matjaz\Documents\Visual-Studio-2013\Projects\qdf200\qdf200\bin\Debug\qd
 C:\Users\Matjaz\Documents\Visual-Studio-2013\Projects\qdf200\qdf200\obj\Debug\qdf200.Form1.resources
 C:\Users\Matjaz\Documents\Visual-Studio-2013\Projects\qdf200\qdf200\obj\Debug\qdf200.Properties.Resources.resources
 C:\Users\Matjaz\Documents\Visual-Studio-2013\Projects\qdf200\qdf200\obj\Debug\qdf200.csproj.GenerateResource.Cache
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\qdf200\qdf200\bin\Debug\qdf200.exe.config
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\qdf200\qdf200\bin\Debug\qdf200.exe
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\qdf200\qdf200\bin\Debug\qdf200.pdb
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\qdf200\qdf200\obj\Debug\qdf200.Form1.resources
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\qdf200\qdf200\obj\Debug\qdf200.Properties.Resources.resources
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\qdf200\qdf200\obj\Debug\qdf200.csproj.GenerateResource.Cache
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\qdf200\qdf200\obj\Debug\qdf200.exe
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\qdf200\qdf200\obj\Debug\qdf200.pdb

@@ -16,6 +16,7 @@ namespace qdf200
     public partial class Form1 : Form
     {
         Thread rx = null;
+        SerialPort com = null;
 
         public Form1()
         {
@@ -49,16 +50,17 @@ namespace qdf200
             Text = "...connecting";
 //            Properties.wtf.Default.port = e.ClickedItem.Text;
 //            Properties.wtf.Default.Save();
-            if(com.IsOpen)
+            if(com != null)
             {
                 com.Close();
                 rx.Abort();
+                com = null;
             }
             string s = e.ClickedItem.Text;
-            int n = s.IndexOf("CO");
-            s = s.Substring(s.IndexOf("tty"));
+            //int n = s.IndexOf("CO");
+            //s = s.Substring(s.IndexOf("tty"));
             try { 
-                com.PortName = s;
+                com = new SerialPort(e.ClickedItem.Text, 921600, Parity.None, 8, StopBits.One);
                 com.Open();
                 rx = new Thread(new ThreadStart(rxData));
                 rx.Start();
@@ -66,6 +68,7 @@ namespace qdf200
             catch
             {
                 Text = s + " not connected ...";
+                com = null;
             }
  
         }
