@@ -73,7 +73,8 @@ namespace WindowsFormsApplication1
             finally
             {
                 cols.Clear();
-                PortWrite("-? " + Scope.sActive().ToString() + "\r");
+//                PortWrite("-? " + Scope.sActive().ToString() + "\r");
+                PortWrite("$ " + Scope.sActive().ToString() + "\r");
             }
         }
 
@@ -215,7 +216,14 @@ namespace WindowsFormsApplication1
 
                         case "f":
                             break;
-
+                        case "$":
+                            {
+                                string[] s = RxString.Substring(2).Split(',');
+                                Pbar.Maximum  = binread = Convert.ToInt32(s[1]);
+                                adcrate = 60*4;
+                            }
+ 
+                            break;
                         case "S":
                             int imax = Convert.ToInt32(RxString.Substring(2, 2), 16);
                             for (int i = 6; i < imax; i += 4)
@@ -316,6 +324,8 @@ namespace WindowsFormsApplication1
                                                                         RxString.Substring(13, 2) + RxString.Substring(10, 2), 16));
                                                 // textBox2.Text = string.Format("{0:####0.0}", i * Constants.IGBTU * Constants.PFMI * Constants.Ts * Constants.EScale);
                                                 textBox2.Text = string.Format("{0:####0.0}", (double)i / 1000.0);
+                                                if(Scope.Visible==true)
+                                                    PortWrite("$ " + Scope.sActive().ToString() + "\r");
                                                 break;
 
                                             case 0x12:

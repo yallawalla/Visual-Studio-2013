@@ -15,7 +15,7 @@ namespace WindowsFormsApplication1
         Rectangle r,rf;
         Brush rGrad,rfGrad;
         
-        int xo, yo, t;
+        int xo, yo, t,th1,h2,tl1,tl2;
         Point p1, p2;
         public Form4()
         {
