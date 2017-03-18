@@ -297,7 +297,6 @@ C:\Users\Matjaz\Documents\Visual-Studio-2013\Projects\Pfm6_205\Pfm6\bin\Release\
 C:\Users\Matjaz\Documents\Visual-Studio-2013\Projects\Pfm6_205\Pfm6\bin\Release\tr\ZedGraph.resources.dll
 C:\Users\Matjaz\Documents\Visual-Studio-2013\Projects\Pfm6_205\Pfm6\bin\Release\zh-cn\ZedGraph.resources.dll
 C:\Users\Matjaz\Documents\Visual-Studio-2013\Projects\Pfm6_205\Pfm6\bin\Release\zh-tw\ZedGraph.resources.dll
-C:\Users\Matjaz\Documents\Visual-Studio-2013\Projects\Pfm6_205\Pfm6\obj\x86\Release\Pfm6.csprojResolveAssemblyReference.cache
 C:\Users\Matjaz\Documents\Visual-Studio-2013\Projects\Pfm6_205\Pfm6\obj\x86\Release\WindowsFormsApplication1.Form1.resources
 C:\Users\Matjaz\Documents\Visual-Studio-2013\Projects\Pfm6_205\Pfm6\obj\x86\Release\WindowsFormsApplication1.Form2.resources
 C:\Users\Matjaz\Documents\Visual-Studio-2013\Projects\Pfm6_205\Pfm6\obj\x86\Release\WindowsFormsApplication1.Form3.resources

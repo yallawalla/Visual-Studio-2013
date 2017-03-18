@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1
         string IapStr = "";
         Form2 Scope = null;
         Form3 Boot = null;
-        Form4 Fan = null;
+        Form4 Fan = new Form4();
         ArrayList cols = new ArrayList();
         Tcp tcp = null;
         int rcv = -1;
@@ -215,7 +215,9 @@ namespace WindowsFormsApplication1
                             break;
 
                         case "f":
+                            aGauge2.Value = Fan.ShowTemp(RxString.Substring(2).Split(','));
                             break;
+
                         case "$":
                             {
                                 string[] s = RxString.Substring(2).Split(',');
@@ -667,8 +669,6 @@ namespace WindowsFormsApplication1
 
         private void TempMenu_Click(object sender, EventArgs e)
         {
-            if (Fan == null)
-                Fan = new Form4();
             Fan.Show();
         }
 
@@ -686,13 +686,9 @@ namespace WindowsFormsApplication1
         {
             if (Login.Enabled == false)
             {
-                PortWrite(".12\r");
-                //try
-                //{
-                //   if (Scope.Visible == true)
-                //     ScopeMenu_Click(sender, e);
-                //}
-                //catch { }
+                PortWrite("f\r");
+                PortWrite("u\r");
+//                PortWrite(".12\r");
             }
         }
 

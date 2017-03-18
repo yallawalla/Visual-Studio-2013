@@ -15,7 +15,7 @@ namespace WindowsFormsApplication1
         Rectangle r,rf;
         Brush rGrad,rfGrad;
         
-        int xo, yo, t,th1,h2,tl1,tl2;
+        int xo, yo,tmax,th1,th2,tl1,tl2;
         Point p1, p2;
         public Form4()
         {
@@ -24,14 +24,34 @@ namespace WindowsFormsApplication1
 
         public string ShowTemp(int temp)
         {
-            t=temp;
+            tmax = th1 = th2 = tl1 = tl2 = temp;
             Refresh();
-            this.Text=
+            this.Text =
                 "f " + (200 * r.X / Width - 39).ToString() +                               // 25,35,20,95
-                "," + (200*(r.X + r.Width)/Width-39 ).ToString() + 
-                "," + (139-200*(r.Y + r.Height)/Height).ToString() + 
-                "," + (139-200*r.Y/Height).ToString();
+                "," + (200 * (r.X + r.Width) / Width - 39).ToString() +
+                "," + (139 - 200 * (r.Y + r.Height) / Height).ToString() +
+                "," + (139 - 200 * r.Y / Height).ToString();
             return (this.Text);
+        }
+
+        public int ShowTemp(string[] s)
+        {
+            if (s.Length > 8)
+            {
+                th1 = (int)Convert.ToSingle(s[8]);
+                th2 = (int)Convert.ToSingle(s[9]);
+                tl1 = (int)Convert.ToSingle(s[10]);
+                tl2 = (int)Convert.ToSingle(s[11]);
+                tmax=Math.Max(Math.Max(Math.Max(th1,th2),tl1),tl2);
+                Refresh();
+                this.Text =
+                    "f " + (200 * r.X / Width - 39).ToString() +                               // 25,35,20,95
+                    "," + (200 * (r.X + r.Width) / Width - 39).ToString() +
+                    "," + (139 - 200 * (r.Y + r.Height) / Height).ToString() +
+                    "," + (139 - 200 * r.Y / Height).ToString();
+            }
+
+            return (tmax);
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -70,11 +90,11 @@ namespace WindowsFormsApplication1
             p2.Y = p1.Y;
             e.Graphics.DrawLine(Pens.Black, p1, p2);
 
-            p1.X = p2.X = rf.X + (t * Width) / 10 / 20;
+            p1.X = p2.X = rf.X + (tmax * Width) / 10 / 20;
             p1.Y = rf.Y;
             p2.Y = rf.Y + rf.Height;
             e.Graphics.DrawLine(Pens.Red, p1, p2);
-            e.Graphics.DrawString(t.ToString(), Font, Brushes.Black, p1);
+            e.Graphics.DrawString(tmax.ToString(), Font, Brushes.Black, p1);
         }
 
         protected override void OnMouseDown(MouseEventArgs e)
