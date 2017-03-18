@@ -91,10 +91,28 @@ namespace WindowsFormsApplication1
             e.Graphics.DrawLine(Pens.Black, p1, p2);
 
             p1.X = p2.X = rf.X + (tmax * Width) / 10 / 20;
+            p1.Y = rf.Y + rf.Height/10;
+            p2.Y = rf.Y + 9*rf.Height/10;
+            e.Graphics.DrawLine(Pens.Green, p1, p2);
+            e.Graphics.DrawString(tmax.ToString(), Font, Brushes.Black, p1);
+
+            p1.X = p2.X = rf.X + (th1 * Width) / 10 / 20;
             p1.Y = rf.Y;
+            p2.Y = rf.Y - rf.Height/10;
+            e.Graphics.DrawLine(Pens.Black, p1, p2);
+            p1.X = p2.X = rf.X + (th2 * Width) / 10 / 20;
+            p1.Y = rf.Y;
+            p2.Y = rf.Y - rf.Height/10;
+            e.Graphics.DrawLine(Pens.Red, p1, p2);
+            p1.X = p2.X = rf.X + (tl1 * Width) / 10 / 20;
+            p1.Y = rf.Y + 11*rf.Height/10;
+            p2.Y = rf.Y + rf.Height;
+            e.Graphics.DrawLine(Pens.Black, p1, p2);
+            p1.X = p2.X = rf.X + (tl2 * Width) / 10 / 20;
+            p1.Y = rf.Y + 11 * rf.Height / 10;
             p2.Y = rf.Y + rf.Height;
             e.Graphics.DrawLine(Pens.Red, p1, p2);
-            e.Graphics.DrawString(tmax.ToString(), Font, Brushes.Black, p1);
+
         }
 
         protected override void OnMouseDown(MouseEventArgs e)

@@ -305,3 +305,4 @@ C:\Users\Matjaz\Documents\Visual-Studio-2013\Projects\Pfm6_205\Pfm6\obj\x86\Rele
 C:\Users\Matjaz\Documents\Visual-Studio-2013\Projects\Pfm6_205\Pfm6\obj\x86\Release\Pfm6.csproj.GenerateResource.Cache
 C:\Users\Matjaz\Documents\Visual-Studio-2013\Projects\Pfm6_205\Pfm6\obj\x86\Release\Pfm6.exe.manifest
 C:\Users\Matjaz\Documents\Visual-Studio-2013\Projects\Pfm6_205\Pfm6\obj\x86\Release\Pfm6.application
+C:\Users\Matjaz\Documents\Visual-Studio-2013\Projects\Pfm6_205\Pfm6\obj\x86\Release\Pfm6.csprojResolveAssemblyReference.cache

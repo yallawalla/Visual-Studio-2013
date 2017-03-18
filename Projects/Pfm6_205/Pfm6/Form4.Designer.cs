@@ -33,7 +33,7 @@
             // 
             // FanEnter
             // 
-            this.FanEnter.Location = new System.Drawing.Point(220, 219);
+            this.FanEnter.Location = new System.Drawing.Point(417, 221);
             this.FanEnter.Name = "FanEnter";
             this.FanEnter.Size = new System.Drawing.Size(60, 35);
             this.FanEnter.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 266);
+            this.ClientSize = new System.Drawing.Size(489, 266);
             this.Controls.Add(this.FanEnter);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
