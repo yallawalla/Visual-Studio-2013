@@ -15,7 +15,8 @@ namespace WindowsFormsApplication1
         Rectangle r,rf;
         Brush rGrad,rfGrad;
         
-        int xo, yo,tmax,th1,th2,tl1,tl2;
+        int xo, yo,th1,th2,tl1,tl2;
+        public int tmax;
         Point p1, p2;
         public Form4()
         {
@@ -25,33 +26,50 @@ namespace WindowsFormsApplication1
         public string ShowTemp(int temp)
         {
             tmax = th1 = th2 = tl1 = tl2 = temp;
-            Refresh();
-            this.Text =
-                "f " + (200 * r.X / Width - 39).ToString() +                               // 25,35,20,95
-                "," + (200 * (r.X + r.Width) / Width - 39).ToString() +
-                "," + (139 - 200 * (r.Y + r.Height) / Height).ToString() +
-                "," + (139 - 200 * r.Y / Height).ToString();
-            return (this.Text);
-        }
-
-        public int ShowTemp(string[] s)
-        {
-            if (s.Length > 8)
+            if (Visible == true)
             {
-                th1 = (int)Convert.ToSingle(s[8]);
-                th2 = (int)Convert.ToSingle(s[9]);
-                tl1 = (int)Convert.ToSingle(s[10]);
-                tl2 = (int)Convert.ToSingle(s[11]);
-                tmax=Math.Max(Math.Max(Math.Max(th1,th2),tl1),tl2);
                 Refresh();
                 this.Text =
                     "f " + (200 * r.X / Width - 39).ToString() +                               // 25,35,20,95
                     "," + (200 * (r.X + r.Width) / Width - 39).ToString() +
                     "," + (139 - 200 * (r.Y + r.Height) / Height).ToString() +
-                    "," + (139 - 200 * r.Y / Height).ToString();
+                    "," + (139 - 200 * r.Y / Height).ToString() + '\r';
+                return (this.Text);
             }
+            else
+                return "";
+        }
 
-            return (tmax);
+        public string  ShowTemp(string[] s)
+        {
+            if (s.Length > 10)
+            {
+                th1 = (int)Convert.ToSingle(s[8]);
+                th2 = (int)Convert.ToSingle(s[9]);
+                tl1 = (int)Convert.ToSingle(s[10]);
+                tl2 = (int)Convert.ToSingle(s[11]);
+                tmax = Math.Max(Math.Max(Math.Max(th1, th2), tl1), tl2);
+            }
+            else if (s.Length > 4)
+            {
+                th1 = (int)Convert.ToSingle(s[8]);
+                th2 = (int)Convert.ToSingle(s[9]);
+                tl1 = th1;
+                tl2 = th2;
+                tmax = Math.Max(Math.Max(Math.Max(th1, th2), tl1), tl2);
+            }
+            else
+                return "";
+            if(Visible==true) {
+                Refresh();
+                this.Text =
+                    "f " + (200 * r.X / Width - 39).ToString() +                               // 25,35,20,95
+                    "," + (200 * (r.X + r.Width) / Width - 39).ToString() +
+                    "," + (139 - 200 * (r.Y + r.Height) / Height).ToString() +
+                    "," + (139 - 200 * r.Y / Height).ToString() + '\r'; ;
+            return (this.Text);
+            } else
+                return "";
         }
 
         protected override void OnPaint(PaintEventArgs e)

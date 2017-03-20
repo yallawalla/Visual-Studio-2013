@@ -31,10 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ButtonsFrame = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Simmer2 = new System.Windows.Forms.CheckBox();
+            this.Simmer1 = new System.Windows.Forms.CheckBox();
             this.aGauge2 = new AGaugeApp.AGauge();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.DAC1 = new System.Windows.Forms.TrackBar();
             this.DAC2 = new System.Windows.Forms.TrackBar();
+            this.DAC1 = new System.Windows.Forms.TrackBar();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.HV = new System.Windows.Forms.TrackBar();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -52,9 +55,6 @@
             this.Xlap4 = new System.Windows.Forms.RadioButton();
             this.Xlap2 = new System.Windows.Forms.RadioButton();
             this.Xlap1 = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Simmer2 = new System.Windows.Forms.CheckBox();
-            this.Simmer1 = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.TriggerButton = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -100,9 +100,10 @@
             this.channel2 = new System.Windows.Forms.RadioButton();
             this.channel = new System.Windows.Forms.RadioButton();
             this.ButtonsFrame.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DAC1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DAC2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAC1)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HV)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -112,7 +113,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.SimmerPw)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SimmerRate)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SetFrame.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackT)).BeginInit();
@@ -126,6 +126,7 @@
             // 
             // ButtonsFrame
             // 
+            this.ButtonsFrame.Controls.Add(this.groupBox1);
             this.ButtonsFrame.Controls.Add(this.aGauge2);
             this.ButtonsFrame.Controls.Add(this.groupBox6);
             this.ButtonsFrame.Controls.Add(this.groupBox5);
@@ -133,7 +134,6 @@
             this.ButtonsFrame.Controls.Add(this.groupBox3);
             this.ButtonsFrame.Controls.Add(this.aGauge1);
             this.ButtonsFrame.Controls.Add(this.groupBox2);
-            this.ButtonsFrame.Controls.Add(this.groupBox1);
             this.ButtonsFrame.Controls.Add(this.label8);
             this.ButtonsFrame.Controls.Add(this.TriggerButton);
             this.ButtonsFrame.Controls.Add(this.textBox2);
@@ -145,6 +145,41 @@
             this.ButtonsFrame.Size = new System.Drawing.Size(263, 420);
             this.ButtonsFrame.TabIndex = 2;
             this.ButtonsFrame.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.Simmer2);
+            this.groupBox1.Controls.Add(this.Simmer1);
+            this.groupBox1.Location = new System.Drawing.Point(160, 176);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(82, 52);
+            this.groupBox1.TabIndex = 40;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Simmer";
+            // 
+            // Simmer2
+            // 
+            this.Simmer2.AutoSize = true;
+            this.Simmer2.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Simmer2.Location = new System.Drawing.Point(52, 14);
+            this.Simmer2.Name = "Simmer2";
+            this.Simmer2.Size = new System.Drawing.Size(17, 31);
+            this.Simmer2.TabIndex = 26;
+            this.Simmer2.Text = "2";
+            this.Simmer2.UseVisualStyleBackColor = true;
+            this.Simmer2.CheckedChanged += new System.EventHandler(this.Simmer_CheckedChanged);
+            // 
+            // Simmer1
+            // 
+            this.Simmer1.AutoSize = true;
+            this.Simmer1.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Simmer1.Location = new System.Drawing.Point(6, 14);
+            this.Simmer1.Name = "Simmer1";
+            this.Simmer1.Size = new System.Drawing.Size(17, 31);
+            this.Simmer1.TabIndex = 25;
+            this.Simmer1.Text = "1";
+            this.Simmer1.UseVisualStyleBackColor = true;
+            this.Simmer1.CheckedChanged += new System.EventHandler(this.Simmer_CheckedChanged);
             // 
             // aGauge2
             // 
@@ -255,28 +290,14 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.DAC1);
             this.groupBox6.Controls.Add(this.DAC2);
+            this.groupBox6.Controls.Add(this.DAC1);
             this.groupBox6.Location = new System.Drawing.Point(79, 134);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(81, 116);
             this.groupBox6.TabIndex = 52;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Curr.limit";
-            // 
-            // DAC1
-            // 
-            this.DAC1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DAC1.Location = new System.Drawing.Point(6, 17);
-            this.DAC1.Maximum = 4095;
-            this.DAC1.Name = "DAC1";
-            this.DAC1.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.DAC1.Size = new System.Drawing.Size(42, 92);
-            this.DAC1.TabIndex = 43;
-            this.DAC1.TickFrequency = 512;
-            this.DAC1.Value = 4095;
-            this.DAC1.Scroll += new System.EventHandler(this.SlidersScroll);
-            this.DAC1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DAC_MouseUp);
             // 
             // DAC2
             // 
@@ -285,12 +306,26 @@
             this.DAC2.Maximum = 4095;
             this.DAC2.Name = "DAC2";
             this.DAC2.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.DAC2.Size = new System.Drawing.Size(42, 92);
+            this.DAC2.Size = new System.Drawing.Size(45, 92);
             this.DAC2.TabIndex = 45;
             this.DAC2.TickFrequency = 512;
             this.DAC2.Value = 4095;
             this.DAC2.Scroll += new System.EventHandler(this.SlidersScroll);
             this.DAC2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DAC_MouseUp);
+            // 
+            // DAC1
+            // 
+            this.DAC1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DAC1.Location = new System.Drawing.Point(6, 17);
+            this.DAC1.Maximum = 4095;
+            this.DAC1.Name = "DAC1";
+            this.DAC1.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.DAC1.Size = new System.Drawing.Size(45, 92);
+            this.DAC1.TabIndex = 43;
+            this.DAC1.TickFrequency = 512;
+            this.DAC1.Value = 4095;
+            this.DAC1.Scroll += new System.EventHandler(this.SlidersScroll);
+            this.DAC1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DAC_MouseUp);
             // 
             // groupBox5
             // 
@@ -309,7 +344,7 @@
             this.HV.Maximum = 800;
             this.HV.Name = "HV";
             this.HV.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.HV.Size = new System.Drawing.Size(42, 124);
+            this.HV.Size = new System.Drawing.Size(45, 124);
             this.HV.SmallChange = 50;
             this.HV.TabIndex = 30;
             this.HV.TickFrequency = 50;
@@ -350,10 +385,10 @@
             // 
             this.DelayPw.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DelayPw.Location = new System.Drawing.Point(41, 19);
-            this.DelayPw.Minimum = 2;
+            this.DelayPw.Minimum = 1;
             this.DelayPw.Name = "DelayPw";
             this.DelayPw.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.DelayPw.Size = new System.Drawing.Size(42, 124);
+            this.DelayPw.Size = new System.Drawing.Size(45, 124);
             this.DelayPw.SmallChange = 20;
             this.DelayPw.TabIndex = 50;
             this.DelayPw.Value = 5;
@@ -367,7 +402,7 @@
             this.DelayTime.Maximum = 500;
             this.DelayTime.Name = "DelayTime";
             this.DelayTime.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.DelayTime.Size = new System.Drawing.Size(42, 124);
+            this.DelayTime.Size = new System.Drawing.Size(45, 124);
             this.DelayTime.TabIndex = 49;
             this.DelayTime.TickFrequency = 50;
             this.DelayTime.Value = 100;
@@ -403,7 +438,7 @@
             this.SimmerPw.Minimum = 10;
             this.SimmerPw.Name = "SimmerPw";
             this.SimmerPw.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.SimmerPw.Size = new System.Drawing.Size(42, 124);
+            this.SimmerPw.Size = new System.Drawing.Size(45, 124);
             this.SimmerPw.SmallChange = 5;
             this.SimmerPw.TabIndex = 53;
             this.SimmerPw.TickFrequency = 50;
@@ -427,7 +462,7 @@
             this.SimmerRate.Minimum = 25;
             this.SimmerRate.Name = "SimmerRate";
             this.SimmerRate.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.SimmerRate.Size = new System.Drawing.Size(42, 124);
+            this.SimmerRate.Size = new System.Drawing.Size(45, 124);
             this.SimmerRate.SmallChange = 5;
             this.SimmerRate.TabIndex = 51;
             this.SimmerRate.TickFrequency = 5;
@@ -595,41 +630,6 @@
             this.Xlap1.UseVisualStyleBackColor = true;
             this.Xlap1.CheckedChanged += new System.EventHandler(this.XlapChanged);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.Simmer2);
-            this.groupBox1.Controls.Add(this.Simmer1);
-            this.groupBox1.Location = new System.Drawing.Point(160, 176);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(82, 52);
-            this.groupBox1.TabIndex = 40;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Simmer";
-            // 
-            // Simmer2
-            // 
-            this.Simmer2.AutoSize = true;
-            this.Simmer2.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Simmer2.Location = new System.Drawing.Point(52, 14);
-            this.Simmer2.Name = "Simmer2";
-            this.Simmer2.Size = new System.Drawing.Size(17, 31);
-            this.Simmer2.TabIndex = 26;
-            this.Simmer2.Text = "2";
-            this.Simmer2.UseVisualStyleBackColor = true;
-            this.Simmer2.CheckedChanged += new System.EventHandler(this.Simmer_CheckedChanged);
-            // 
-            // Simmer1
-            // 
-            this.Simmer1.AutoSize = true;
-            this.Simmer1.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Simmer1.Location = new System.Drawing.Point(6, 14);
-            this.Simmer1.Name = "Simmer1";
-            this.Simmer1.Size = new System.Drawing.Size(17, 31);
-            this.Simmer1.TabIndex = 25;
-            this.Simmer1.Text = "1";
-            this.Simmer1.UseVisualStyleBackColor = true;
-            this.Simmer1.CheckedChanged += new System.EventHandler(this.Simmer_CheckedChanged);
-            // 
             // label8
             // 
             this.label8.Location = new System.Drawing.Point(0, 0);
@@ -694,7 +694,7 @@
             this.FileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.FileMenu.Name = "FileMenu";
-            this.FileMenu.Size = new System.Drawing.Size(35, 20);
+            this.FileMenu.Size = new System.Drawing.Size(37, 20);
             this.FileMenu.Text = "File";
             // 
             // exitToolStripMenuItem
@@ -707,7 +707,7 @@
             // ConnectMenu
             // 
             this.ConnectMenu.Name = "ConnectMenu";
-            this.ConnectMenu.Size = new System.Drawing.Size(59, 20);
+            this.ConnectMenu.Size = new System.Drawing.Size(64, 20);
             this.ConnectMenu.Text = "Connect";
             this.ConnectMenu.DropDownOpening += new System.EventHandler(this.ConnectMenu_DropDownOpening);
             this.ConnectMenu.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.ConnectMenu_DropDownItemClicked);
@@ -716,21 +716,21 @@
             // ScopeMenu
             // 
             this.ScopeMenu.Name = "ScopeMenu";
-            this.ScopeMenu.Size = new System.Drawing.Size(48, 20);
+            this.ScopeMenu.Size = new System.Drawing.Size(51, 20);
             this.ScopeMenu.Text = "Scope";
             this.ScopeMenu.Click += new System.EventHandler(this.ScopeMenu_Click);
             // 
             // TempMenu
             // 
             this.TempMenu.Name = "TempMenu";
-            this.TempMenu.Size = new System.Drawing.Size(45, 20);
+            this.TempMenu.Size = new System.Drawing.Size(49, 20);
             this.TempMenu.Text = "Temp";
             this.TempMenu.Click += new System.EventHandler(this.TempMenu_Click);
             // 
             // eCEnable
             // 
             this.eCEnable.Name = "eCEnable";
-            this.eCEnable.Size = new System.Drawing.Size(67, 20);
+            this.eCEnable.Size = new System.Drawing.Size(71, 20);
             this.eCEnable.Text = "EC enable";
             this.eCEnable.Click += new System.EventHandler(this.eCEnable_Click);
             // 
@@ -739,7 +739,7 @@
             this.qSPToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.qSPToolStripMenuItem.BackColor = System.Drawing.Color.Goldenrod;
             this.qSPToolStripMenuItem.Name = "qSPToolStripMenuItem";
-            this.qSPToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.qSPToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.qSPToolStripMenuItem.Text = "QSP";
             this.qSPToolStripMenuItem.Click += new System.EventHandler(this.qSPToolStripMenuItem_Click);
             // 
@@ -748,7 +748,7 @@
             this.vLPToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.vLPToolStripMenuItem.BackColor = System.Drawing.Color.Gold;
             this.vLPToolStripMenuItem.Name = "vLPToolStripMenuItem";
-            this.vLPToolStripMenuItem.Size = new System.Drawing.Size(36, 20);
+            this.vLPToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.vLPToolStripMenuItem.Text = "VLP";
             this.vLPToolStripMenuItem.Click += new System.EventHandler(this.vLPToolStripMenuItem_Click);
             // 
@@ -757,7 +757,7 @@
             this.sPToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.sPToolStripMenuItem.BackColor = System.Drawing.Color.LemonChiffon;
             this.sPToolStripMenuItem.Name = "sPToolStripMenuItem";
-            this.sPToolStripMenuItem.Size = new System.Drawing.Size(31, 20);
+            this.sPToolStripMenuItem.Size = new System.Drawing.Size(32, 20);
             this.sPToolStripMenuItem.Text = "SP";
             this.sPToolStripMenuItem.Click += new System.EventHandler(this.sPToolStripMenuItem_Click);
             // 
@@ -766,7 +766,7 @@
             this.lPToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.lPToolStripMenuItem.BackColor = System.Drawing.Color.Khaki;
             this.lPToolStripMenuItem.Name = "lPToolStripMenuItem";
-            this.lPToolStripMenuItem.Size = new System.Drawing.Size(30, 20);
+            this.lPToolStripMenuItem.Size = new System.Drawing.Size(32, 20);
             this.lPToolStripMenuItem.Text = "LP";
             this.lPToolStripMenuItem.Click += new System.EventHandler(this.lPToolStripMenuItem_Click);
             // 
@@ -775,7 +775,7 @@
             this.mSPToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.mSPToolStripMenuItem.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.mSPToolStripMenuItem.Name = "mSPToolStripMenuItem";
-            this.mSPToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.mSPToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.mSPToolStripMenuItem.Text = "MSP";
             this.mSPToolStripMenuItem.Click += new System.EventHandler(this.mSPToolStripMenuItem_Click);
             // 
@@ -784,7 +784,7 @@
             this.sSPToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.sSPToolStripMenuItem.BackColor = System.Drawing.Color.DarkKhaki;
             this.sSPToolStripMenuItem.Name = "sSPToolStripMenuItem";
-            this.sSPToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.sSPToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.sSPToolStripMenuItem.Text = "SSP";
             this.sSPToolStripMenuItem.Click += new System.EventHandler(this.sSPToolStripMenuItem_Click);
             // 
@@ -841,7 +841,7 @@
             this.trackT.Minimum = 20;
             this.trackT.Name = "trackT";
             this.trackT.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackT.Size = new System.Drawing.Size(42, 346);
+            this.trackT.Size = new System.Drawing.Size(45, 346);
             this.trackT.TabIndex = 22;
             this.trackT.TickFrequency = 100;
             this.trackT.TickStyle = System.Windows.Forms.TickStyle.Both;
@@ -856,7 +856,7 @@
             this.trackU.Maximum = 800;
             this.trackU.Name = "trackU";
             this.trackU.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackU.Size = new System.Drawing.Size(42, 346);
+            this.trackU.Size = new System.Drawing.Size(45, 346);
             this.trackU.TabIndex = 21;
             this.trackU.TickFrequency = 100;
             this.trackU.TickStyle = System.Windows.Forms.TickStyle.Both;
@@ -931,7 +931,7 @@
             this.Length.Minimum = 1;
             this.Length.Name = "Length";
             this.Length.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.Length.Size = new System.Drawing.Size(42, 278);
+            this.Length.Size = new System.Drawing.Size(45, 278);
             this.Length.TabIndex = 9;
             this.Length.Value = 1;
             this.Length.Scroll += new System.EventHandler(this.SlidersScroll);
@@ -945,7 +945,7 @@
             this.Burst.Minimum = 1;
             this.Burst.Name = "Burst";
             this.Burst.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.Burst.Size = new System.Drawing.Size(42, 278);
+            this.Burst.Size = new System.Drawing.Size(45, 278);
             this.Burst.TabIndex = 8;
             this.Burst.Value = 1;
             this.Burst.Scroll += new System.EventHandler(this.SlidersScroll);
@@ -959,7 +959,7 @@
             this.Period.Minimum = 5;
             this.Period.Name = "Period";
             this.Period.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.Period.Size = new System.Drawing.Size(42, 278);
+            this.Period.Size = new System.Drawing.Size(45, 278);
             this.Period.TabIndex = 7;
             this.Period.TickFrequency = 100;
             this.Period.Value = 10;
@@ -971,7 +971,7 @@
             this.ResetBurst.Location = new System.Drawing.Point(66, 19);
             this.ResetBurst.Name = "ResetBurst";
             this.ResetBurst.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.ResetBurst.Size = new System.Drawing.Size(42, 278);
+            this.ResetBurst.Size = new System.Drawing.Size(45, 278);
             this.ResetBurst.TabIndex = 8;
             // 
             // BootBar
@@ -1084,10 +1084,12 @@
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.ButtonsFrame.ResumeLayout(false);
             this.ButtonsFrame.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DAC1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DAC2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAC1)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HV)).EndInit();
@@ -1101,8 +1103,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.SimmerRate)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.SetFrame.ResumeLayout(false);

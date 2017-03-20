@@ -195,7 +195,7 @@ namespace WindowsFormsApplication1
             if (binread > 0 && Scope != null && Scope.Visible == true)
             {
                 Scope.ScopeBinary(b, adcrate);
-                Pbar.Value = Pbar.Maximum - binread;
+       //         Pbar.Value = Pbar.Maximum - binread;
                 if (--binread == 0)
                     Scope.ScopeBinary(-1, adcrate);
             }
@@ -215,7 +215,36 @@ namespace WindowsFormsApplication1
                             break;
 
                         case "f":
-                            aGauge2.Value = Fan.ShowTemp(RxString.Substring(2).Split(','));
+                            {
+                                string s = Fan.ShowTemp(RxString.Substring(2).Split(','));
+                                if (s != "")
+                                    PortWrite(s);
+                                aGauge2.Value = Fan.tmax;
+                            }
+                            break;
+
+
+                        case "u":
+                            {
+                                string[] s = RxString.Split(' ');
+                                if (s.Length > 4)
+                                {
+                                    char[] delim = { ',','V' };
+                                    string[] ss = s[4].Split(delim);
+                                    aGauge1.Range_Idx = 0;
+                                    aGauge1.RangeStartValue = 0;
+                                    aGauge1.RangeEndValue = Convert.ToInt32(ss[2]);
+
+                                    aGauge1.Range_Idx = 1;
+                                    aGauge1.RangeStartValue = Convert.ToInt32(ss[2]);
+                                    aGauge1.RangeEndValue = Convert.ToInt32(ss[0]);
+
+                                    aGauge1.Range_Idx = 2;
+                                    aGauge1.RangeStartValue = Convert.ToInt32(ss[0]);
+                                    aGauge1.RangeEndValue = aGauge1.MaxValue;
+                                }
+ 
+                            }
                             break;
 
                         case "$":
@@ -241,6 +270,7 @@ namespace WindowsFormsApplication1
                                 }
                                 catch { }
                             }
+
                             if (cols.Count == 20000 / 4)
                             {
                                 try
@@ -259,6 +289,7 @@ namespace WindowsFormsApplication1
                             else
                                 if (tcp.client.Connected)
                                     this.Text = "PFM6 connected, port " + tcp.stream.GetType().ToString() + ", version " + RxString.Substring(0);
+
                             Login.Enabled = false;
                             ButtonsFrame.Enabled = true;
                             ScopeMenu.Enabled = true;
@@ -266,7 +297,6 @@ namespace WindowsFormsApplication1
                             charger_CheckedChanged(null,null);
                             HV.Value=Properties.pfm6.Default.HVvalue;
                             SetHVCommand(null, null);
-
 
                             SimmerRate.Value = Properties.pfm6.Default.SimmerRate;
                             SimmerPw.Value= Properties.pfm6.Default.SimmerPw;
