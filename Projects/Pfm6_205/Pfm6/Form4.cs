@@ -44,7 +44,7 @@ namespace WindowsFormsApplication1
         {
             if (s.Length > 10)
             {
-                th1 = (int)Convert.ToSingle(s[8]);
+                th1 = th2 = tl1 = tl2 =(int)Convert.ToSingle(s[8]);
                 th2 = (int)Convert.ToSingle(s[9]);
                 tl1 = (int)Convert.ToSingle(s[10]);
                 tl2 = (int)Convert.ToSingle(s[11]);
@@ -52,11 +52,17 @@ namespace WindowsFormsApplication1
             }
             else if (s.Length > 4)
             {
-                th1 = (int)Convert.ToSingle(s[8]);
-                th2 = (int)Convert.ToSingle(s[9]);
-                tl1 = th1;
-                tl2 = th2;
-                tmax = Math.Max(Math.Max(Math.Max(th1, th2), tl1), tl2);
+                try
+                {
+                    th1 = th2 = tl1 = tl2 = (int)Convert.ToSingle(s[8]);
+                }
+                catch { }
+               try
+                {
+                th2 = tl2 = (int)Convert.ToSingle(s[9]);
+                }
+               catch { }
+               tmax = Math.Max(Math.Max(Math.Max(th1, th2), tl1), tl2);
             }
             else
                 return "";

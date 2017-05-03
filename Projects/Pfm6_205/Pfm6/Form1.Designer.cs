@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ButtonsFrame = new System.Windows.Forms.GroupBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.xxlap4 = new System.Windows.Forms.RadioButton();
+            this.xxlap2 = new System.Windows.Forms.RadioButton();
+            this.xxlap1 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Simmer2 = new System.Windows.Forms.CheckBox();
             this.Simmer1 = new System.Windows.Forms.CheckBox();
@@ -52,9 +56,9 @@
             this.SimmerRate = new System.Windows.Forms.TrackBar();
             this.aGauge1 = new AGaugeApp.AGauge();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.Xlap4 = new System.Windows.Forms.RadioButton();
-            this.Xlap2 = new System.Windows.Forms.RadioButton();
-            this.Xlap1 = new System.Windows.Forms.RadioButton();
+            this.xlap4 = new System.Windows.Forms.RadioButton();
+            this.xlap2 = new System.Windows.Forms.RadioButton();
+            this.xlap1 = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.TriggerButton = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -65,7 +69,6 @@
             this.ConnectMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.ScopeMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.TempMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.eCEnable = new System.Windows.Forms.ToolStripMenuItem();
             this.qSPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vLPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -93,13 +96,13 @@
             this.BootBar = new System.Windows.Forms.ProgressBar();
             this.Login = new System.Windows.Forms.Timer(this.components);
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
-            this.Pbar = new System.Windows.Forms.ProgressBar();
             this.shaped = new System.Windows.Forms.CheckBox();
             this.charger = new System.Windows.Forms.CheckBox();
             this.channel1 = new System.Windows.Forms.RadioButton();
             this.channel2 = new System.Windows.Forms.RadioButton();
             this.channel = new System.Windows.Forms.RadioButton();
             this.ButtonsFrame.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DAC2)).BeginInit();
@@ -126,6 +129,7 @@
             // 
             // ButtonsFrame
             // 
+            this.ButtonsFrame.Controls.Add(this.groupBox7);
             this.ButtonsFrame.Controls.Add(this.groupBox1);
             this.ButtonsFrame.Controls.Add(this.aGauge2);
             this.ButtonsFrame.Controls.Add(this.groupBox6);
@@ -146,11 +150,63 @@
             this.ButtonsFrame.TabIndex = 2;
             this.ButtonsFrame.TabStop = false;
             // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.xxlap4);
+            this.groupBox7.Controls.Add(this.xxlap2);
+            this.groupBox7.Controls.Add(this.xxlap1);
+            this.groupBox7.Location = new System.Drawing.Point(160, 156);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(83, 36);
+            this.groupBox7.TabIndex = 51;
+            this.groupBox7.TabStop = false;
+            // 
+            // xxlap4
+            // 
+            this.xxlap4.AutoSize = true;
+            this.xxlap4.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.xxlap4.Checked = true;
+            this.xxlap4.Location = new System.Drawing.Point(59, 8);
+            this.xxlap4.Name = "xxlap4";
+            this.xxlap4.Size = new System.Drawing.Size(14, 30);
+            this.xxlap4.TabIndex = 53;
+            this.xxlap4.TabStop = true;
+            this.xxlap4.Text = " ";
+            this.xxlap4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.xxlap4.UseVisualStyleBackColor = true;
+            this.xxlap4.CheckedChanged += new System.EventHandler(this.xxlap_CheckedChanged);
+            // 
+            // xxlap2
+            // 
+            this.xxlap2.AutoSize = true;
+            this.xxlap2.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.xxlap2.Location = new System.Drawing.Point(34, 8);
+            this.xxlap2.Name = "xxlap2";
+            this.xxlap2.Size = new System.Drawing.Size(14, 30);
+            this.xxlap2.TabIndex = 52;
+            this.xxlap2.Text = " ";
+            this.xxlap2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.xxlap2.UseVisualStyleBackColor = true;
+            this.xxlap2.CheckedChanged += new System.EventHandler(this.xxlap_CheckedChanged);
+            // 
+            // xxlap1
+            // 
+            this.xxlap1.AutoSize = true;
+            this.xxlap1.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.xxlap1.Location = new System.Drawing.Point(9, 8);
+            this.xxlap1.Name = "xxlap1";
+            this.xxlap1.Size = new System.Drawing.Size(14, 30);
+            this.xxlap1.TabIndex = 51;
+            this.xxlap1.Text = " ";
+            this.xxlap1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.xxlap1.UseVisualStyleBackColor = true;
+            this.xxlap1.CheckedChanged += new System.EventHandler(this.xxlap_CheckedChanged);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.Simmer2);
             this.groupBox1.Controls.Add(this.Simmer1);
-            this.groupBox1.Location = new System.Drawing.Point(160, 176);
+            this.groupBox1.Location = new System.Drawing.Point(160, 194);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(82, 52);
             this.groupBox1.TabIndex = 40;
@@ -161,7 +217,7 @@
             // 
             this.Simmer2.AutoSize = true;
             this.Simmer2.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Simmer2.Location = new System.Drawing.Point(52, 14);
+            this.Simmer2.Location = new System.Drawing.Point(56, 14);
             this.Simmer2.Name = "Simmer2";
             this.Simmer2.Size = new System.Drawing.Size(17, 31);
             this.Simmer2.TabIndex = 26;
@@ -173,7 +229,7 @@
             // 
             this.Simmer1.AutoSize = true;
             this.Simmer1.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Simmer1.Location = new System.Drawing.Point(6, 14);
+            this.Simmer1.Location = new System.Drawing.Point(10, 14);
             this.Simmer1.Name = "Simmer1";
             this.Simmer1.Size = new System.Drawing.Size(17, 31);
             this.Simmer1.TabIndex = 25;
@@ -303,13 +359,13 @@
             // 
             this.DAC2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DAC2.Location = new System.Drawing.Point(40, 17);
-            this.DAC2.Maximum = 4095;
+            this.DAC2.Maximum = 1000;
             this.DAC2.Name = "DAC2";
             this.DAC2.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.DAC2.Size = new System.Drawing.Size(45, 92);
             this.DAC2.TabIndex = 45;
             this.DAC2.TickFrequency = 512;
-            this.DAC2.Value = 4095;
+            this.DAC2.Value = 1000;
             this.DAC2.Scroll += new System.EventHandler(this.SlidersScroll);
             this.DAC2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DAC_MouseUp);
             // 
@@ -317,13 +373,13 @@
             // 
             this.DAC1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DAC1.Location = new System.Drawing.Point(6, 17);
-            this.DAC1.Maximum = 4095;
+            this.DAC1.Maximum = 1000;
             this.DAC1.Name = "DAC1";
             this.DAC1.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.DAC1.Size = new System.Drawing.Size(45, 92);
             this.DAC1.TabIndex = 43;
             this.DAC1.TickFrequency = 512;
-            this.DAC1.Value = 4095;
+            this.DAC1.Value = 1000;
             this.DAC1.Scroll += new System.EventHandler(this.SlidersScroll);
             this.DAC1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DAC_MouseUp);
             // 
@@ -340,6 +396,7 @@
             // HV
             // 
             this.HV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.HV.LargeChange = 50;
             this.HV.Location = new System.Drawing.Point(6, 19);
             this.HV.Maximum = 800;
             this.HV.Name = "HV";
@@ -513,32 +570,32 @@
             this.aGauge1.RangeColor = System.Drawing.Color.DarkSalmon;
             this.aGauge1.RangeEnabled = true;
             this.aGauge1.RangeEndValue = 1000F;
-            this.aGauge1.RangeInnerRadius = 30;
+            this.aGauge1.RangeInnerRadius = 60;
             this.aGauge1.RangeOuterRadius = 80;
             this.aGauge1.RangesColor = new System.Drawing.Color[] {
         System.Drawing.Color.PaleGoldenrod,
         System.Drawing.Color.YellowGreen,
         System.Drawing.Color.DarkSalmon,
-        System.Drawing.SystemColors.Control,
-        System.Drawing.SystemColors.Control};
+        System.Drawing.Color.Black,
+        System.Drawing.Color.Red};
             this.aGauge1.RangesEnabled = new bool[] {
         true,
         true,
         true,
-        false,
-        false};
+        true,
+        true};
             this.aGauge1.RangesEndValue = new float[] {
         400F,
         800F,
         1000F,
-        0F,
-        0F};
+        420F,
+        510F};
             this.aGauge1.RangesInnerRadius = new int[] {
+        60,
+        60,
+        60,
         30,
-        30,
-        30,
-        70,
-        70};
+        30};
             this.aGauge1.RangesOuterRadius = new int[] {
         80,
         80,
@@ -549,8 +606,8 @@
         0F,
         400F,
         800F,
-        0F,
-        0F};
+        400F,
+        500F};
             this.aGauge1.RangeStartValue = 800F;
             this.aGauge1.ScaleLinesInterColor = System.Drawing.Color.Black;
             this.aGauge1.ScaleLinesInterInnerRadius = 73;
@@ -579,56 +636,56 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.Xlap4);
-            this.groupBox2.Controls.Add(this.Xlap2);
-            this.groupBox2.Controls.Add(this.Xlap1);
-            this.groupBox2.Location = new System.Drawing.Point(160, 119);
+            this.groupBox2.Controls.Add(this.xlap4);
+            this.groupBox2.Controls.Add(this.xlap2);
+            this.groupBox2.Controls.Add(this.xlap1);
+            this.groupBox2.Location = new System.Drawing.Point(160, 113);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(83, 51);
+            this.groupBox2.Size = new System.Drawing.Size(83, 50);
             this.groupBox2.TabIndex = 41;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Overlap _-_";
             // 
-            // Xlap4
+            // xlap4
             // 
-            this.Xlap4.AutoSize = true;
-            this.Xlap4.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Xlap4.Checked = true;
-            this.Xlap4.Location = new System.Drawing.Point(52, 15);
-            this.Xlap4.Name = "Xlap4";
-            this.Xlap4.Size = new System.Drawing.Size(17, 30);
-            this.Xlap4.TabIndex = 47;
-            this.Xlap4.TabStop = true;
-            this.Xlap4.Text = "4";
-            this.Xlap4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Xlap4.UseVisualStyleBackColor = true;
-            this.Xlap4.CheckedChanged += new System.EventHandler(this.XlapChanged);
+            this.xlap4.AutoSize = true;
+            this.xlap4.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.xlap4.Checked = true;
+            this.xlap4.Location = new System.Drawing.Point(56, 15);
+            this.xlap4.Name = "xlap4";
+            this.xlap4.Size = new System.Drawing.Size(17, 30);
+            this.xlap4.TabIndex = 47;
+            this.xlap4.TabStop = true;
+            this.xlap4.Text = "4";
+            this.xlap4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.xlap4.UseVisualStyleBackColor = true;
+            this.xlap4.CheckedChanged += new System.EventHandler(this.XlapChanged);
             // 
-            // Xlap2
+            // xlap2
             // 
-            this.Xlap2.AutoSize = true;
-            this.Xlap2.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Xlap2.Location = new System.Drawing.Point(29, 15);
-            this.Xlap2.Name = "Xlap2";
-            this.Xlap2.Size = new System.Drawing.Size(17, 30);
-            this.Xlap2.TabIndex = 46;
-            this.Xlap2.Text = "2";
-            this.Xlap2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Xlap2.UseVisualStyleBackColor = true;
-            this.Xlap2.CheckedChanged += new System.EventHandler(this.XlapChanged);
+            this.xlap2.AutoSize = true;
+            this.xlap2.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.xlap2.Location = new System.Drawing.Point(31, 15);
+            this.xlap2.Name = "xlap2";
+            this.xlap2.Size = new System.Drawing.Size(17, 30);
+            this.xlap2.TabIndex = 46;
+            this.xlap2.Text = "2";
+            this.xlap2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.xlap2.UseVisualStyleBackColor = true;
+            this.xlap2.CheckedChanged += new System.EventHandler(this.XlapChanged);
             // 
-            // Xlap1
+            // xlap1
             // 
-            this.Xlap1.AutoSize = true;
-            this.Xlap1.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Xlap1.Location = new System.Drawing.Point(6, 15);
-            this.Xlap1.Name = "Xlap1";
-            this.Xlap1.Size = new System.Drawing.Size(17, 30);
-            this.Xlap1.TabIndex = 45;
-            this.Xlap1.Text = "1";
-            this.Xlap1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Xlap1.UseVisualStyleBackColor = true;
-            this.Xlap1.CheckedChanged += new System.EventHandler(this.XlapChanged);
+            this.xlap1.AutoSize = true;
+            this.xlap1.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.xlap1.Location = new System.Drawing.Point(6, 15);
+            this.xlap1.Name = "xlap1";
+            this.xlap1.Size = new System.Drawing.Size(17, 30);
+            this.xlap1.TabIndex = 45;
+            this.xlap1.Text = "1";
+            this.xlap1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.xlap1.UseVisualStyleBackColor = true;
+            this.xlap1.CheckedChanged += new System.EventHandler(this.XlapChanged);
             // 
             // label8
             // 
@@ -655,7 +712,7 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox2.Location = new System.Drawing.Point(160, 69);
+            this.textBox2.Location = new System.Drawing.Point(160, 66);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(82, 20);
             this.textBox2.TabIndex = 20;
@@ -663,7 +720,7 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(160, 94);
+            this.textBox1.Location = new System.Drawing.Point(160, 88);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(82, 20);
             this.textBox1.TabIndex = 19;
@@ -675,7 +732,6 @@
             this.ConnectMenu,
             this.ScopeMenu,
             this.TempMenu,
-            this.eCEnable,
             this.qSPToolStripMenuItem,
             this.vLPToolStripMenuItem,
             this.sPToolStripMenuItem,
@@ -726,13 +782,6 @@
             this.TempMenu.Size = new System.Drawing.Size(49, 20);
             this.TempMenu.Text = "Temp";
             this.TempMenu.Click += new System.EventHandler(this.TempMenu_Click);
-            // 
-            // eCEnable
-            // 
-            this.eCEnable.Name = "eCEnable";
-            this.eCEnable.Size = new System.Drawing.Size(71, 20);
-            this.eCEnable.Text = "EC enable";
-            this.eCEnable.Click += new System.EventHandler(this.eCEnable_Click);
             // 
             // qSPToolStripMenuItem
             // 
@@ -893,14 +942,14 @@
             this.ResetFrame.Dock = System.Windows.Forms.DockStyle.Top;
             this.ResetFrame.Location = new System.Drawing.Point(434, 24);
             this.ResetFrame.Name = "ResetFrame";
-            this.ResetFrame.Size = new System.Drawing.Size(173, 324);
+            this.ResetFrame.Size = new System.Drawing.Size(173, 364);
             this.ResetFrame.TabIndex = 25;
             this.ResetFrame.TabStop = false;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(111, 300);
+            this.label5.Location = new System.Drawing.Point(111, 343);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 13;
@@ -909,7 +958,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(63, 300);
+            this.label4.Location = new System.Drawing.Point(63, 343);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 12;
@@ -918,7 +967,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 300);
+            this.label3.Location = new System.Drawing.Point(15, 343);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 11;
@@ -931,7 +980,7 @@
             this.Length.Minimum = 1;
             this.Length.Name = "Length";
             this.Length.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.Length.Size = new System.Drawing.Size(45, 278);
+            this.Length.Size = new System.Drawing.Size(45, 321);
             this.Length.TabIndex = 9;
             this.Length.Value = 1;
             this.Length.Scroll += new System.EventHandler(this.SlidersScroll);
@@ -945,7 +994,7 @@
             this.Burst.Minimum = 1;
             this.Burst.Name = "Burst";
             this.Burst.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.Burst.Size = new System.Drawing.Size(45, 278);
+            this.Burst.Size = new System.Drawing.Size(45, 322);
             this.Burst.TabIndex = 8;
             this.Burst.Value = 1;
             this.Burst.Scroll += new System.EventHandler(this.SlidersScroll);
@@ -959,7 +1008,7 @@
             this.Period.Minimum = 5;
             this.Period.Name = "Period";
             this.Period.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.Period.Size = new System.Drawing.Size(45, 278);
+            this.Period.Size = new System.Drawing.Size(45, 321);
             this.Period.TabIndex = 7;
             this.Period.TickFrequency = 100;
             this.Period.Value = 10;
@@ -977,9 +1026,9 @@
             // BootBar
             // 
             this.BootBar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BootBar.Location = new System.Drawing.Point(434, 348);
+            this.BootBar.Location = new System.Drawing.Point(434, 388);
             this.BootBar.Name = "BootBar";
-            this.BootBar.Size = new System.Drawing.Size(173, 96);
+            this.BootBar.Size = new System.Drawing.Size(173, 56);
             this.BootBar.TabIndex = 33;
             // 
             // Login
@@ -988,17 +1037,10 @@
             this.Login.Interval = 500;
             this.Login.Tick += new System.EventHandler(this.Login_Tick);
             // 
-            // Pbar
-            // 
-            this.Pbar.Location = new System.Drawing.Point(434, 421);
-            this.Pbar.Name = "Pbar";
-            this.Pbar.Size = new System.Drawing.Size(173, 23);
-            this.Pbar.TabIndex = 34;
-            // 
             // shaped
             // 
             this.shaped.AutoSize = true;
-            this.shaped.Location = new System.Drawing.Point(440, 378);
+            this.shaped.Location = new System.Drawing.Point(440, 422);
             this.shaped.Name = "shaped";
             this.shaped.Size = new System.Drawing.Size(63, 17);
             this.shaped.TabIndex = 35;
@@ -1009,7 +1051,7 @@
             // charger
             // 
             this.charger.AutoSize = true;
-            this.charger.Location = new System.Drawing.Point(440, 355);
+            this.charger.Location = new System.Drawing.Point(440, 399);
             this.charger.Name = "charger";
             this.charger.Size = new System.Drawing.Size(63, 17);
             this.charger.TabIndex = 36;
@@ -1021,7 +1063,7 @@
             // 
             this.channel1.AutoSize = true;
             this.channel1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.channel1.Location = new System.Drawing.Point(570, 354);
+            this.channel1.Location = new System.Drawing.Point(570, 399);
             this.channel1.Name = "channel1";
             this.channel1.Size = new System.Drawing.Size(31, 17);
             this.channel1.TabIndex = 37;
@@ -1033,7 +1075,7 @@
             // 
             this.channel2.AutoSize = true;
             this.channel2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.channel2.Location = new System.Drawing.Point(570, 400);
+            this.channel2.Location = new System.Drawing.Point(570, 422);
             this.channel2.Name = "channel2";
             this.channel2.Size = new System.Drawing.Size(31, 17);
             this.channel2.TabIndex = 38;
@@ -1046,7 +1088,7 @@
             this.channel.AutoSize = true;
             this.channel.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.channel.Checked = true;
-            this.channel.Location = new System.Drawing.Point(554, 377);
+            this.channel.Location = new System.Drawing.Point(518, 411);
             this.channel.Name = "channel";
             this.channel.Size = new System.Drawing.Size(47, 17);
             this.channel.TabIndex = 39;
@@ -1065,7 +1107,6 @@
             this.Controls.Add(this.channel1);
             this.Controls.Add(this.charger);
             this.Controls.Add(this.shaped);
-            this.Controls.Add(this.Pbar);
             this.Controls.Add(this.BootBar);
             this.Controls.Add(this.ResetFrame);
             this.Controls.Add(this.SetFrame);
@@ -1076,7 +1117,7 @@
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "PFM 6";
+            this.Text = "...";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
@@ -1084,6 +1125,8 @@
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.ButtonsFrame.ResumeLayout(false);
             this.ButtonsFrame.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -1157,16 +1200,14 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox Simmer2;
         private System.Windows.Forms.CheckBox Simmer1;
-        private System.Windows.Forms.RadioButton Xlap4;
-        private System.Windows.Forms.RadioButton Xlap2;
-        private System.Windows.Forms.RadioButton Xlap1;
+        private System.Windows.Forms.RadioButton xlap4;
+        private System.Windows.Forms.RadioButton xlap2;
+        private System.Windows.Forms.RadioButton xlap1;
         private AGaugeApp.AGauge aGauge1;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
         private AGaugeApp.AGauge aGauge2;
-        private System.Windows.Forms.ToolStripMenuItem eCEnable;
         private System.Windows.Forms.TrackBar DAC1;
         private System.Windows.Forms.TrackBar DAC2;
-        private System.Windows.Forms.ProgressBar Pbar;
         private System.Windows.Forms.ToolStripMenuItem sSPToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mSPToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sPToolStripMenuItem;
@@ -1191,6 +1232,10 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TrackBar HV;
         private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.RadioButton xxlap4;
+        private System.Windows.Forms.RadioButton xxlap2;
+        private System.Windows.Forms.RadioButton xxlap1;
     }
 }
 

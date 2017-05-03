@@ -29,6 +29,7 @@ namespace WindowsFormsApplication1
         Tcp tcp = null;
         int rcv = -1;
 
+
         public Form1()
         {
             InitializeComponent();
@@ -49,6 +50,7 @@ namespace WindowsFormsApplication1
             aGauge1.Range_Idx = 2;
             aGauge1.RangeStartValue = aGauge1.MaxValue * 8 / 10;
             aGauge1.RangeEndValue = aGauge1.MaxValue;
+
         }
         //.................. menu items 
 
@@ -92,17 +94,18 @@ namespace WindowsFormsApplication1
             if (portname.Substring(0, 3) == "COM")
                 try
                 {
- //                   IgbtTemp.Enabled = false;
-                    if (com.IsOpen)
-                        com.Close();
-                    com.PortName = portname;
-                    com.Open();
-                    Login.Interval = 1000;
+//                  IgbtTemp.Enabled = false;
+                    if (com.IsOpen == false)
+                    {
+                      com.PortName = portname;
+                      com.Open();
+                    }
+                    Login.Interval = 200;
                     Login.Enabled = true;
                     ButtonsFrame.Enabled = false;
                     ScopeMenu.Enabled = false;
                 }
-                catch { }
+                    catch { }
             else
             {
                 tcp = new Tcp(portname);
@@ -195,9 +198,8 @@ namespace WindowsFormsApplication1
             if (binread > 0 && Scope != null && Scope.Visible == true)
             {
                 Scope.ScopeBinary(b, adcrate);
-       //         Pbar.Value = Pbar.Maximum - binread;
                 if (--binread == 0)
-                    Scope.ScopeBinary(-1, adcrate);
+                    Scope.ScopeBinary(-1, adcrate);                
             }
             else
             {
@@ -226,35 +228,53 @@ namespace WindowsFormsApplication1
 
                         case "u":
                             {
-                                string[] s = RxString.Split(' ');
-                                if (s.Length > 4)
+                                try
                                 {
-                                    char[] delim = { ',','V' };
-                                    string[] ss = s[4].Split(delim);
+                                    RxString = RxString.Substring(RxString.IndexOf("..."));
+                                    RxString = RxString.Replace("V", "");
+                                    RxString = RxString.Replace(".", "");
+                                    RxString = RxString.Replace(" ", "");
+                                    string [] s = RxString.Split(',');
                                     aGauge1.Range_Idx = 0;
                                     aGauge1.RangeStartValue = 0;
-                                    aGauge1.RangeEndValue = Convert.ToInt32(ss[2]);
+                                    aGauge1.RangeEndValue = Convert.ToInt32(s[1]);
 
                                     aGauge1.Range_Idx = 1;
-                                    aGauge1.RangeStartValue = Convert.ToInt32(ss[2]);
-                                    aGauge1.RangeEndValue = Convert.ToInt32(ss[0]);
+                                    aGauge1.RangeStartValue = Convert.ToInt32(s[1]);
+                                    aGauge1.RangeEndValue = Convert.ToInt32(s[0]);
 
                                     aGauge1.Range_Idx = 2;
-                                    aGauge1.RangeStartValue = Convert.ToInt32(ss[0]);
+                                    aGauge1.RangeStartValue = Convert.ToInt32(s[0]);
                                     aGauge1.RangeEndValue = aGauge1.MaxValue;
+
+                                    if (Text.Substring(0, 3) == "PFM8")
+                                    {
+                                        aGauge1.Range_Idx = 3;
+                                        aGauge1.RangeStartValue = Convert.ToInt32(s[2]);
+                                        aGauge1.RangeEndValue = Convert.ToInt32(s[2]) + 20;
+
+                                        aGauge1.Range_Idx = 4;
+                                        aGauge1.RangeStartValue = Convert.ToInt32(s[3]);
+                                        aGauge1.RangeEndValue = Convert.ToInt32(s[3]) + 20;
+                                    }
                                 }
- 
+                                catch 
+                                {
+                                    break;
+                                } 
                             }
                             break;
 
                         case "$":
                             {
+                                if (RxString.IndexOf("WTF") >= 0)
+                                    break;
                                 string[] s = RxString.Substring(2).Split(',');
-                                Pbar.Maximum  = binread = Convert.ToInt32(s[1]);
+                                binread = Convert.ToInt32(s[1]);
                                 adcrate = 60*4;
                             }
- 
                             break;
+
                         case "S":
                             int imax = Convert.ToInt32(RxString.Substring(2, 2), 16);
                             for (int i = 6; i < imax; i += 4)
@@ -284,11 +304,26 @@ namespace WindowsFormsApplication1
 
                         case "v":
 
+                            if (RxString.IndexOf("v 1") >= 0 || RxString.IndexOf("v 2") >= 0)
+                            {
+                                RxString = "PFM6 connected, port " + com.PortName + ", version " + RxString.Substring(0);
+                                aGauge1.Range_Idx = 3;
+                                aGauge1.RangeEnabled = false;
+                                aGauge1.Range_Idx = 4;
+                                aGauge1.RangeEnabled = false;
+                            }
+                            else if (RxString.IndexOf("v 3") >= 0)
+                            {
+                                RxString = "PFM8 connected, port " + com.PortName + ", version " + RxString.Substring(0);
+                            }
+                            else
+                                RxString = "???";
+
                             if (com.IsOpen)
-                                this.Text = "PFM6 connected, port " + com.PortName + ", version " + RxString.Substring(0);
+                                this.Text = RxString;
                             else
                                 if (tcp.client.Connected)
-                                    this.Text = "PFM6 connected, port " + tcp.stream.GetType().ToString() + ", version " + RxString.Substring(0);
+                                    this.Text = RxString;
 
                             Login.Enabled = false;
                             ButtonsFrame.Enabled = true;
@@ -316,19 +351,14 @@ namespace WindowsFormsApplication1
                             if (RxString.Substring(1, 1) == "!")
                             {
                                 string[] s = RxString.Substring(2).Split(',');
-                                Pbar.Maximum  =binread =Convert.ToInt32(s[0]);
                                 adcrate = Convert.ToInt32(s[1]);
+                                binread = Convert.ToInt32(s[0]);
                             }
                             break;
 
                         case "(":
-                            try
-                            {
-                                --Boot.Ack;
-                            }
-                            catch
-                            {
-                            }
+                            try { --Boot.Ack; }
+                            catch { }
                             break;
 
                         case "4":
@@ -402,8 +432,8 @@ namespace WindowsFormsApplication1
             toolTip1.SetToolTip(Burst, Burst.Value.ToString());
             toolTip1.SetToolTip(Length, Length.Value.ToString("0ms"));
             toolTip1.SetToolTip(HV,HV.Value.ToString("0V"));
-            toolTip1.SetToolTip(DAC1, "DAC1=" + ((DAC1.Value * 100 + 2048) / 4096).ToString()+"%");
-            toolTip1.SetToolTip(DAC2, "DAC2=" + ((DAC2.Value * 100 + 2048) / 4096).ToString()+"%");
+            toolTip1.SetToolTip(DAC1, DAC1.Value.ToString() + "A");
+            toolTip1.SetToolTip(DAC2, DAC2.Value.ToString() + "A");
             toolTip1.SetToolTip(SimmerPw, SimmerPw.Value.ToString("0ns"));
             toolTip1.SetToolTip(SimmerRate, SimmerRate.Value.ToString("0uS"));
             toolTip1.SetToolTip(DelayPw, (DelayPw.Value / 100.0).ToString("0.00%"));
@@ -472,6 +502,8 @@ namespace WindowsFormsApplication1
             PortWrite("u " + HV.Value.ToString() + "\r");
             Properties.pfm6.Default.HVvalue = HV.Value;
             Properties.pfm6.Default.Save();
+            aGauge1.MaxValue = 5*HV.Value/4;
+            aGauge1.ScaleLinesMajorStepValue = 200 * (HV.Value / 200);
         }
 
         private void Simmer_CheckedChanged(object sender, EventArgs e)
@@ -729,31 +761,27 @@ namespace WindowsFormsApplication1
 
         private void XlapChanged(object sender, EventArgs e)
         {
-            if (Xlap1.Checked == true)
+            if (xlap1.Checked == true)
                 PortWrite("x 1\r");
-            if (Xlap2.Checked == true)
+            if (xlap2.Checked == true)
                 PortWrite("x 2\r");
-            if (Xlap4.Checked == true)
+            if (xlap4.Checked == true)
                 PortWrite("x 4\r");
+        }
+
+        private void xxlap_CheckedChanged(object sender, EventArgs e)
+        {
+            if (xxlap1.Checked == true)
+                PortWrite("X 1\r");
+            if (xxlap2.Checked == true)
+                PortWrite("X 2\r");
+            if (xxlap4.Checked == true)
+                PortWrite("X 4\r");
         }
 
         private void ExitMenu_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void eCEnable_Click(object sender, EventArgs e)
-        {
-            if (eCEnable.Text == "EC enable")
-            {
-                eCEnable.Text = "EC disable";
-                PortWrite("u 1\r");
-            }
-            else
-            {
-                eCEnable.Text = "EC enable";
-                PortWrite("u 0\r");
-            }
         }
 
         public void PortWrite(string s)
@@ -774,13 +802,6 @@ namespace WindowsFormsApplication1
             { }
         }
 
-
-
-        private void ConnectMenu_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-            OpenPort(e.ClickedItem.ToString());
-        }
-
         private void ConnectMenu_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
@@ -795,6 +816,11 @@ namespace WindowsFormsApplication1
             foreach (string port in ports)
                 ConnectMenu.DropDownItems.Add(port);
             ConnectMenu.DropDownItems.Add(Properties.pfm6.Default.ip);
+        }
+
+        private void ConnectMenu_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            OpenPort(e.ClickedItem.ToString());
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -844,10 +870,11 @@ namespace WindowsFormsApplication1
 
         private void DAC_MouseUp(object sender, MouseEventArgs e)
         {
-            PortWrite(".10"
-                + (DAC2.Value % 256).ToString("X2") + (DAC2.Value / 256).ToString("X2")
-                + (DAC1.Value % 256).ToString("X2") + (DAC1.Value / 256).ToString("X2")
-                + "\r");
+            //PortWrite(".10"
+            //    + (DAC2.Value % 256).ToString("X2") + (DAC2.Value / 256).ToString("X2")
+            //    + (DAC1.Value % 256).ToString("X2") + (DAC1.Value / 256).ToString("X2")
+            //    + "\r");
+            PortWrite("i "  + DAC1.Value.ToString() + "," + DAC2.Value.ToString()  + "\r");
         }
 
         private void vLPToolStripMenuItem_Click(object sender, EventArgs e)
@@ -942,7 +969,6 @@ namespace WindowsFormsApplication1
             Properties.pfm6.Default.Save();
 
         }
-
     }
 
 
