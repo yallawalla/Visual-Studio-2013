@@ -135,11 +135,13 @@ static 	const char *month_table[12] = {
 
 struct	ftpd_msgstate {
 	enum ftpd_state_e state;
+	LPTHREAD_START_ROUTINE MsgHandle;
 //	vfs_t *vfs;
 //	struct ip_addr dataip;
-//	u16_t dataport;
-	SOCKET msg_socket;
-	SOCKET data_socket;
+	FATFS *fatfs;
+	DIR *dir;
+	int dataport;
+	SOCKET listen, msg_socket;
 	struct ftpd_datastate *datafs;
 	bool passive;
 	char *renamefrom;
@@ -152,3 +154,8 @@ struct	ftpd_datastate {
 	//vfs_file_t *vfs_file;
 	struct ftpd_msgstate *msgfs;
 };
+
+#define DEFAULT_BUFLEN 512
+#define DEFAULT_PORT "21"
+
+struct ftpd_msgstate * Listen(PCSTR, LPVOID);

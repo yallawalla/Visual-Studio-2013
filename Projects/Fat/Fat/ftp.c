@@ -1,4 +1,4 @@
-#include <time.h>
+#include <Windows.h>
 #include <stdarg.h>
 #include <ctype.h>
 #include	"vfs.h"
@@ -119,8 +119,8 @@ enum ftpd_state_e {
 	FTPD_QUIT
 };
 
-#define	_CLOSED 		0
-#define	_CLOSING 		1
+#define	_CLOSED 	0
+#define	_CLOSING 	1
 #define	_CONNECTED 	2
 
 static 	const char *month_table[12] = {
@@ -139,7 +139,9 @@ static 	const char *month_table[12] = {
 };
 
 time_t	time(time_t *t) {
-	*t = __time__;
+	SYSTEMTIME st;
+	GetSystemTime(&st);
+	*t = st.wMilliseconds;
 	return *t;
 }
 
@@ -158,10 +160,9 @@ struct	ftpd_msgstate {
 	struct pbuf	*p;
 	vfs_t *vfs;
 	struct ip_addr dataip;
-	u16_t dataport;
 	struct tcp_pcb *datapcb;
 	struct ftpd_datastate *datafs;
-	int passive;
+	int  dataport,passive;
 	char *renamefrom;
 };
 
