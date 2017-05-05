@@ -102,7 +102,7 @@ dataset).
 File name not allowed.
 */
 
-enum ftpd_state_e {
+enum fsm_state {
 	FTPD_USER,
 	FTPD_PASS,
 	FTPD_IDLE,
@@ -114,9 +114,11 @@ enum ftpd_state_e {
 	FTPD_QUIT
 };
 
-#define	_CLOSED 		0
-#define	_CLOSING 		1
-#define	_CONNECTED 	2
+enum fsd_state {
+	CLOSED,
+	CLOSING,
+	CONNECTED
+};
 
 static 	const char *month_table[12] = {
 	"Jan",
@@ -134,28 +136,22 @@ static 	const char *month_table[12] = {
 };
 
 struct	ftpd_msgstate {
-	enum ftpd_state_e state;
+	enum fsm_state mstate;
+	enum fsd_state dstate;
+	struct ftpd_msgstate *data;
 	LPTHREAD_START_ROUTINE MsgHandle;
-//	vfs_t *vfs;
-//	struct ip_addr dataip;
 	FATFS *fatfs;
 	DIR *dir;
-	int dataport;
-	SOCKET listen, msg_socket;
-	struct ftpd_datastate *datafs;
+	int port;
+	SOCKET listen, socket;
 	bool passive;
 	char *renamefrom;
 };
 
-struct	ftpd_datastate {
-	int state;
-	//vfs_dir_t *vfs_dir;
-	//vfs_dirent_t *vfs_dirent;
-	//vfs_file_t *vfs_file;
-	struct ftpd_msgstate *msgfs;
-};
 
 #define DEFAULT_BUFLEN 512
 #define DEFAULT_PORT "21"
+#define DEFAULT_DATAPORT 4096
+#define MAX_DATAPORT DEFAULT_DATAPORT+4096
 
 struct ftpd_msgstate * Listen(PCSTR, LPVOID);

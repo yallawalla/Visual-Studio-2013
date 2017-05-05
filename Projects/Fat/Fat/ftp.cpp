@@ -16,6 +16,31 @@
 #pragma comment (lib, "Ws2_32.lib")
 // #pragma comment (lib, "Mswsock.lib")
 
+void send_next_directory(struct ftpd_msgstate *fsm, int shortlist)
+{
+	FILINFO	fno;
+	TCHAR	buf[256];
+	while (1) {
+		f_readdir(fsm->dir, &fno);
+		if (fsm->dir->sect == NULL)
+			break;
+		if (shortlist)
+			sprintf_s(buf, "%s\r\n", fno.fname);
+		else {
+			time_t current_time;
+			struct tm s_time;
+			time(&current_time);
+			gmtime_s( &s_time, &current_time);
+			sprintf_s(buf, "-rwxrwxrwx   1 user     ftp  %11d %s %02i %02i:%02i %s\r\n", fno.fsize, month_table[s_time.tm_mon], s_time.tm_mday, s_time.tm_hour, s_time.tm_min, fno.fname);
+		}
+
+		if (fno.fattrib & AM_DIR)
+			buf[0] = 'd';
+		send(fsm->data->socket, buf, strlen(buf), 0);
+	}
+	closesocket(fsm->data->socket);
+}
+
 
 int send_msg(SOCKET s, char *msg, ...)
 {
@@ -36,22 +61,22 @@ struct	ftpd_command {
 };
 
 void cmd_user(const char *arg, struct ftpd_msgstate *fsm) {
-	send_msg(fsm->msg_socket, msg331);
-	fsm->state = FTPD_PASS;
+	send_msg(fsm->socket, msg331);
+	fsm->mstate = FTPD_PASS;
 	//		send_msg(pcb, fs, msgLoginFailed);
 	//		fs->state = FTPD_QUIT;
 }
 
 void cmd_pass(const char *arg, struct ftpd_msgstate *fsm) {
-	send_msg(fsm->msg_socket, msg230);
-	fsm->state = FTPD_IDLE;
+	send_msg(fsm->socket, msg230);
+	fsm->mstate = FTPD_IDLE;
 	//		send_msg(pcb, fs, msgLoginFailed);
 	//		fs->state = FTPD_QUIT;
 }
 
 static void cmd_syst(const char *arg, struct ftpd_msgstate *fsm)
 {
-	send_msg(fsm->msg_socket, msg214SYST, "UNIX");
+	send_msg(fsm->socket, msg214SYST, "UNIX");
 }
 
 static void cmd_type(const char *arg, struct ftpd_msgstate *fsm)
@@ -59,16 +84,16 @@ static void cmd_type(const char *arg, struct ftpd_msgstate *fsm)
 	printf("Got TYPE -%s-\n", arg);
 	if (*arg == 'A')
 	{
-		send_msg(fsm->msg_socket, "200 Type set to A.");
+		send_msg(fsm->socket, "200 Type set to A.");
 		return;
 	}
 	if (*arg == 'I')
 	{
-		send_msg(fsm->msg_socket, "200 Type set to I.");
+		send_msg(fsm->socket, "200 Type set to I.");
 		return;
 	}
 
-	send_msg(fsm->msg_socket, msg502);
+	send_msg(fsm->socket, msg502);
 }
 
 DWORD WINAPI DataHandle(LPVOID lpParameter) {
@@ -77,14 +102,13 @@ DWORD WINAPI DataHandle(LPVOID lpParameter) {
 
 void cmd_pasv(const char *arg, struct ftpd_msgstate *fsm) {
 	DWORD WINAPI DataHandle(LPVOID);
-
-	if (Listen("4096", DataHandle))
-	{
-		send_msg(fsm->msg_socket, msg227, 127,0,0,1,10,00);
-
-
+	fsm->data = Listen(NULL, DataHandle);
+	if (fsm->data) {
+		send_msg(fsm->socket, msg227, 127,0,0,1,0x10,0x0);
 	}
-
+	else {
+		send_msg(fsm->socket, msg451);
+	}
 }
 //{
 //	DWORD WINAPI DataHandle(LPVOID);
@@ -123,8 +147,8 @@ void cmd_pasv(const char *arg, struct ftpd_msgstate *fsm) {
 
 void cmd_quit(const char *arg, struct ftpd_msgstate *fsm)
 {
-	send_msg(fsm->msg_socket, msg221);
-	fsm->state = FTPD_QUIT;
+	send_msg(fsm->socket, msg221);
+	fsm->mstate = FTPD_QUIT;
 }
 
 void cmd_cwd(const char *arg, struct ftpd_msgstate *fsm)
@@ -139,10 +163,10 @@ void cmd_cwd(const char *arg, struct ftpd_msgstate *fsm)
 		++c;	
 
 	if (f_chdir((TCHAR *) c) == FR_OK) {
-		send_msg(fsm->msg_socket, msg250);
+		send_msg(fsm->socket, msg250);
 	}
 	else {
-		send_msg(fsm->msg_socket, msg550);
+		send_msg(fsm->socket, msg550);
 	}
 }
 
@@ -150,7 +174,7 @@ void cmd_pwd(const char *arg, struct ftpd_msgstate *fsm)
 {
 	TCHAR path[256];
 	if (f_getcwd(path, sizeof(path))==FR_OK)
-		send_msg(fsm->msg_socket, msg257PWD, path);	//~~~
+		send_msg(fsm->socket, msg257PWD, path);	//~~~
 }
 
 static void cmd_list_common(const char *arg, struct ftpd_msgstate *fsm, bool shortlist)
@@ -159,7 +183,7 @@ static void cmd_list_common(const char *arg, struct ftpd_msgstate *fsm, bool sho
 	TCHAR	buf[128];
 
 	if (f_getcwd(buf, sizeof(buf)) != FR_OK || f_opendir(fsm->dir, buf) != FR_OK || f_readdir(fsm->dir, NULL) != FR_OK) {
-		send_msg(fsm->msg_socket, msg451);
+		send_msg(fsm->socket, msg451);
 		return;
 	}
 
@@ -171,24 +195,13 @@ static void cmd_list_common(const char *arg, struct ftpd_msgstate *fsm, bool sho
 	//}
 
 	if (shortlist) {
-		fsm->state = FTPD_NLST;
+		fsm->mstate = FTPD_NLST;
 	} else {
-		fsm->state = FTPD_LIST;
+		fsm->mstate = FTPD_LIST;
 	}
 
-	send_msg(fsm->msg_socket, msg150);
-
-	while (1) {
-		f_readdir(fsm->dir, &fno);
-		if (fsm->dir->sect == NULL)
-			break;
-		printf("\r\n%-16s", fno.fname);
-		if (fno.fattrib & AM_DIR)
-			printf("/");
-		else
-			printf("%d", (int)fno.fsize);
-	}
-	printf("\r\n");
+	send_msg(fsm->socket, msg150);
+	send_next_directory(fsm, shortlist);
 }
 
 static void cmd_nlst(const char *arg, struct ftpd_msgstate *fsm)
@@ -241,7 +254,8 @@ struct ftpd_msgstate * Listen(PCSTR port, LPVOID lpParameter)
 	struct addrinfo *result = NULL;
 	struct addrinfo hints;
 	struct ftpd_msgstate *fsm = new ftpd_msgstate();
-	fsm->state = FTPD_IDLE;
+	fsm->mstate = FTPD_IDLE;
+	fsm->port = DEFAULT_DATAPORT;
 	fsm->MsgHandle = (LPTHREAD_START_ROUTINE)lpParameter;
 	//    fsm->vfs = vfs_openfs();
 
@@ -305,7 +319,7 @@ DWORD WINAPI ListenForClients(LPVOID lpParameter) {
 	struct ftpd_msgstate *fsm = (struct ftpd_msgstate *)lpParameter;
 	while (true) // Never ends until the Server is closed.
 	{
-		fsm->msg_socket = accept(fsm->listen, NULL, NULL);
+		fsm->socket = accept(fsm->listen, NULL, NULL);
 		DWORD WINAPI HandleClientComm(LPVOID);
 		DWORD myThreadID;
 		HANDLE myHandle = CreateThread(0, 0, fsm->MsgHandle, fsm, 0, &myThreadID);
@@ -315,13 +329,13 @@ DWORD WINAPI ListenForClients(LPVOID lpParameter) {
 
 DWORD WINAPI MsgHandle(LPVOID lpParameter) {
 	struct ftpd_msgstate *fsm = (struct ftpd_msgstate *)lpParameter;
-	int i=send_msg(fsm->msg_socket, msg220);
+	int i=send_msg(fsm->socket, msg220);
 	struct ftpd_command *ftpd_cmd;
 	while (true) // Never ends until the Server is closed.
 	{
 		char recvbuf[DEFAULT_BUFLEN];
 		int recvbuflen = DEFAULT_BUFLEN;
-		int iResult = recv(fsm->msg_socket, recvbuf, recvbuflen, 0);
+		int iResult = recv(fsm->socket, recvbuf, recvbuflen, 0);
 		if (iResult > 0) {
 			char cmd[5];
 			struct pbuf *q;
@@ -346,8 +360,10 @@ DWORD WINAPI MsgHandle(LPVOID lpParameter) {
 
 			if (ftpd_cmd->func)
 				ftpd_cmd->func(pt,fsm);
-			else
-				send_msg(fsm->msg_socket, msg502);
+			else {
+				send_msg(fsm->socket, msg502);
+				printf("not implemented.. %sr\n", recvbuf);
+			}
 		}
 		else if (iResult == 0) {
 			printf("Connection closing...\n");
@@ -357,7 +373,7 @@ DWORD WINAPI MsgHandle(LPVOID lpParameter) {
 			break;
 		}
 	}
-	closesocket(fsm->msg_socket);
+	closesocket(fsm->socket);
 //	WSACleanup();
 	return 0;
 }
