@@ -135,23 +135,24 @@ static 	const char *month_table[12] = {
 	"Dec"
 };
 
-struct	ftpd_msgstate {
+typedef struct	ftpd_msgstate {
 	enum fsm_state mstate;
 	enum fsd_state dstate;
 	struct ftpd_msgstate *data;
 	LPTHREAD_START_ROUTINE MsgHandle;
 	FATFS *fatfs;
 	DIR *dir;
-	int port;
+	int dataport;
 	SOCKET listen, socket;
 	bool passive;
 	char *renamefrom;
-};
-
+} _FSM;
 
 #define DEFAULT_BUFLEN 512
 #define DEFAULT_PORT "21"
 #define DEFAULT_DATAPORT 4096
 #define MAX_DATAPORT DEFAULT_DATAPORT+4096
 
-struct ftpd_msgstate * Listen(PCSTR, LPVOID);
+_FSM* Listen(PCSTR, LPVOID);
+DWORD WINAPI MsgHandle(LPVOID);
+DWORD WINAPI DataHandle(LPVOID);

@@ -6,9 +6,6 @@
 #include "diskio.h"
 #include "ftp.h"
 
-DWORD WINAPI MsgHandle(LPVOID);
-struct ftpd_msgstate * Listen(PCSTR, LPVOID);
-
 // all files without precompiled headers
 // project character set not set
 //
@@ -37,10 +34,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	fres = f_chdir((const TCHAR *)"..");
 	fres = f_getcwd((TCHAR *)cwd, sizeof(cwd));
 
-	struct	ftpd_msgstate *msg = Listen("21", MsgHandle);
-	if (msg) {
-		msg->fatfs = &fs;
-		msg->dir = &dir;
+	_FSM *fsm = Listen("21", MsgHandle);
+	if (fsm) {
+		fsm->fatfs = &fs;
+		fsm->dir = &dir;
 		while (1);
 	}
 }

@@ -16,10 +16,11 @@
 #pragma comment (lib, "Ws2_32.lib")
 // #pragma comment (lib, "Mswsock.lib")
 
-void send_next_directory(struct ftpd_msgstate *fsm, int shortlist)
+void list_directory(_FSM *fsm, int shortlist)
 {
 	FILINFO	fno;
 	TCHAR	buf[256];
+
 	while (1) {
 		f_readdir(fsm->dir, &fno);
 		if (fsm->dir->sect == NULL)
@@ -37,10 +38,9 @@ void send_next_directory(struct ftpd_msgstate *fsm, int shortlist)
 		if (fno.fattrib & AM_DIR)
 			buf[0] = 'd';
 		send(fsm->data->socket, buf, strlen(buf), 0);
+		Sleep(5);
 	}
-	closesocket(fsm->data->socket);
 }
-
 
 int send_msg(SOCKET s, char *msg, ...)
 {
@@ -57,29 +57,29 @@ int send_msg(SOCKET s, char *msg, ...)
 
 struct	ftpd_command {
 	char *cmd;
-	void(*func) (const char *, struct ftpd_msgstate *);
+	void(*func) (const char *, _FSM *);
 };
 
-void cmd_user(const char *arg, struct ftpd_msgstate *fsm) {
+void cmd_user(const char *arg, _FSM *fsm) {
 	send_msg(fsm->socket, msg331);
 	fsm->mstate = FTPD_PASS;
 	//		send_msg(pcb, fs, msgLoginFailed);
 	//		fs->state = FTPD_QUIT;
 }
 
-void cmd_pass(const char *arg, struct ftpd_msgstate *fsm) {
+void cmd_pass(const char *arg, _FSM *fsm) {
 	send_msg(fsm->socket, msg230);
 	fsm->mstate = FTPD_IDLE;
 	//		send_msg(pcb, fs, msgLoginFailed);
 	//		fs->state = FTPD_QUIT;
 }
 
-static void cmd_syst(const char *arg, struct ftpd_msgstate *fsm)
+static void cmd_syst(const char *arg, _FSM *fsm)
 {
 	send_msg(fsm->socket, msg214SYST, "UNIX");
 }
 
-static void cmd_type(const char *arg, struct ftpd_msgstate *fsm)
+static void cmd_type(const char *arg, _FSM *fsm)
 {
 	printf("Got TYPE -%s-\n", arg);
 	if (*arg == 'A')
@@ -96,62 +96,31 @@ static void cmd_type(const char *arg, struct ftpd_msgstate *fsm)
 	send_msg(fsm->socket, msg502);
 }
 
-DWORD WINAPI DataHandle(LPVOID lpParameter) {
-	return 0;
-}
-
-void cmd_pasv(const char *arg, struct ftpd_msgstate *fsm) {
+void cmd_pasv(const char *arg, _FSM *fsm) {
 	DWORD WINAPI DataHandle(LPVOID);
-	fsm->data = Listen(NULL, DataHandle);
+	char c[8];
+	_itoa_s(fsm->dataport, c, 10);
+
+	fsm->data = Listen(c, DataHandle);
+	fsm->data->data = fsm;
+
 	if (fsm->data) {
-		send_msg(fsm->socket, msg227, 127,0,0,1,0x10,0x0);
+		send_msg(fsm->socket, msg227, 127, 0, 0, 1, fsm->dataport / 256, fsm->dataport % 256);
+		if (++fsm->dataport == MAX_DATAPORT)
+			fsm->dataport = DEFAULT_DATAPORT;
 	}
 	else {
 		send_msg(fsm->socket, msg451);
 	}
 }
-//{
-//	DWORD WINAPI DataHandle(LPVOID);
-//	static int port = 4096;
-//	static int start_port = 4096;
-//	char	s[8];
-//	fsm->datafs = new struct ftpd_datastate();
-//	start_port = port;
-//	while (1) {
-//		if (++port > 0x7fff)
-//			port = 4096;
-//
-//		fsm->dataport = port;
-//		sprintf(s, "%s", port);
-//		if (listen(s, DataHandle) == 0)
-//			break;
-//		else
-//			return;
-//		}
-//	}
-//	fsm->datapcb = temppcb;
-//
-//	fsm->datafs->passive = 1;
-//	fsm->datafs->state = _CLOSED;
-//	fsm->datafs->msgfs = fsm;
-//	fsm->datafs->msgpcb = pcb;
-//
-//	/* Tell TCP that this is the structure we wish to be passed for our
-//	callbacks. */
-//	tcp_arg(fsm->datapcb, fsm->datafs);
-//	tcp_accept(fsm->datapcb, ftpd_dataaccept);
-//	send_msg(pcb, fsm, msg227, ip4_addr1(&pcb->local_ip), ip4_addr2(&pcb->local_ip), ip4_addr3(&pcb->local_ip), ip4_addr4(&pcb->local_ip), (fsm->dataport >> 8) & 0xff, (fsm->dataport) & 0xff);
-//	//   dbg_printf("\r\ndatapcb=%08X, dataarg=%08X\r\n", fsm->datapcb,fsm->datafs);
-//
-//}
 
-void cmd_quit(const char *arg, struct ftpd_msgstate *fsm)
+void cmd_quit(const char *arg, _FSM *fsm)
 {
 	send_msg(fsm->socket, msg221);
 	fsm->mstate = FTPD_QUIT;
 }
 
-void cmd_cwd(const char *arg, struct ftpd_msgstate *fsm)
+void cmd_cwd(const char *arg, _FSM *fsm)
 {
 	char *c = (char *)arg;
 	int i = strlen(c);
@@ -170,14 +139,14 @@ void cmd_cwd(const char *arg, struct ftpd_msgstate *fsm)
 	}
 }
 
-void cmd_pwd(const char *arg, struct ftpd_msgstate *fsm)
+void cmd_pwd(const char *arg, _FSM *fsm)
 {
 	TCHAR path[256];
 	if (f_getcwd(path, sizeof(path))==FR_OK)
 		send_msg(fsm->socket, msg257PWD, path);	//~~~
 }
 
-static void cmd_list_common(const char *arg, struct ftpd_msgstate *fsm, bool shortlist)
+ void cmd_list_common(const char *arg, _FSM *fsm, bool shortlist)
 {
 	FILINFO	fno;
 	TCHAR	buf[128];
@@ -201,20 +170,19 @@ static void cmd_list_common(const char *arg, struct ftpd_msgstate *fsm, bool sho
 	}
 
 	send_msg(fsm->socket, msg150);
-	send_next_directory(fsm, shortlist);
 }
 
-static void cmd_nlst(const char *arg, struct ftpd_msgstate *fsm)
+ void cmd_nlst(const char *arg, _FSM *fsm)
 {
 	cmd_list_common(arg, fsm, true);
 }
 
-static void cmd_list(const char *arg, struct ftpd_msgstate *fsm)
+ void cmd_list(const char *arg, _FSM *fsm)
 {
 	cmd_list_common(arg, fsm, false);
 }
 
-static struct ftpd_command ftpd_commands[] = {
+struct ftpd_command ftpd_commands[] = {
 	"USER", cmd_user,
 	"PASS", cmd_pass,
 	"SYST", cmd_syst,
@@ -245,7 +213,7 @@ static struct ftpd_command ftpd_commands[] = {
 }; 
 
 
-struct ftpd_msgstate * Listen(PCSTR port, LPVOID lpParameter)
+_FSM * Listen(PCSTR port, LPVOID lpParameter)
 {
 	WSADATA wsaData;
 	int iResult;
@@ -253,20 +221,18 @@ struct ftpd_msgstate * Listen(PCSTR port, LPVOID lpParameter)
 
 	struct addrinfo *result = NULL;
 	struct addrinfo hints;
-	struct ftpd_msgstate *fsm = new ftpd_msgstate();
+	_FSM *fsm = new ftpd_msgstate();
 	fsm->mstate = FTPD_IDLE;
-	fsm->port = DEFAULT_DATAPORT;
+	fsm->dataport = DEFAULT_DATAPORT;
+
 	fsm->MsgHandle = (LPTHREAD_START_ROUTINE)lpParameter;
 	//    fsm->vfs = vfs_openfs();
-
-
 	// Initialize Winsock
 	iResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
 	if (iResult != 0) {
 		printf("WSAStartup failed with error: %d\n", iResult);
 		return NULL;
 	}
-
 	ZeroMemory(&hints, sizeof(hints));
 	hints.ai_family = AF_INET;
 	hints.ai_socktype = SOCK_STREAM;
@@ -275,6 +241,7 @@ struct ftpd_msgstate * Listen(PCSTR port, LPVOID lpParameter)
 
 	// Resolve the server address and port
 	iResult = getaddrinfo(NULL, port, &hints, &result);
+
 	if (iResult != 0) {
 		printf("getaddrinfo failed with error: %d\n", iResult);
 		WSACleanup();
@@ -316,7 +283,7 @@ struct ftpd_msgstate * Listen(PCSTR port, LPVOID lpParameter)
 }
 
 DWORD WINAPI ListenForClients(LPVOID lpParameter) {
-	struct ftpd_msgstate *fsm = (struct ftpd_msgstate *)lpParameter;
+	_FSM *fsm = (_FSM *)lpParameter;
 	while (true) // Never ends until the Server is closed.
 	{
 		fsm->socket = accept(fsm->listen, NULL, NULL);
@@ -327,8 +294,31 @@ DWORD WINAPI ListenForClients(LPVOID lpParameter) {
 	return 0;
 }
 
+DWORD WINAPI DataHandle(LPVOID lpParameter) {
+	_FSM *fsm = (_FSM *)lpParameter;
+	switch (fsm->data->mstate) {
+		case FTPD_LIST:
+			list_directory(fsm->data, 0);
+			fsm->data->mstate = FTPD_IDLE;
+			closesocket(fsm->socket);
+			printf("data connection closing...\n");
+			break;
+		case FTPD_NLST:
+			list_directory(fsm->data, 1);
+			fsm->data->mstate = FTPD_IDLE;
+			closesocket(fsm->socket);
+			break;
+		case FTPD_RETR:
+			//send_file(fsm->datafs, fsm->datapcb);
+			break;
+		default:
+			break;
+	}
+	return 0;
+}
+
 DWORD WINAPI MsgHandle(LPVOID lpParameter) {
-	struct ftpd_msgstate *fsm = (struct ftpd_msgstate *)lpParameter;
+	_FSM *fsm = (_FSM *)lpParameter;
 	int i=send_msg(fsm->socket, msg220);
 	struct ftpd_command *ftpd_cmd;
 	while (true) // Never ends until the Server is closed.
@@ -360,13 +350,11 @@ DWORD WINAPI MsgHandle(LPVOID lpParameter) {
 
 			if (ftpd_cmd->func)
 				ftpd_cmd->func(pt,fsm);
-			else {
+			else
 				send_msg(fsm->socket, msg502);
-				printf("not implemented.. %sr\n", recvbuf);
-			}
 		}
 		else if (iResult == 0) {
-			printf("Connection closing...\n");
+			printf("message connection closing...\n");
 			break;
 		}
 		else  {
