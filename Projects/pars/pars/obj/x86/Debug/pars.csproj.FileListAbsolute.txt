@@ -6,3 +6,8 @@ C:\Users\MOCNIK\documents\visual studio 2010\Projects\pars\pars\obj\x86\Debug\pa
 C:\Users\MOCNIK\documents\visual studio 2010\Projects\pars\pars\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
 C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\pars\pars\obj\x86\Debug\pars.csprojResolveAssemblyReference.cache
 C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\pars\pars\obj\x86\Debug\pars.csproj.GenerateResource.Cache
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\pars\pars\obj\x86\Debug\pars.exe
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\pars\pars\obj\x86\Debug\pars.csprojResolveAssemblyReference.cache
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\pars\pars\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\pars\pars\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\pars\pars\obj\x86\Debug\pars.csproj.GenerateResource.Cache

@@ -29,7 +29,9 @@ namespace ConsoleApplication1
                 // Open device in our list by serial number
                 ftStatus = myFtdiDevice.OpenBySerialNumber(ftdiDeviceList[i].SerialNumber);
                 if (String.Equals(ftdiDeviceList[i].SerialNumber, "F5090101") ||
-                    String.Equals(ftdiDeviceList[i].SerialNumber, "FTF2J188")) {
+                    String.Equals(ftdiDeviceList[i].SerialNumber, "SkyPulse") ||
+                    String.Equals(ftdiDeviceList[i].SerialNumber, "FTF2J188"))
+                {
                         ftStatus = myFtdiDevice.SetBitMode(0xc0, 0x01);             // reset
                         Thread.Sleep(200);
                         ftStatus = myFtdiDevice.SetBitMode(0xc4, 0x01);             // reset

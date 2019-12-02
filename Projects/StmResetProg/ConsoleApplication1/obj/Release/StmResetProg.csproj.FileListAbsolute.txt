@@ -23,3 +23,14 @@ C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\StmResetProg\ConsoleApplic
 C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\StmResetProg\ConsoleApplication1\bin\Release\StmResetProg.application
 C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\StmResetProg\ConsoleApplication1\obj\Release\StmResetProg.exe.manifest
 C:\Users\MOCNIK\Documents\Visual Studio 2010\Projects\StmResetProg\ConsoleApplication1\obj\Release\StmResetProg.application
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\StmResetProg\ConsoleApplication1\obj\Release\StmResetProg.exe
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\StmResetProg\ConsoleApplication1\obj\Release\StmResetProg.pdb
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\StmResetProg\ConsoleApplication1\obj\Release\StmResetProg.csprojResolveAssemblyReference.cache
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\StmResetProg\ConsoleApplication1\bin\Release\StmResetProg.exe.manifest
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\StmResetProg\ConsoleApplication1\bin\Release\StmResetProg.application
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\StmResetProg\ConsoleApplication1\bin\Release\StmResetProg.exe
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\StmResetProg\ConsoleApplication1\bin\Release\StmResetProg.pdb
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\StmResetProg\ConsoleApplication1\bin\Release\FTD2XX_NET.dll
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\StmResetProg\ConsoleApplication1\bin\Release\FTD2XX_NET.xml
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\StmResetProg\ConsoleApplication1\obj\Release\StmResetProg.exe.manifest
+C:\Users\Mocnik\Documents\Visual Studio 2013\Projects\StmResetProg\ConsoleApplication1\obj\Release\StmResetProg.application
