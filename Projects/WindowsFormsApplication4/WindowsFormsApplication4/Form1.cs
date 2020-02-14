@@ -39,8 +39,18 @@ namespace WindowsFormsApplication4
             for (int i = 0; i < 12; ++i)
             {
                 int locX = Width / 2 + Convert.ToInt32(100 * Math.Cos(2 * Math.PI * i / 12));
-                int locY = Height / 2 + Convert.ToInt32(100 * Math.Sin(2 * Math.PI * i / 12));
-                if (Math.Sqrt((Math.Pow((locX - x), 2) + Math.Pow((locY - y), 2))) < 100)
+                int locY = Height / 2 - Convert.ToInt32(100 * Math.Sin(2 * Math.PI * i / 12));
+               
+
+                double fi0 = Math.Atan2(Height / 2 - y, x - Width / 2);
+                double fi = Math.Atan2(locY - y, x - locX);
+                double d0 = Math.Sqrt((Math.Pow((Width / 2 - x), 2) + Math.Pow((Height / 2 - y), 2)));
+                double d = Math.Sqrt((Math.Pow((locX - x), 2) + Math.Pow((locY - y), 2)));
+
+                Text = (fi0 / 2 / Math.PI * 360).ToString() + " // " + (fi / 2 / Math.PI * 360).ToString();
+
+                if(Math.Abs(fi-fi0) < Math.PI/24 && d < d0)
+//                if (Math.Sqrt((Math.Pow((locX - x), 2) + Math.Pow((locY - y), 2))) < 100)
                     k |= 1 << i;
             }
             k = decode[k];
@@ -48,11 +58,12 @@ namespace WindowsFormsApplication4
            for (int i = 0; i < 24; ++i)
             {
                 int locX = Width / 2 + Convert.ToInt32(100 * Math.Cos(2 * Math.PI * i / 24));
-                int locY = Height / 2 + Convert.ToInt32(100 * Math.Sin(2 * Math.PI * i / 24));
+                int locY = Height / 2 - Convert.ToInt32(100 * Math.Sin(2 * Math.PI * i / 24));
+
                 if ((k & (1<<i)) != 0)
-                    g.FillEllipse(red, locX, locY, 20, 20);
+                    g.FillEllipse(red, locX-10, locY-10, 20, 20);
                 else
-                    g.FillEllipse(gray, locX, locY, 20, 20);
+                    g.FillEllipse(gray, locX-10, locY-10, 20, 20);
             }
         }
 
