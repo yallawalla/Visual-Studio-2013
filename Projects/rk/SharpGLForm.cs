@@ -17,6 +17,7 @@ namespace rk
     public partial class SharpGLForm : Form
     {
         const int   N =150;
+        float perspective = 45;
         int mouseX=0, mouseY=0;
         [DllImport("..\\..\\..\\rkdll\\Debug\\rkdll.dll", CallingConvention = CallingConvention.Cdecl)]
         static extern void rk4open(int n);
@@ -39,6 +40,7 @@ namespace rk
             openGLControl.MouseUp += new System.Windows.Forms.MouseEventHandler(glMouseUp);
             openGLControl.MouseDown += new System.Windows.Forms.MouseEventHandler(glMouseDown);
             openGLControl.MouseMove += new System.Windows.Forms.MouseEventHandler(glMouseMove);
+            openGLControl.MouseWheel += new System.Windows.Forms.MouseEventHandler(glMouseWheel);
     
             rk4open(N);
             rk4(200, 200, 0, N);
@@ -52,11 +54,13 @@ namespace rk
         private void openGLControl_OpenGLDraw(object sender, RenderEventArgs e)
         {
             OpenGL gl = openGLControl.OpenGL;
-            float x=0, y=0, z=0;
+            float x = 0, y = 0, z = 0;
             gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
             gl.LoadIdentity();
-       //     gl.Rotate(rotX, 0.0f, 1.0f, 0.0f);
-       //     gl.Rotate(rotY, 0.0f, 0.0f, 1.0f);
+
+            gl.Perspective(perspective, (double)Width / (double)Height, 1.0, 1000.0);
+            gl.Viewport(0, 0, (int)Width, (int)Height);
+            gl.LookAt(-4, 2, -4, 4, 4, 0, 0, 1, 0);
 
             gl.Begin(OpenGL.GL_LINES);
             gl.Color(1.0f, 0.0f, 0.0f);
@@ -100,11 +104,15 @@ namespace rk
         {
             if (e.Button == MouseButtons.Left)
             {
-            rotX += (e.X - mouseX)/10.0f;
-            mouseX = e.X;
-            rotY += (e.Y - mouseY)/10.0f;
-            mouseY=e.Y;
+                rotX += (e.X - mouseX) / 10.0f;
+                mouseX = e.X;
+                rotY += (e.Y - mouseY) / 10.0f;
+                mouseY = e.Y;
             }
+        }
+        private void glMouseWheel(object sender, MouseEventArgs e)
+        {
+            perspective = Math.Max(5, Math.Min(85, perspective + e.Delta/120));
         }
 
         /// <summary>
