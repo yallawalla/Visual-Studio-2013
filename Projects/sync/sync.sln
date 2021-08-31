@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2013 for Windows Desktop
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spaga", "spaga.csproj", "{546383EA-30FF-4BAE-8FB9-ACB3B0CD73EF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sync", "sync.csproj", "{1B62D17D-51BB-4483-83C8-4FB9D8E1C92F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{546383EA-30FF-4BAE-8FB9-ACB3B0CD73EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{546383EA-30FF-4BAE-8FB9-ACB3B0CD73EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{546383EA-30FF-4BAE-8FB9-ACB3B0CD73EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{546383EA-30FF-4BAE-8FB9-ACB3B0CD73EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B62D17D-51BB-4483-83C8-4FB9D8E1C92F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B62D17D-51BB-4483-83C8-4FB9D8E1C92F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B62D17D-51BB-4483-83C8-4FB9D8E1C92F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B62D17D-51BB-4483-83C8-4FB9D8E1C92F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
