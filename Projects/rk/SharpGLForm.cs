@@ -16,9 +16,10 @@ namespace rk
     /// </summary>
     public partial class SharpGLForm : Form
     {
-        const int   N =150;
-        float perspective = 45;
-        int mouseX=0, mouseY=0;
+        private const int   N =100;
+        private int mouseX = 0, mouseY = 0, lr = 0, bt = 0;
+        private float rotX = 0.0f, rotY = 0.0f;
+
         [DllImport("..\\..\\..\\rkdll\\Debug\\rkdll.dll", CallingConvention = CallingConvention.Cdecl)]
         static extern void rk4open(int n);
         [DllImport("..\\..\\..\\rkdll\\Debug\\rkdll.dll", CallingConvention = CallingConvention.Cdecl)]
@@ -54,13 +55,15 @@ namespace rk
         private void openGLControl_OpenGLDraw(object sender, RenderEventArgs e)
         {
             OpenGL gl = openGLControl.OpenGL;
-            float x = 0, y = 0, z = 0;
             gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
             gl.LoadIdentity();
 
-            gl.Perspective(perspective, (double)Width / (double)Height, 1.0, 1000.0);
-            gl.Viewport(0, 0, (int)Width, (int)Height);
-            gl.LookAt(-4, 2, -4, 4, 4, 0, 0, 1, 0);
+            gl.MatrixMode(OpenGL.GL_PROJECTION);
+            gl.LoadIdentity();
+        //    gl.Rotate(rotY,rotX, 0);
+            gl.Ortho(-Width / 2, Width / 2, -Height/2, Height/2, -1000, 1000);
+
+            gl.LookAt(lr/100.0f, bt/100.0f, 1, 0, 0, 0, 0, 1, 0);
 
             gl.Begin(OpenGL.GL_LINES);
             gl.Color(1.0f, 0.0f, 0.0f);
@@ -81,12 +84,10 @@ namespace rk
             gl.Begin(OpenGL.GL_LINE_STRIP);
             gl.Color(1.0f, 1.0f, 0.0f);
             gl.Vertex(0.0f, 0.0f, 0.0f);
+
             for (int i = 0; i < N; ++i)
             {
-                x += rk4x(i);
-                y += rk4y(i);
-                z -= rk4z(i);
-                gl.Vertex(x/1000,y/1000,z/1000);
+                gl.Vertex(rk4x(i) / 10, rk4y(i) / 10, rk4z(i) / 10);
             }
             gl.End();
         }
@@ -104,15 +105,22 @@ namespace rk
         {
             if (e.Button == MouseButtons.Left)
             {
-                rotX += (e.X - mouseX) / 10.0f;
+                lr -= e.X - mouseX;
                 mouseX = e.X;
-                rotY += (e.Y - mouseY) / 10.0f;
+                bt += e.Y - mouseY;
+                mouseY = e.Y;
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                rotX -= (e.X - mouseX);
+                mouseX = e.X;
+                rotY += (e.Y - mouseY);
                 mouseY = e.Y;
             }
         }
         private void glMouseWheel(object sender, MouseEventArgs e)
         {
-            perspective = Math.Max(5, Math.Min(85, perspective + e.Delta/120));
+
         }
 
         /// <summary>
@@ -162,6 +170,5 @@ namespace rk
         /// <summary>
         /// The current rotation.
         /// </summary>
-        private float rotX = 0.0f, rotY = 0.0f;
     }
 }
