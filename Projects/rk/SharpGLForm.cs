@@ -16,9 +16,10 @@ namespace rk
     /// </summary>
     public partial class SharpGLForm : Form
     {
-        private const int   N =100;
+        private const int   N =206;
         private int mouseX = 0, mouseY = 0, lr = 0, bt = 0;
         private float rotX = 0.0f, rotY = 0.0f;
+        private Form1 f;
 
         [DllImport("..\\..\\..\\rkdll\\Debug\\rkdll.dll", CallingConvention = CallingConvention.Cdecl)]
         static extern void rk4open(int n);
@@ -42,9 +43,16 @@ namespace rk
             openGLControl.MouseDown += new System.Windows.Forms.MouseEventHandler(glMouseDown);
             openGLControl.MouseMove += new System.Windows.Forms.MouseEventHandler(glMouseMove);
             openGLControl.MouseWheel += new System.Windows.Forms.MouseEventHandler(glMouseWheel);
-    
+
             rk4open(N);
-            rk4(200, 200, 0, N);
+            rk4((float)(322.0 / Math.Sqrt(2.0)), (float)(322.0 / Math.Sqrt(2.0)), 0, N);
+            try
+            {
+                f = new Form1();
+                f.Show();
+            }
+                catch {}
+ 
         }
 
         /// <summary>
@@ -85,7 +93,7 @@ namespace rk
             gl.Color(1.0f, 1.0f, 0.0f);
             gl.Vertex(0.0f, 0.0f, 0.0f);
 
-            for (int i = 0; i < N; ++i)
+            for (int i = 0; i < N-1; ++i)
             {
                 gl.Vertex(rk4x(i) / 10, rk4y(i) / 10, rk4z(i) / 10);
             }
