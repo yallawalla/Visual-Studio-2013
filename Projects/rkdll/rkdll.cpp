@@ -45,20 +45,6 @@ double emji[] ={ 0.77, 0.85, 0.94, 1.03, 1.13, 1.24, 1.36, 1.49,
 				28.4, 30.0, 31.8, 33.7, 35.7, 37.7, 39.9, 42.2,
 				44.6, 47.1, 49.7, 52.4, 55.3, 55.3 };
 
-void	FiktT(struct h2o *p) {
-	int i, ti;
-	double temp;
-
-	ti = (int)floor(p->temp);
-	i = ti + 20;
-	if (i<0)
-		i = 0;
-	if (i>60)
-		i = 60;
-	p->em = emji[i] + (p->temp - ti) * (emji[i + 1] - emji[i]);
-	temp = 1.0 - (3.0 * p->rv * p->em) / (800.0 * p->h);
-	p->tau = (273.0 + p->temp) / temp;
-}
 double	CD43(double m)
 {
 	static double a1[] = { -2.083333, 1.180556, -0.3125,
@@ -144,6 +130,20 @@ double	FunkE(double u, double p, double y, struct Atmosfera *pp)
 	}
 	return (pom * m);
 }
+void	FiktT(struct h2o *p) {
+	int i, ti;
+	double temp;
+
+	ti = (int)floor(p->temp);
+	i = ti + 20;
+	if (i<0)
+		i = 0;
+	if (i>60)
+		i = 60;
+	p->em = emji[i] + (p->temp - ti) * (emji[i + 1] - emji[i]);
+	temp = 1.0 - (3.0 * p->rv * p->em) / (800.0 * p->h);
+	p->tau = (273.0 + p->temp) / temp;
+}
 void	AtmVent(double y, struct atm *p)
 {
 	p->y = y;
@@ -176,7 +176,10 @@ void df(float t, Vector3D y[], Vector3D dy[]) {
 extern "C" {
 __declspec(dllexport) void rk4open(int n) {
 		yarr = (Vector3D *)malloc(K*n*sizeof(Vector3D));
-		Atm(0, &atm);
+		FiktT(&h2o);
+		atm.tau0 = h2o.tau;
+		atm.ha0 = h2o.h;
+		AtmVent(0, &atm);
 	}
 __declspec(dllexport) void rk4close(void) {
 		free(yarr);
