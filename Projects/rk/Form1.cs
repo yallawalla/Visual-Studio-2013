@@ -14,21 +14,16 @@ namespace rk
         public double hg;               // izmerjeni pritisk
         public double rv;               // izmerjena rel. vlaga
         public double h;                // višina meritve
-        public double tau0;             /* temperatura na povrsini zemlje */
-
-        public double ha0;              /* pritisk na povrsini zemlje v mm Hg */
-        public double ro0;
-        public double a0;
-        public double ro0a0;
-        public double y;                /* visina nad povrsino zemlje */
-        public double tau;              /* temperatura */
-        public double hm;               /* pritisk v mm Hg */
-        public double ro;	    	    /* gostota */
-        public double a;    	        /* hitrost zvoka */
+        public double tau;              // fikt. temperatura
+        public double a;    	        // hitrost zvoka
+        public double ro;	    	    // gostota
     };
 
     public partial class Form1 : Form
     {
+        double mass = 20;
+        double S = 0.155 * 0.155 * Math.PI / 4;
+
         atm atm;
         double[] emji = new double[] {
 	        0.77, 0.85, 0.94, 1.03, 1.13, 1.24, 1.36, 1.49,
@@ -73,7 +68,7 @@ namespace rk
             double hg = 750.0 * Math.Pow(atm.tau / 288.9, 5.4);
             double a = 20.0484413 * Math.Sqrt(tau);
             double ro = 0.4643761 * hg / tau;
-            return ro*CD43(v / a);
+            return ro*CD43(v / a)*S/2/mass;
         }
 
         /**************************************************/

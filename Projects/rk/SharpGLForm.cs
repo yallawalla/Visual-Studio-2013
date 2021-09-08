@@ -16,7 +16,7 @@ namespace rk
     /// </summary>
     public partial class SharpGLForm : Form
     {
-        private const int   N =206;
+        private const int   N =216;
         private int mouseX = 0, mouseY = 0, lr = 0, bt = 0;
         private float rotX = 0.0f, rotY = 0.0f;
         private Form1 f;

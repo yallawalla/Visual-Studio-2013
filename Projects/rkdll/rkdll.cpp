@@ -6,6 +6,13 @@
 
 // test.cpp : Defines the entry point for the console application.
 //
+// 322	6340
+// 290	5782
+// 256	4932
+// 219	3938
+// 176	2728
+// 139	1574
+
 
 #include "stdafx.h"
 #include <stdio.h>
@@ -14,29 +21,21 @@
 #include <conio.h>
 #include "mathlib3d-cpp-alpha-0.1/src/Vector3D.h"
 
+#define pi 3.14159265359
+double mass = 12.13;
+double S = 0.120 * 0.120 * pi / 4;
 
-struct h2o {				  /* osnovni podatki atmosfere */
-	double temp;              /* v stopinjah Celzija */
-	double h;                 /* pritisk v mm Hg */
-	double rv;                /* procent relativne vlage */
-	double tau;               /* fiktivna temperatura */
-	double em;                /* pritisk v zasicenem zraku */
-	int err;                  /* parameter napake */
-} h2o = { 20.0, 750.0, 60, 0, 0 };
-struct  atm {          /* normalna atmosfera */
-	double tau0;             /* temperatura na povrsini zemlje */
-	double ha0;              /* pritisk na povrsini zemlje v mm Hg */
-	double ro0;
-	double a0;
-	double ro0a0;
-	double y;                /* visina nad povrsino zemlje */
-	double tau;              /* temperatura */
-	double hm;               /* pritisk v mm Hg */
-	double ro;	    	    /* gostota */
-	double a;    	        /* hitrost zvoka */
+struct  atm {
+	double temp;             // izmerjena temperatura
+	double hg;               // izmerjeni pritisk
+	double rv;               // izmerjena rel. vlaga
+	double h;                // višina meritve
+	double tau;              // fikt. temperatura
+	double a;    	         // hitrost zvoka
+	double ro;	    	     // gostota
 } atm;
 
-double emji[] ={ 0.77, 0.85, 0.94, 1.03, 1.13, 1.24, 1.36, 1.49,
+double	emji[] ={ 0.77, 0.85, 0.94, 1.03, 1.13, 1.24, 1.36, 1.49,
 				1.63, 1.78, 1.95, 2.13, 2.32, 2.53, 2.76, 3.01,
 				3.29, 3.57, 3.88, 4.22, 4.58, 4.90, 5.30, 5.70,
 				6.10, 6.50, 7.00, 7.50, 8.10, 8.60, 9.20, 9.80,
@@ -98,88 +97,40 @@ double	CD43(double m)
 	}
 	return cd;
 }
-double	FunkE(double u, double p, double y, struct Atmosfera *pp)
+double	drag(double v, double h)
 {
-	double x, m, pom, v;
-	/* stetje - zacasno		*/
-	v = u * sqrt(1 + p * p);
-	x = (0.006328 * y) / atm.tau0;   /* pomozna sprem.		*/
-	if (x < 0.14) {                  /* (1-x)**0.5			*/
-		m = 0.999997 - x * (0.499309 + 0.139021 * x);
-	}
-	else {
-		m = 0.999306 - x * (0.489492 + 0.174513 * x);
-	}
-	m = v / (atm.a0 * m);            /* Machovo stevilo		*/
-	pom = CD43(m);
-	pom = pom * m * atm.ro0a0;
-	if (x <= 0.05) {                 /* Odvisnost od visine	*/
-		m = 1.000017 + x*(-4.891948 + x*8.955130);
-	}
-	else if (x <= 0.1) {
-		m = 0.996803 + x*(-4.762684 + x*7.624088);
-	}
-	else if (x <= 0.15) {
-		m = 0.985486 + x*(-4.536655 + x*6.489576);
-	}
-	else if (x <= 0.2) {
-		m = 0.962657 + x*(-4.232153 + x*5.471807);
-	}
-	else {
-		m = 0.923605 + x*(-3.843824 + x*4.505014);
-	}
-	return (pom * m);
+	double tau = atm.tau - 0.006328 * (h - atm.h);
+	double hg = 750.0 * pow(atm.tau / 288.9, 5.4);
+	double a = 20.0484413 * sqrt(tau);
+	double ro = 0.4643761 * hg / tau;
+	return S*ro*CD43(v / a) / 2 / mass;
 }
-void	FiktT(struct h2o *p) {
-	int i, ti;
-	double temp;
 
-	ti = (int)floor(p->temp);
-	i = ti + 20;
-	if (i<0)
-		i = 0;
-	if (i>60)
-		i = 60;
-	p->em = emji[i] + (p->temp - ti) * (emji[i + 1] - emji[i]);
-	temp = 1.0 - (3.0 * p->rv * p->em) / (800.0 * p->h);
-	p->tau = (273.0 + p->temp) / temp;
-}
-void	AtmVent(double y, struct atm *p)
-{
-	p->y = y;
-	p->tau = p->tau0 - 0.006328 * y;
-	p->hm = p->ha0 * pow(p->tau / p->tau0, 5.4);
-	p->a = 20.0484413 * sqrt(p->tau);
-	p->ro = 0.4643761 * p->hm / p->tau;
-}
-void	Atm(double y, struct atm *p)
-{
-	p->y = y;
-	p->tau = 288.16 - 0.0065 * y;
-	p->hm = 760.0 * pow(1.0 - 0.00002256 * y, 5.2561);
-	p->a = 20.0484413 * sqrt(p->tau);
-	p->ro = 0.4645673 * p->hm / p->tau;
-}
 const int	K = 2;
-float		ro = 0;											// rotacija
-Vector3D	ar = { 0, 0, 0 };								// yaw
+float		rot = 0;												// rotacija
+Vector3D	ar = { 0, 0, 0 };										// yaw
 Vector3D	*yarr;
 Vector3D	g = { 0, -9.8f, 0 };
 
 void df(float t, Vector3D y[], Vector3D dy[]) {
-	float yabs = y[1].GetMagnitude();						// |v|
-	dy[0] = y[1];
-	dy[1] = -y[1] * yabs*0.00019f + ar*0.001f + g;
-	ar = y[1].GetCross(y[0]) / yabs / yabs*ro;				// V x dV/dt / |V|*|V|
+		float absY = y[1].GetMagnitude();							// |v|
+		dy[0] = y[1];
+		dy[1] = drag(absY, y[0].y)*(-y[1] * absY + ar) + g;
+		ar = y[1].GetCross(y[0]) / absY / absY * rot;				// V x dV/dt / |V|*|V|
 }
-
 extern "C" {
 __declspec(dllexport) void rk4open(int n) {
 		yarr = (Vector3D *)malloc(K*n*sizeof(Vector3D));
-		FiktT(&h2o);
-		atm.tau0 = h2o.tau;
-		atm.ha0 = h2o.h;
-		AtmVent(0, &atm);
+		atm.rv = 50;
+		atm.hg = 750;
+		atm.temp = 15;
+		atm.h = 0;
+
+		int i = (int)max(0, min(60, atm.temp + 20));
+		double em = emji[i] + (atm.temp - floor(atm.temp)) * (emji[i + 1] - emji[i]);
+		atm.tau = (273.0 + atm.temp) / (1.0 - (3.0 * atm.rv * em) / (800.0 * atm.hg));
+		atm.a = 20.0484413 * sqrt(atm.tau);
+		atm.ro = 0.4643761 * atm.hg / atm.tau;
 	}
 __declspec(dllexport) void rk4close(void) {
 		free(yarr);
@@ -193,13 +144,18 @@ __declspec(dllexport) float rk4y(int n) {
 __declspec(dllexport) float rk4z(int n) {
 		return yarr[K*n].z;
 	}
-
 __declspec(dllexport) int rk4(float vx, float vy, float vz, int n) {
 		float		t=0, h=0.2f;
 		Vector3D	y[K], dy[K], k1[K], k2[K], k3[K], k4[K];
 		Vector3D	*yp = yarr;
 		yp[0] = { 0, 0, 0 };
-		yp[1] = { vx,vy,vz };
+		yp[1] = { (float)(322 / sqrt(2.0)), (float)(322 / sqrt(2.0)), vz };
+		// 322	6340 5855 -458
+		// 290	5782 5210 -572
+		// 256	4932 4418 -514
+		// 219	3938 3530 -408
+		// 176	2728 2527 -201
+		// 139	1574 1698 -124
 
 		for (int i = 0; i < n - 2; ++i) {
 			df(t, yp, dy);						// k1
@@ -229,6 +185,10 @@ __declspec(dllexport) int rk4(float vx, float vy, float vz, int n) {
 			if (yp[0].y > 0 && yp[2].y < 0) {
 				float r = yp[0].x;
 				float tt = t;
+			}
+			if (yp[1].y > 0 && yp[3].y < 0) {
+				float xt = yp[0].x;
+				float yt = yp[0].y;
 			}
 			++yp; ++yp;
 			t += h;
