@@ -62,13 +62,17 @@ namespace rk
             }
         }
 
+        public void hit(double z, double y)
+        {
+            chart2.Series["Series1"].Points.AddXY(z, y);   
+        }
         private double drag(double v, double h)
         {
-            double tau = atm.tau - 0.006328 * (h-atm.h);
+            double tau = atm.tau - 0.006328 * (h - atm.h);
             double hg = 750.0 * Math.Pow(atm.tau / 288.9, 5.4);
             double a = 20.0484413 * Math.Sqrt(tau);
             double ro = 0.4643761 * hg / tau;
-            return ro*CD43(v / a)*S/2/mass;
+            return ro * CD43(v / a) * S / 2 / mass;
         }
 
         /**************************************************/

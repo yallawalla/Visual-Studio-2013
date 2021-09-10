@@ -107,7 +107,7 @@ double	drag(double v, double h)
 }
 
 const int	K = 2;
-float		rot = 0;												// rotacija
+float		rot = 200;												// rotacija
 Vector3D	ar = { 0, 0, 0 };										// yaw
 Vector3D	*yarr;
 Vector3D	g = { 0, -9.8f, 0 };
@@ -115,7 +115,7 @@ Vector3D	g = { 0, -9.8f, 0 };
 void df(float t, Vector3D y[], Vector3D dy[]) {
 		float absY = y[1].GetMagnitude();							// |v|
 		dy[0] = y[1];
-		dy[1] = drag(absY, y[0].y)*(-y[1] * absY + ar) + g;
+		dy[1] = drag(absY, y[0].y) * (-y[1] * absY + ar) + g;
 		ar = y[1].GetCross(y[0]) / absY / absY * rot;				// V x dV/dt / |V|*|V|
 }
 extern "C" {
@@ -132,6 +132,7 @@ __declspec(dllexport) void rk4open(int n) {
 		atm.a = 20.0484413 * sqrt(atm.tau);
 		atm.ro = 0.4643761 * atm.hg / atm.tau;
 	}
+
 __declspec(dllexport) void rk4close(void) {
 		free(yarr);
 	}
@@ -146,10 +147,12 @@ __declspec(dllexport) float rk4z(int n) {
 	}
 __declspec(dllexport) int rk4(float vx, float vy, float vz, int n) {
 		float		t=0, h=0.2f;
+		int			ret = EOF;
 		Vector3D	y[K], dy[K], k1[K], k2[K], k3[K], k4[K];
 		Vector3D	*yp = yarr;
 		yp[0] = { 0, 0, 0 };
-		yp[1] = { (float)(322 / sqrt(2.0)), (float)(322 / sqrt(2.0)), vz };
+		yp[1] = { vx, vy, vz };
+
 		// 322	6340 5855 -458
 		// 290	5782 5210 -572
 		// 256	4932 4418 -514
@@ -182,17 +185,11 @@ __declspec(dllexport) int rk4(float vx, float vy, float vz, int n) {
 				k4[j] = h*dy[j];
 				yp[j+2] = yp[j] + k1[j] / 6.0 + k2[j] / 3.0 + k3[j] / 3.0 + k4[j] / 6.0;
 			}
-			if (yp[0].y > 0 && yp[2].y < 0) {
-				float r = yp[0].x;
-				float tt = t;
-			}
-			if (yp[1].y > 0 && yp[3].y < 0) {
-				float xt = yp[0].x;
-				float yt = yp[0].y;
-			}
+			if (yp[0].y > 0 && yp[2].y < 0)
+				ret = i;
 			++yp; ++yp;
 			t += h;
 		}
-		return 0;
+		return ret;
 	}
 }

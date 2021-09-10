@@ -45,13 +45,18 @@ namespace rk
             openGLControl.MouseWheel += new System.Windows.Forms.MouseEventHandler(glMouseWheel);
 
             rk4open(N);
-            rk4((float)(322.0 / Math.Sqrt(2.0)), (float)(322.0 / Math.Sqrt(2.0)), 0, N);
+            int k=rk4((float)(322.0 / Math.Sqrt(2.0)), (float)(322.0 / Math.Sqrt(2.0)), 0, N);
             try
             {
                 f = new Form1();
                 f.Show();
             }
                 catch {}
+
+            if (k > 0)
+            {
+                f.hit(rk4z(k), rk4y(k));
+            }
  
         }
 
@@ -68,7 +73,7 @@ namespace rk
 
             gl.MatrixMode(OpenGL.GL_PROJECTION);
             gl.LoadIdentity();
-        //    gl.Rotate(rotY,rotX, 0);
+            gl.Rotate(30,30, 0);
             gl.Ortho(-Width / 2, Width / 2, -Height/2, Height/2, -1000, 1000);
 
             gl.LookAt(lr/100.0f, bt/100.0f, 1, 0, 0, 0, 0, 1, 0);
