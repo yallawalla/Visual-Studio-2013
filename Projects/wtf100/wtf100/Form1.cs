@@ -39,7 +39,7 @@ namespace WindowsFormsApplication1
             Properties.wtf.Default.Save();
             log = new StreamWriter(Properties.wtf.Default.logfile);
             log.AutoFlush = true;
-            OpenPort(Properties.wtf.Default.port);
+            OpenPort(Properties.wtf.Default.port, Properties.wtf.Default.baud);
         }
         
  
@@ -72,7 +72,7 @@ namespace WindowsFormsApplication1
             if(tcp!=null)
                 if (tcp.isOpen)
                     tcp.Close();
-            OpenPort(Properties.wtf.Default.port);
+            OpenPort(Properties.wtf.Default.port, Properties.wtf.Default.baud);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -212,7 +212,7 @@ namespace WindowsFormsApplication1
                 WritePort("\x1b[C");
         }
 
-         private void OpenPort(string portname)
+         private void OpenPort(string portname, int baudrate)
         {
   
                 try
@@ -222,6 +222,8 @@ namespace WindowsFormsApplication1
                         if (com.IsOpen)
                             com.Close();
                         com.PortName = portname;
+                        com.BaudRate = baudrate;
+                        com.Parity = Parity.None;
                         com.Open();
 
                     }
@@ -450,7 +452,7 @@ namespace WindowsFormsApplication1
                     }
                     
                     pString = pString.Substring(i+2);
-                    if (pString != "" && pString.Substring(0, 1) == ">")
+                    if (pString != "" && (pString.Substring(0, 1) == ">" || pString.Substring(0, 1) == "/"))
                         pString = pString.Substring(1);
 
                 }
@@ -578,6 +580,27 @@ namespace WindowsFormsApplication1
             pulse.Show();
             pulse.Left = Width / 2;
             pulse.Top = Height / 2;
+        }
+
+        private void com_ErrorReceived(object sender, SerialErrorReceivedEventArgs e)
+        {
+
+        }
+
+        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            byte[] callw = new byte[] { 97,98,99,100 };
+            com.Close();
+            com.Parity = Parity.Mark;
+            com.Open();
+            com.Write(callw, 0, 1);
+            com.Close();
+            com.Parity = Parity.Space;
+            com.Open();
+            com.Write(callw, 1, 3);
+            com.Close();
+            com.Parity = Parity.None;
+            com.Open();
         }
 
 

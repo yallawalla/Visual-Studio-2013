@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="wtf100.exe" size="1878528">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="wtf100.exe" size="1879552">
       <assemblyIdentity name="wtf100" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>1Kje9SGJPlCoadrUotXtQBM+QPA=</dsig:DigestValue>
+        <dsig:DigestValue>EQccUO1HXAG/unCg9aGEsTH+rGk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
