@@ -18,7 +18,7 @@ Vector3D	*yarr;
 float q = 1.60217662e-19;
 float m = 9.10938356e-21;
 Vector3D B = { 0, 1, 0 };
-Vector3D E = { -1000, 0, 0 };
+Vector3D E = { 0, 0, 0 };
 
 void df(float t, Vector3D y[], Vector3D dy[]) {
 		dy[1] = q / m*(E + y[1].GetCross(B));

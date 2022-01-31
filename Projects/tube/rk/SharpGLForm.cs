@@ -17,9 +17,36 @@ namespace rk
     public partial class SharpGLForm : Form
     {
         private const int   N =5000;
-        private int mouseX = 0, mouseY = 0, lr = 0, bt = 0;
+        private int mouseX = 0, mouseY = 0;
         private float rotX = 0.0f, rotY = 0.0f;
         private Form1 f;
+
+        struct coord {public double x=0,y=0,z=0;};
+        struct cam {
+          coord norm,up;
+          double hRadians = 0, vRadians = 0;
+          public void SetView(float h, float v) {
+              norm.x = Math.Cos(vRadians) * Math.Sin(hRadians); 
+              norm.y = -Math.Sin(vRadians);
+              norm.z = Math.Cos(vRadians) * Math.Sin(hRadians); 
+
+              up.x = Math.Sin(vRadians) * Math.Sin(hRadians);
+              up.y = Math.Cos(vRadians);
+              up.z = Math.Sin(vRadians) * Math.Cos(hRadians);
+          }
+
+          public void View(cam c)
+          {
+              OpenGL gl = openGLControl.OpenGL;
+              gl.LookAt(c.pos.x, c.pos.y, c.pos.z,
+            cam_pos.x + cam_norm.x, cam + pos.y + cam_norm.y, camp_pos.z + cam_norm.z,
+            cam_up.x, cam_up.y, cam_up.z); 
+          }
+        }
+        
+
+
+
 
         [DllImport("..\\..\\..\\rkdll\\Debug\\rkdll.dll", CallingConvention = CallingConvention.Cdecl)]
         static extern void rk4open(int n);
@@ -45,7 +72,7 @@ namespace rk
             openGLControl.MouseWheel += new System.Windows.Forms.MouseEventHandler(glMouseWheel);
 
             rk4open(N);
-            int k=rk4(10000,500,0, N);
+            int k=rk4(100,0,0, N);
             try
             {
                 f = new Form1();
@@ -65,6 +92,20 @@ namespace rk
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="RenderEventArgs"/> instance containing the event data.</param>
+        void RotateCamera(float h, float v)
+        { 
+          hRadians += h; 
+          vRadians += v; 
+
+          cam_norm.x = cos(vRadians) * sin(hRadians); 
+          cam_norm.y = -sin(vRadians);
+          cam_norm.z = cos(vRadians) * sin(hRadians); 
+
+          cam_up.x = sin(vRadians) * sin(hRadians);
+          cam_up.y = cos(vRadians);
+          cam_up.z = sin(vRadians) * cos(hRadians);
+        } 
+
         private void openGLControl_OpenGLDraw(object sender, RenderEventArgs e)
         {
             OpenGL gl = openGLControl.OpenGL;
@@ -73,25 +114,25 @@ namespace rk
 
             gl.MatrixMode(OpenGL.GL_PROJECTION);
             gl.LoadIdentity();
-            gl.Rotate(30,30, 0);
             gl.Ortho(-Width / 2, Width / 2, -Height/2, Height/2, -1000, 1000);
 
-            gl.LookAt(lr/100.0f, bt/100.0f, 1, 0, 0, 0, 0, 1, 0);
+            gl.LookAt(10,10, 10, 0, 0, 0, 0, 1, 0);
+            gl.Rotate(hr,vr, 0);
 
             gl.Begin(OpenGL.GL_LINES);
             gl.Color(1.0f, 0.0f, 0.0f);
             gl.Vertex(-1.0f, 0.0f, 0.0f);
-            gl.Vertex(1000.0f, 0.0f, 0.0f);
+            gl.Vertex(100.0f, 0.0f, 0.0f);
             gl.End();
             gl.Begin(OpenGL.GL_LINES);
             gl.Color(0.0f, 1.0f, 0.0f);
             gl.Vertex(0.0f, -1.0f, 0.0f);
-            gl.Vertex(0.0f, 1000.0f, 0.0f);
+            gl.Vertex(0.0f, 100.0f, 0.0f);
             gl.End();
             gl.Begin(OpenGL.GL_LINES);
             gl.Color(0.0f, 0.0f, 1.0f);
             gl.Vertex(0.0f, 0.0f, -1.0f);
-            gl.Vertex(0.0f, 0.0f, 1000.0f);
+            gl.Vertex(0.0f, 0.0f, 100.0f);
             gl.End();
 
             gl.Begin(OpenGL.GL_LINE_STRIP);
@@ -100,7 +141,7 @@ namespace rk
 
             for (int i = 0; i < N-1; ++i)
             {
-                gl.Vertex(rk4x(i) / 10, rk4y(i) / 10, rk4z(i) / 10);
+                gl.Vertex(rk4x(i), rk4y(i), rk4z(i));
             }
             gl.End();
         }
@@ -118,9 +159,15 @@ namespace rk
         {
             if (e.Button == MouseButtons.Left)
             {
-                lr -= e.X - mouseX;
+                if (Math.Abs(e.X - mouseX) > Math.Abs(e.Y - mouseY))
+                {
+                    vr -= e.X - mouseX;
+                }
+                else
+                {
+                 hr += e.Y - mouseY;
+                }
                 mouseX = e.X;
-                bt += e.Y - mouseY;
                 mouseY = e.Y;
             }
             if (e.Button == MouseButtons.Right)
