@@ -8,28 +8,64 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+// http://c-faq.com/lib/gaussian.html
 
 namespace slam
 {
-    public struct Vehicle
+    public class Gauss
     {
-        public double X, Y, Vx, Vy, fi, V, theta,lambda;
+        Random r;
+        double V1, V2, S;
+        int phase = 0;
+
+        public Gauss()
+        {
+            r = new Random();
+        }
+
+        public double Next()
+        {
+	        double X;
+	        if(phase == 0) {
+		        do {
+			        double U1 = r.NextDouble();
+			        double U2 = r.NextDouble();
+			        V1 = 2 * U1 - 1;
+			        V2 = 2 * U2 - 1;
+			        S = V1 * V1 + V2 * V2;
+			        } while(S >= 1 || S == 0);
+		        X = V1 * Math.Sqrt(-2 *  Math.Log10(S) / S);
+	        } else
+		        X = V2 *  Math.Sqrt(-2  *Math.Log10(S) / S);
+	        phase = 1 - phase;
+	        return X;
+        }
+    }
+    public class Vehicle
+    {
+        public double X, Y, Vx, Vy, fi, V, theta, lambda;
+        public Vehicle(int x, int y)
+        {
+            X = x;
+            Y = y;
+        }
         public void Draw(Graphics g, Pen p)
         {
-            Rectangle r = new Rectangle( (int)X-10, (int)Y-5, 20, 10 );
+            Rectangle r = new Rectangle((int)X - 10, (int)Y - 5, 20, 10);
             using (Matrix m = new Matrix())
             {
-                m.RotateAt((float)(fi/Math.PI*180), new PointF(r.Left + (r.Width / 2), r.Top + (r.Height / 2)));
+                m.RotateAt((float)(fi / Math.PI * 180), new PointF(r.Left + (r.Width / 2), r.Top + (r.Height / 2)));
                 g.Transform = m;
                 g.DrawRectangle(p, r);
                 g.ResetTransform();
             }
         }
-        public void Beam(Graphics g, int w, int l) {
+        public void Beam(Graphics g, int w, int l)
+        {
             GraphicsPath gp = new GraphicsPath();
-            gp.AddPie((int)X - l/2, (int)Y - l/2, l, l, (int)(lambda/Math.PI*180)-w/2,w);
+            gp.AddPie((int)X - l / 2, (int)Y - l / 2, l, l, (int)(lambda / Math.PI * 180) - w / 2, w);
             PathGradientBrush pgb = new PathGradientBrush(gp);
-            pgb.CenterPoint = new Point((int)X,(int)Y);
+            pgb.CenterPoint = new Point((int)X, (int)Y);
             pgb.CenterColor = Color.White;
             pgb.SurroundColors = new Color[] { Color.Black };
 
@@ -50,12 +86,11 @@ namespace slam
 
     public partial class Form1 : Form
     {
-        Random      rnd = new Random();
+        Gauss       gauss = new Gauss();
         List<Point> Pos = new List<Point>(),  
                     Echo = new List<Point>();
         Vehicle     Dron, DronEst;
         Form        Form2=null;
-        Point       cp;
 
         public Form1()
         {
@@ -66,8 +101,11 @@ namespace slam
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
-            cp.X = e.X;
-            cp.Y = e.Y;
+            if (Form2 != null)
+            {
+                Dron.V = (Math.Pow(e.X - Dron.X, 2) + Math.Pow(e.Y - Dron.Y, 2)) * 0.0001;
+                Dron.theta = Math.Atan2(e.Y - Dron.Y, e.X - Dron.X);
+            }
         }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
@@ -83,13 +121,8 @@ namespace slam
 
             if (e.Button == MouseButtons.Right)
             {
-                Dron            = new Vehicle();
-                Dron.X          = e.X;
-                Dron.Y          = e.Y;
-
-                DronEst         = new Vehicle();
-                DronEst.X       = Width / 2;
-                DronEst.Y       = Height / 2;
+                Dron = new Vehicle(e.X, e.Y);
+                DronEst = new Vehicle(Width / 2, Height / 2);
 
                 Form2           =new Form1();
                 Form2.Show();
@@ -111,8 +144,12 @@ namespace slam
             if (Form2 != null)
             {
                 Dron.Draw(e.Graphics, Pens.Red);
-                Dron.Beam(e.Graphics,30,200);
+                Dron.Beam(e.Graphics,10,200);
             }
+
+            //int x=Width/2 + (int)(10*gauss.Next());
+            //int y=Height/2 +(int)(10*gauss.Next());
+            // e.Graphics.DrawEllipse(Pens.Yellow, x-1, y-1,2,2);
         }
 
         private void Form2_Paint(object sender, PaintEventArgs e)
@@ -130,18 +167,17 @@ namespace slam
                 {
                     double range = Math.Sqrt(Math.Pow(p.Y - Dron.Y, 2) + Math.Pow(p.X - Dron.X, 2));
                     double l = Math.Atan2(p.Y - Dron.Y, p.X - Dron.X) - Dron.fi - Dron.lambda;
-
+                    
                     if (l > Math.PI)
                         l -= 2 * Math.PI;
                     if (l < -Math.PI)
                         l += 2 * Math.PI;
 
-                    if (Math.Abs(l) < Math.PI/18.0/2.0 && range < 200)
+                    if (Math.Abs(l) < Math.PI / 18.0 / 2.0 && range < 200)
+                    {
                         Echo.Add(new Point((int)(range * Math.Cos(Dron.lambda + DronEst.fi) + DronEst.X), (int)(range * Math.Sin(Dron.lambda + DronEst.fi) + DronEst.Y)));
+                    }
                 }
-
-                Dron.V = (Math.Pow(cp.X - Dron.X, 2) + Math.Pow(cp.Y - Dron.Y, 2)) * 0.0001;
-                Dron.theta = Math.Atan2(cp.Y-Dron.Y, cp.X-Dron.X);
                 Dron.Update();
 
                 DronEst.V = Dron.V;
