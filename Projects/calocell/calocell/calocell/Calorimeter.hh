@@ -10,15 +10,15 @@ using namespace std ;
 
 class Calorimeter {
 public:
-    Calorimeter(int Nx, int Ny , double X = 0 , double Y = 0 , double Z = 0) {
+    Calorimeter(int Nx, int Ny , double X = 0 , double Y = 0 , double Z = 0) : point(X,Y,Z),calogrid(Nx,Ny) {
+        cout << "Calorimeter constructor " << this << endl ;
         nx = Nx ; 
         ny = Ny ;
         x = X ;
         y = Y ;
         z = Z ;
-        point = Point(x,y,z) ;
-        calogrid = CaloGrid(nx,ny) ;
-        cout << "Calorimeter constructor " << this << endl ;
+//        point = Point(x,y,z) ;
+//        calogrid = CaloGrid(nx,ny) ;
     }
 /*
     Calorimeter(const Calorimeter &other) {

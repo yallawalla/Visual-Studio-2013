@@ -9,25 +9,25 @@ class CaloGrid {
 public:
 
     CaloGrid(int Nx = 3,int Ny = 3) {           //r) added default values for grid size otherwise we get an error trying to instantiate them in Calorimeter class
+        cout << "CaloGrid constructor" << this << endl ;
         nx = Nx ;
         ny = Ny ;
         len = Nx*Ny ;
         calocells = new CaloCell[len] ;
-        cout << "CaloGrid constructor" << this << endl ;
     }
-    CaloGrid(const CaloGrid& other) :
-    nx(other.nx) , ny(other.ny) , len(other.len) {
+
+    CaloGrid(const CaloGrid& other) : nx(other.nx) , ny(other.ny) , len(other.len) {
+        cout << "CaloGrid copy constructor" << this << endl ;
         calocells = new CaloCell[len] ;
         int i ;
         for (i = 0 ; i < len ; i++) {
             calocells[i] = other.calocells[i] ;
         }
-        cout << "CaloGrid copy constructor" << this << endl ;
-
     }
+
     ~CaloGrid() {
-//        delete[] calocells ;
         cout << "CaloGrid destructor" << this << endl ;
+        delete[] calocells ;
     }
 
 // o)

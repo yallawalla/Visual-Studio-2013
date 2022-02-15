@@ -75,7 +75,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	cout << p_->get_energy() << endl;
 	cout << p_->get_ID() << endl;
 
-	// u) 
+	//// u) 
 	Calorimeter calo(2, 2);
 	Calorimeter c_calo(calo);
 	Point point1 = calo.position();

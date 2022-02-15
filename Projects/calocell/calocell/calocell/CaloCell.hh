@@ -6,12 +6,15 @@ using namespace std ;
 class CaloCell {
 
 public:
-    CaloCell(double Energy = 0,int Id = 0) {          // n) Assigned default values so we can initialize an array of calocells in CaloGrid
-        energy = Energy ;
-        ID = Id ;
-        cout << "CaloCell constructor" << this << endl ;
-    }
-// c , d)
+	CaloCell(double Energy = 0, int Id = 0) {          // n) Assigned default values so we can initialize an array of calocells in CaloGrid
+		cout << "CaloCell constructor" << this << endl;
+		energy = Energy;
+		ID = Id;
+	}
+	~CaloCell() {          // n) Assigned default values so we can initialize an array of calocells in CaloGrid
+		cout << "CaloCell destructor" << this << endl;
+	}
+	// c , d)
 // Accessors - return reference to private data member
 // implemented both reference and const reference so we can instantiate const CaloCell
     double& get_energy() {

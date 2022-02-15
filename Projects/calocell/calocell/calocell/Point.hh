@@ -5,13 +5,16 @@ using namespace std ;
 
 class Point {
 public:
-    Point(double X = 0, double Y = 0 , double Z = 0) {
-        x = X ;
-        y = Y ;
-        z = Z ;
-        cout << "Point constructor" << this << endl ;
-    }
-// h)
+	Point(double X = 0, double Y = 0, double Z = 0) {
+		cout << "Point constructor" << this << endl;
+		x = X;
+		y = Y;
+		z = Z;
+	}
+	~Point() {
+		cout << "Point destructor" << this << endl;
+	}
+	// h)
 // Accessors - return regular or const reference to private data member
     double& get_x() { return x ;}
     const double& get_x() const { return x ;}
