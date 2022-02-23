@@ -35,7 +35,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 20;
+            this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
@@ -49,6 +49,7 @@
             this.Text = "Form1";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.ResumeLayout(false);
 
         }
