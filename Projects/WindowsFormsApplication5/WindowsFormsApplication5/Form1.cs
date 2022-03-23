@@ -14,6 +14,7 @@ namespace WindowsFormsApplication1
     {
         PointF p, v, a, ep, ev, gps;
         Random rnd = new Random();
+        float k1, k2;
         int count;
 
         public Form1()
@@ -45,12 +46,14 @@ namespace WindowsFormsApplication1
 //                    gps.X += (float)(rnd.NextDouble() * 20 - 10);
 //                    gps.Y += (float)(rnd.NextDouble() * 20 - 10);
                 }
-            }
 
-            ep.X += ev.X + dx * 0.05f;
-            ep.Y += ev.Y + dy * 0.05f;
-            ev.X += a.X + dx * 0.01f;
-            ev.Y += a.Y + dy * 0.01f;
+            }
+            k1 = 0.05f;
+            k2 = k1 * k1 / 4;
+            ep.X += ev.X + dx * k1;
+            ep.Y += ev.Y + dy * k1;
+            ev.X += a.X + dx * k2;
+            ev.Y += a.Y + dy * k2;
 
             Refresh();
             ++count;
@@ -96,8 +99,8 @@ namespace WindowsFormsApplication1
         {
             //if (gps.X != 0 && gps.Y != 0 && count % (1000 / timer1.Interval) == 0)
             //{
-            //    gps.X = e.X;
-            //    gps.Y = e.Y;
+                gps.X = e.X;
+                gps.Y = e.Y;
             //}
         }
     }
